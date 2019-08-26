@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-us" lang="en-us">
+<head>
+  <link href="//gmpg.org/xfn/11" rel="profile">
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta name="generator" content="Hugo 0.57.2" />
+
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>BugFlow &middot; HORIZON</title>
+
+  
+  <link type="text/css" rel="stylesheet" href="https://horizonnn.github.iocss/print.css" media="print">
+  <link type="text/css" rel="stylesheet" href="https://horizonnn.github.iocss/poole.css">
+  <link type="text/css" rel="stylesheet" href="https://horizonnn.github.iocss/syntax.css">
+  <link type="text/css" rel="stylesheet" href="https://horizonnn.github.iocss/hyde.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Abril+Fatface|PT+Sans:400,400i,700">
+
+
+  
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/apple-touch-icon-144-precomposed.png">
+  <link rel="shortcut icon" href="/favicon.png">
+
+  
+  
+</head>
+
+  <body class=" ">
+  <aside class="sidebar">
+  <div class="container sidebar-sticky">
+    <div class="sidebar-about">
+      <a href="https://horizonnn.github.io"><h1>HORIZON</h1></a>
+      <p class="lead">
+      An elegant open source and mobile first theme for <a href="http://hugo.spf13.com">hugo</a> made by <a href="http://twitter.com/mdo">@mdo</a>. Originally made for Jekyll.
+      </p>
+    </div>
+
+    <nav>
+      <ul class="sidebar-nav">
+        <li><a href="https://horizonnn.github.io">Home</a> </li>
+        
+      </ul>
+    </nav>
+
+    <p>&copy; 2019. All rights reserved. </p>
+  </div>
+</aside>
+
+    <main class="content container">
+    <div class="post">
+  <h1>BugFlow</h1>
+  <time datetime=2019-08-25T21:21:34&#43;0800 class="post-date">Sun, Aug 25, 2019</time>
+  
+
+<h1 id="基础问题">基础问题</h1>
+
+<h3 id="attributeerror-module-xxx-has-no-attribute-xxx">AttributeError: module &lsquo;XXX&rsquo; has no attribute &lsquo;xxx&rsquo;</h3>
+
+<p>原因：一般module和attribute的名字没有拼错的情况下，出现这类问题通常是因为这个py文件所在的目录中存在与module同名的py文件，导致python的错误调用。</p>
+
+<p>解决办法：更改文件名。</p>
+
+<h1 id="keras">Keras</h1>
+
+<h3 id="typeerror-unexpected-keyword-argument-passed-to-optimizer-name">TypeError: Unexpected keyword argument passed to optimizer: name</h3>
+
+<pre><code class="language-shell">Traceback (most recent call last):
+  File &quot;visualizing_the_convnet.py&quot;, line 3, in &lt;module&gt;
+    model = load_model('cats_and_dogs_small_2.h5')
+  File &quot;D:\ProgramFiles\Anaconda3\envs\keras\lib\site-packages\tensorflow\python\keras\engine\saving.py&quot;, line 249, in load_model
+    optimizer_config, custom_objects=custom_objects)
+  File &quot;D:\ProgramFiles\Anaconda3\envs\keras\lib\site-packages\tensorflow\python\keras\optimizers.py&quot;, line 838, in deserialize
+    printable_module_name='optimizer')
+  File &quot;D:\ProgramFiles\Anaconda3\envs\keras\lib\site-packages\tensorflow\python\keras\utils\generic_utils.py&quot;, line 194, in deserialize_keras_object
+    return cls.from_config(cls_config)
+  File &quot;D:\ProgramFiles\Anaconda3\envs\keras\lib\site-packages\tensorflow\python\keras\optimizers.py&quot;, line 159, in from_config
+    return cls(**config)
+  File &quot;D:\ProgramFiles\Anaconda3\envs\keras\lib\site-packages\tensorflow\python\keras\optimizers.py&quot;, line 247, in __init__
+    super(RMSprop, self).__init__(**kwargs)
+  File &quot;D:\ProgramFiles\Anaconda3\envs\keras\lib\site-packages\tensorflow\python\keras\optimizers.py&quot;, line 68, in __init__
+    'passed to optimizer: ' + str(k))
+TypeError: Unexpected keyword argument passed to optimizer: name
+</code></pre>
+
+<p>原因：这部分代码加载了H5文件保存的keras Model，但是由于保存Model和加载Model的keras的版本不一致，所以会产生这个问题</p>
+
+<p>解决办法：保持加载Model和保存Model的keras版本一致</p>
+
+<h3 id="failed-to-create-cublas-handle-cublas-status-alloc-failed">failed to create cublas handle: CUBLAS_STATUS_ALLOC_FAILED</h3>
+
+<p>原因：申请GPU内存，空间不够被拒绝</p>
+
+<p>解决办法：在代码中加入动态申请内存的显式设定</p>
+
+<pre><code class="language-python">config = tf.ConfigProto()
+config.gpu_options.allow_growth = True
+session = tf.Session(config=config)
+</code></pre>
+
+<h1 id="matplotlib">matplotlib</h1>
+
+<h3 id="调用imshow-显示出的图像全白">调用imshow()显示出的图像全白</h3>
+
+<p>原因：imshow可以接受float或者int类型的参数，其有效范围分别为[0,1]和[0,255]。当参数类型为float时，imshow会默认将其裁剪到[0,1]的区间内。所以通常是输入了按照[0,255]的区间范围的float参数会出现上述问题</p>
+
+<p>解决办法：将float参数手动转换到[0,1]区间（x = x / 255），或者将其转换为int类型（x = x.astype(&lsquo;int32&rsquo;)）。</p>
+
+</div>
+
+
+    </main>
+
+    
+  </body>
+</html>
