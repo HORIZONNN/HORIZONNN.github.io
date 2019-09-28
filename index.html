@@ -33,7 +33,7 @@
 <meta property="og:type" content="website" />
 <meta property="og:url" content="https://horizonnn.github.io/" />
 
-<meta property="og:updated_time" content="2019-09-14T21:36:16+08:00" />
+<meta property="og:updated_time" content="2019-09-28T20:37:36+08:00" />
 <meta itemprop="name" content="Bridge : you &amp; me">
 <meta itemprop="description" content="The last theme you&#39;ll ever need. Maybe.">
 
@@ -132,6 +132,41 @@
       
       <div class="blah w-100">
         <h1 class="f3 fw1 athelas mt0 lh-title">
+          <a href="/post/%E5%88%A9%E7%94%A8frp%E5%AE%9E%E7%8E%B0%E9%BB%91%E7%BE%A4%E6%99%96%E5%86%85%E7%BD%91%E7%A9%BF%E9%80%8F/" class="color-inherit dim link">
+            利用frp实现黑群晖内网穿透
+            </a>
+        </h1>
+        <div class="f6 f5-l lh-copy nested-copy-line-height nested-links">
+          前一段时间捡了一台暴风酷播云矿机，想着拿来做NAS，装了黑群晖，无奈的是没有公网IP，只能局域网访问，因此需要做内网穿透。
+搜了搜方法，感觉frp还是比较不错的方案，开搞！
+相关链接  frp的github链接 群晖的中文官网  准备工具  使用frp做内网穿透，首先需要一台具有公网IP的主机，这里我租用了一台VPS 去frp的github链接里根据个人NAS以及公网IP主机的型号下载对应的压缩文件 去群晖官网下载drive client  配置过程 服务端  解压公网IP主机对应的frp文件，只保存frps和frps.ini文件，删掉其他文件
+ 将上述两个文件上传到公网IP主机中
+ 编辑frps.ini文件（vim frps.ini），写入以下内容
+[common] bind_port = 7000 vhost_http_port = 7008 vhost_https_port = 7010 dashboard_port = 7001 dashboard_user = admin dashboard_pwd = 123456   其中7008是http连接的端口，7001是frp后台管理的端口
+此外，在主机中开启7000、7008、7001、7010、6690（后文中会说到为什么开启这个端口）端口
+ 运行frps
+./frps -c ./frps.ini   客户端  解压公网IP主机对应的frp文件，只保存frpc和frpc.ini文件，删掉其他文件
+ 将上述两个文件上传到NAS主机中
+ 编辑frpc.ini文件（vim frpc.ini），写入以下内容
+[common] server_addr = XXX.XXX.XXX.XXX server_port = 7000 [web1] type = http local_ip = 127.
+        </div>
+          <a href="/post/%E5%88%A9%E7%94%A8frp%E5%AE%9E%E7%8E%B0%E9%BB%91%E7%BE%A4%E6%99%96%E5%86%85%E7%BD%91%E7%A9%BF%E9%80%8F/" class="ba b--moon-gray bg-light-gray br2 color-inherit dib f7 hover-bg-moon-gray link mt2 ph2 pv1">read more</a>
+        
+      </div>
+    </div>
+  </div>
+</article>
+
+          </div>
+        
+          <div class="relative w-100 mb4">
+            
+<article class="bb b--black-10">
+  <div class="db pv4 ph3 ph0-l no-underline dark-gray">
+    <div class="flex flex-column flex-row-ns">
+      
+      <div class="blah w-100">
+        <h1 class="f3 fw1 athelas mt0 lh-title">
           <a href="/post/%E5%90%89%E5%A4%A7%E6%A0%A1%E5%9B%AD%E7%BD%91%E8%B7%AF%E7%94%B1%E5%99%A8%E9%85%8D%E7%BD%AE/" class="color-inherit dim link">
             吉大校园网路由器配置
             </a>
@@ -154,34 +189,25 @@ nohup python newclient.py &gt;/dev/null 2&gt;&amp;1   此时可以连上路由�
 
           </div>
         
-          <div class="relative w-100 mb4">
-            
-<article class="bb b--black-10">
-  <div class="db pv4 ph3 ph0-l no-underline dark-gray">
-    <div class="flex flex-column flex-row-ns">
-      
-      <div class="blah w-100">
-        <h1 class="f3 fw1 athelas mt0 lh-title">
-          <a href="/post/bugflow/" class="color-inherit dim link">
-            BugFlow
-            </a>
-        </h1>
-        <div class="f6 f5-l lh-copy nested-copy-line-height nested-links">
-          基础问题 AttributeError: module &lsquo;XXX&rsquo; has no attribute &lsquo;xxx&rsquo; 原因：一般module和attribute的名字没有拼错的情况下，出现这类问题通常是因为这个py文件所在的目录中存在与module同名的py文件，导致python的错误调用。
-解决办法：更改文件名。
-Keras TypeError: Unexpected keyword argument passed to optimizer: name Traceback (most recent call last): File &quot;visualizing_the_convnet.py&quot;, line 3, in &lt;module&gt; model = load_model('cats_and_dogs_small_2.h5') File &quot;D:\ProgramFiles\Anaconda3\envs\keras\lib\site-packages\tensorflow\python\keras\engine\saving.py&quot;, line 249, in load_model optimizer_config, custom_objects=custom_objects) File &quot;D:\ProgramFiles\Anaconda3\envs\keras\lib\site-packages\tensorflow\python\keras\optimizers.py&quot;, line 838, in deserialize printable_module_name='optimizer') File &quot;D:\ProgramFiles\Anaconda3\envs\keras\lib\site-packages\tensorflow\python\keras\utils\generic_utils.py&quot;, line 194, in deserialize_keras_object return cls.from_config(cls_config) File &quot;D:\ProgramFiles\Anaconda3\envs\keras\lib\site-packages\tensorflow\python\keras\optimizers.py&quot;, line 159, in from_config return cls(**config) File &quot;D:\ProgramFiles\Anaconda3\envs\keras\lib\site-packages\tensorflow\python\keras\optimizers.py&quot;, line 247, in __init__ super(RMSprop, self).
-        </div>
-          <a href="/post/bugflow/" class="ba b--moon-gray bg-light-gray br2 color-inherit dib f7 hover-bg-moon-gray link mt2 ph2 pv1">read more</a>
-        
-      </div>
-    </div>
-  </div>
-</article>
-
-          </div>
-        
       </section>
 
+      
+      <section class="w-100">
+        <h1 class="f3">More</h1>
+        
+        
+          <h2 class="f5 fw4 mb4 dib mr3">
+            <a href="/post/bugflow/" class="link black dim">
+              BugFlow
+            </a>
+          </h2>
+        
+
+        
+        
+          <a href="/post/" class="link db f6 pa2 br3 bg-mid-gray white dim w4 tc">All Posts</a>
+        
+        </section>
       
 
       </div>
