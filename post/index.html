@@ -33,7 +33,7 @@
 <meta property="og:type" content="website" />
 <meta property="og:url" content="https://horizonnn.github.io/post/" />
 
-<meta property="og:updated_time" content="2019-09-28T20:37:36+08:00" />
+<meta property="og:updated_time" content="2019-11-20T22:23:45+08:00" />
 <meta itemprop="name" content="Posts">
 <meta itemprop="description" content="The last theme you&#39;ll ever need. Maybe.">
 
@@ -110,6 +110,32 @@
             <div class="mb3 pa4 mid-gray overflow-hidden">
     
       <div class="f6">
+        November 20, 2019
+      </div>
+    
+    <h1 class="f3 near-black">
+      <a href="/post/%E5%9C%A8win10%E4%B8%8B%E5%AE%89%E8%A3%85gym%E7%8E%AF%E5%A2%83%E7%9A%84%E4%B8%A4%E7%A7%8D%E5%8A%9E%E6%B3%95/" class="link black dim">
+        在win10下安装gym环境的两种办法
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+      Gym是强化学习中一个很重要的python库，里面包含了很多强化学习的环境。但比较可惜的是官方并没有提供Windows平台的支持，这对于习惯了Windows平台工作的强化学习研究人员来说很不方便，所以我找到了两个解决办法。
+ 直接在win 10上安装Gym环境 利用WSL( Windows Subsystem for Linux )安装Gym环境  直接在win 10上安装Gym环境 安装 Microsoft Visual C++ 2017 Build Tools for Visual Studio 2017  下载链接 : Visual Studio 安装 Microsoft Visual C++ 2017 Build Tools  在Anaconda中创建python环境并安装相应的packages  在Anaconda中创建python环境
+conda create -n &lt;your_env_name&gt; python=3.7  如果需要在gym中录制视频，则需要安装ffmpeg
+conda install -c conda-forge ffmpeg  首先需要安装一个空的gym环境，因为在后面安装完全的gym环境的过程中会出现mujoco环境的错误，虽然这不影响其他模块的使用，但会导致gym不会被添加到环境中，也就没有办法import。
+pip install gym  安装pystan是ToyText环境的需要
+conda install pystan  这一步是安装gym环境成功的关键，国外大神kojoley成功地封装了atari模块使得安装这一补丁后，atari环境能够在win 10环境下成功运行
+conda install git pip install git+https://github.
+    </div>
+  </div>
+
+        </div>
+      
+        <div class="relative w-100 w-30-l mb4 bg-white">
+          
+            <div class="mb3 pa4 mid-gray overflow-hidden">
+    
+      <div class="f6">
         September 28, 2019
       </div>
     
@@ -162,30 +188,52 @@ nohup python newclient.py &gt;/dev/null 2&gt;&amp;1   此时可以连上路由�
 
         </div>
       
-        <div class="relative w-100 w-30-l mb4 bg-white">
-          
-            <div class="mb3 pa4 mid-gray overflow-hidden">
-    
-      <div class="f6">
-        August 25, 2019
-      </div>
-    
-    <h1 class="f3 near-black">
-      <a href="/post/bugflow/" class="link black dim">
-        BugFlow
-      </a>
-    </h1>
-    <div class="nested-links f5 lh-copy nested-copy-line-height">
-      基础问题 AttributeError: module &lsquo;XXX&rsquo; has no attribute &lsquo;xxx&rsquo; 原因：一般module和attribute的名字没有拼错的情况下，出现这类问题通常是因为这个py文件所在的目录中存在与module同名的py文件，导致python的错误调用。
-解决办法：更改文件名。
-Keras TypeError: Unexpected keyword argument passed to optimizer: name Traceback (most recent call last): File &quot;visualizing_the_convnet.py&quot;, line 3, in &lt;module&gt; model = load_model('cats_and_dogs_small_2.h5') File &quot;D:\ProgramFiles\Anaconda3\envs\keras\lib\site-packages\tensorflow\python\keras\engine\saving.py&quot;, line 249, in load_model optimizer_config, custom_objects=custom_objects) File &quot;D:\ProgramFiles\Anaconda3\envs\keras\lib\site-packages\tensorflow\python\keras\optimizers.py&quot;, line 838, in deserialize printable_module_name='optimizer') File &quot;D:\ProgramFiles\Anaconda3\envs\keras\lib\site-packages\tensorflow\python\keras\utils\generic_utils.py&quot;, line 194, in deserialize_keras_object return cls.from_config(cls_config) File &quot;D:\ProgramFiles\Anaconda3\envs\keras\lib\site-packages\tensorflow\python\keras\optimizers.py&quot;, line 159, in from_config return cls(**config) File &quot;D:\ProgramFiles\Anaconda3\envs\keras\lib\site-packages\tensorflow\python\keras\optimizers.py&quot;, line 247, in __init__ super(RMSprop, self).
-    </div>
-  </div>
-
-        </div>
-      
     </aside>
     
+
+<ul class="pagination">
+    
+    <li class="page-item">
+        <a href="/post/" class="page-link" aria-label="First"><span aria-hidden="true">&laquo;&laquo;</span></a>
+    </li>
+    
+    <li class="page-item disabled">
+    <a  class="page-link" aria-label="Previous"><span aria-hidden="true">&laquo;</span></a>
+    </li>
+    
+    
+    
+    
+    
+    
+    
+        
+        
+    
+    
+    <li class="page-item active"><a class="page-link" href="/post/">1</a></li>
+    
+    
+    
+    
+    
+    
+        
+        
+    
+    
+    <li class="page-item"><a class="page-link" href="/post/page/2/">2</a></li>
+    
+    
+    <li class="page-item">
+    <a href="/post/page/2/" class="page-link" aria-label="Next"><span aria-hidden="true">&raquo;</span></a>
+    </li>
+    
+    <li class="page-item">
+        <a href="/post/page/2/" class="page-link" aria-label="Last"><span aria-hidden="true">&raquo;&raquo;</span></a>
+    </li>
+    
+</ul>
 
 
   </article>

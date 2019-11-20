@@ -6,10 +6,25 @@
     <description>Recent content on Bridge : you &amp; me</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 28 Sep 2019 20:37:36 +0800</lastBuildDate>
+    <lastBuildDate>Wed, 20 Nov 2019 22:23:45 +0800</lastBuildDate>
     
 	<atom:link href="https://horizonnn.github.io/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>在win10下安装gym环境的两种办法</title>
+      <link>https://horizonnn.github.io/post/%E5%9C%A8win10%E4%B8%8B%E5%AE%89%E8%A3%85gym%E7%8E%AF%E5%A2%83%E7%9A%84%E4%B8%A4%E7%A7%8D%E5%8A%9E%E6%B3%95/</link>
+      <pubDate>Wed, 20 Nov 2019 22:23:45 +0800</pubDate>
+      
+      <guid>https://horizonnn.github.io/post/%E5%9C%A8win10%E4%B8%8B%E5%AE%89%E8%A3%85gym%E7%8E%AF%E5%A2%83%E7%9A%84%E4%B8%A4%E7%A7%8D%E5%8A%9E%E6%B3%95/</guid>
+      <description>Gym是强化学习中一个很重要的python库，里面包含了很多强化学习的环境。但比较可惜的是官方并没有提供Windows平台的支持，这对于习惯了Windows平台工作的强化学习研究人员来说很不方便，所以我找到了两个解决办法。
+ 直接在win 10上安装Gym环境 利用WSL( Windows Subsystem for Linux )安装Gym环境  直接在win 10上安装Gym环境 安装 Microsoft Visual C++ 2017 Build Tools for Visual Studio 2017  下载链接 : Visual Studio 安装 Microsoft Visual C++ 2017 Build Tools  在Anaconda中创建python环境并安装相应的packages  在Anaconda中创建python环境
+conda create -n &amp;lt;your_env_name&amp;gt; python=3.7  如果需要在gym中录制视频，则需要安装ffmpeg
+conda install -c conda-forge ffmpeg  首先需要安装一个空的gym环境，因为在后面安装完全的gym环境的过程中会出现mujoco环境的错误，虽然这不影响其他模块的使用，但会导致gym不会被添加到环境中，也就没有办法import。
+pip install gym  安装pystan是ToyText环境的需要
+conda install pystan  这一步是安装gym环境成功的关键，国外大神kojoley成功地封装了atari模块使得安装这一补丁后，atari环境能够在win 10环境下成功运行
+conda install git pip install git+https://github.</description>
+    </item>
     
     <item>
       <title>利用frp实现黑群晖内网穿透</title>
@@ -52,9 +67,11 @@ nohup python newclient.py &amp;gt;/dev/null 2&amp;gt;&amp;amp;1   此时可以�
       <pubDate>Sun, 25 Aug 2019 21:21:34 +0800</pubDate>
       
       <guid>https://horizonnn.github.io/post/bugflow/</guid>
-      <description>基础问题 AttributeError: module &amp;lsquo;XXX&amp;rsquo; has no attribute &amp;lsquo;xxx&amp;rsquo; 原因：一般module和attribute的名字没有拼错的情况下，出现这类问题通常是因为这个py文件所在的目录中存在与module同名的py文件，导致python的错误调用。
-解决办法：更改文件名。
-Keras TypeError: Unexpected keyword argument passed to optimizer: name Traceback (most recent call last): File &amp;quot;visualizing_the_convnet.py&amp;quot;, line 3, in &amp;lt;module&amp;gt; model = load_model(&#39;cats_and_dogs_small_2.h5&#39;) File &amp;quot;D:\ProgramFiles\Anaconda3\envs\keras\lib\site-packages\tensorflow\python\keras\engine\saving.py&amp;quot;, line 249, in load_model optimizer_config, custom_objects=custom_objects) File &amp;quot;D:\ProgramFiles\Anaconda3\envs\keras\lib\site-packages\tensorflow\python\keras\optimizers.py&amp;quot;, line 838, in deserialize printable_module_name=&#39;optimizer&#39;) File &amp;quot;D:\ProgramFiles\Anaconda3\envs\keras\lib\site-packages\tensorflow\python\keras\utils\generic_utils.py&amp;quot;, line 194, in deserialize_keras_object return cls.from_config(cls_config) File &amp;quot;D:\ProgramFiles\Anaconda3\envs\keras\lib\site-packages\tensorflow\python\keras\optimizers.py&amp;quot;, line 159, in from_config return cls(**config) File &amp;quot;D:\ProgramFiles\Anaconda3\envs\keras\lib\site-packages\tensorflow\python\keras\optimizers.py&amp;quot;, line 247, in __init__ super(RMSprop, self).</description>
+      <description>基础问题 1. AttributeError: module &amp;lsquo;XXX&amp;rsquo; has no attribute &amp;lsquo;xxx&amp;rsquo;  原因：一般module和attribute的名字没有拼错的情况下，出现这类问题通常是因为这个py文件所在的目录中存在与module同名的py文件，导致python的错误调用。
+ 解决办法：更改文件名。
+  2. AttributeError: module &amp;lsquo;XXX&amp;rsquo; has no attribute &amp;lsquo;XXX&amp;rsquo;  原因：一般情况下可能是因为拼写错误导致的改模块下确实没有对应的attribute。但还有另外一种情况是当前运行的python文件目录下有和此module模块重名的python文件，导致运行的python文件优先import了当前目录下的对应文件，所以不存在对应的attribute 解决办法：检查拼写错误或者改变文件名即可  TensorFlow 1. TypeError: Unexpected keyword argument passed to optimizer: name Traceback (most recent call last): File &amp;quot;visualizing_the_convnet.py&amp;quot;, line 3, in &amp;lt;module&amp;gt; model = load_model(&#39;cats_and_dogs_small_2.h5&#39;) ... TypeError: Unexpected keyword argument passed to optimizer: name   原因：这部分代码加载了H5文件保存的keras Model，但是由于保存Model和加载Model的keras的版本不一致，所以会产生这个问题
+ 解决办法：保持加载Model和保存Model的keras版本一致
+  2. failed to create cublas handle: CUBLAS_STATUS_ALLOC_FAILED  原因：申请GPU内存，空间不够被拒绝</description>
     </item>
     
   </channel>

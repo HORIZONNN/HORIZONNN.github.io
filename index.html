@@ -33,7 +33,7 @@
 <meta property="og:type" content="website" />
 <meta property="og:url" content="https://horizonnn.github.io/" />
 
-<meta property="og:updated_time" content="2019-09-28T20:37:36+08:00" />
+<meta property="og:updated_time" content="2019-11-20T22:23:45+08:00" />
 <meta itemprop="name" content="Bridge : you &amp; me">
 <meta itemprop="description" content="The last theme you&#39;ll ever need. Maybe.">
 
@@ -132,6 +132,36 @@
       
       <div class="blah w-100">
         <h1 class="f3 fw1 athelas mt0 lh-title">
+          <a href="/post/%E5%9C%A8win10%E4%B8%8B%E5%AE%89%E8%A3%85gym%E7%8E%AF%E5%A2%83%E7%9A%84%E4%B8%A4%E7%A7%8D%E5%8A%9E%E6%B3%95/" class="color-inherit dim link">
+            在win10下安装gym环境的两种办法
+            </a>
+        </h1>
+        <div class="f6 f5-l lh-copy nested-copy-line-height nested-links">
+          Gym是强化学习中一个很重要的python库，里面包含了很多强化学习的环境。但比较可惜的是官方并没有提供Windows平台的支持，这对于习惯了Windows平台工作的强化学习研究人员来说很不方便，所以我找到了两个解决办法。
+ 直接在win 10上安装Gym环境 利用WSL( Windows Subsystem for Linux )安装Gym环境  直接在win 10上安装Gym环境 安装 Microsoft Visual C++ 2017 Build Tools for Visual Studio 2017  下载链接 : Visual Studio 安装 Microsoft Visual C++ 2017 Build Tools  在Anaconda中创建python环境并安装相应的packages  在Anaconda中创建python环境
+conda create -n &lt;your_env_name&gt; python=3.7  如果需要在gym中录制视频，则需要安装ffmpeg
+conda install -c conda-forge ffmpeg  首先需要安装一个空的gym环境，因为在后面安装完全的gym环境的过程中会出现mujoco环境的错误，虽然这不影响其他模块的使用，但会导致gym不会被添加到环境中，也就没有办法import。
+pip install gym  安装pystan是ToyText环境的需要
+conda install pystan  这一步是安装gym环境成功的关键，国外大神kojoley成功地封装了atari模块使得安装这一补丁后，atari环境能够在win 10环境下成功运行
+conda install git pip install git+https://github.
+        </div>
+          <a href="/post/%E5%9C%A8win10%E4%B8%8B%E5%AE%89%E8%A3%85gym%E7%8E%AF%E5%A2%83%E7%9A%84%E4%B8%A4%E7%A7%8D%E5%8A%9E%E6%B3%95/" class="ba b--moon-gray bg-light-gray br2 color-inherit dib f7 hover-bg-moon-gray link mt2 ph2 pv1">read more</a>
+        
+      </div>
+    </div>
+  </div>
+</article>
+
+          </div>
+        
+          <div class="relative w-100 mb4">
+            
+<article class="bb b--black-10">
+  <div class="db pv4 ph3 ph0-l no-underline dark-gray">
+    <div class="flex flex-column flex-row-ns">
+      
+      <div class="blah w-100">
+        <h1 class="f3 fw1 athelas mt0 lh-title">
           <a href="/post/%E5%88%A9%E7%94%A8frp%E5%AE%9E%E7%8E%B0%E9%BB%91%E7%BE%A4%E6%99%96%E5%86%85%E7%BD%91%E7%A9%BF%E9%80%8F/" class="color-inherit dim link">
             利用frp实现黑群晖内网穿透
             </a>
@@ -159,42 +189,18 @@
 
           </div>
         
-          <div class="relative w-100 mb4">
-            
-<article class="bb b--black-10">
-  <div class="db pv4 ph3 ph0-l no-underline dark-gray">
-    <div class="flex flex-column flex-row-ns">
-      
-      <div class="blah w-100">
-        <h1 class="f3 fw1 athelas mt0 lh-title">
-          <a href="/post/%E5%90%89%E5%A4%A7%E6%A0%A1%E5%9B%AD%E7%BD%91%E8%B7%AF%E7%94%B1%E5%99%A8%E9%85%8D%E7%BD%AE/" class="color-inherit dim link">
-            吉大校园网路由器配置
-            </a>
-        </h1>
-        <div class="f6 f5-l lh-copy nested-copy-line-height nested-links">
-          设备配置 路由器：NETGEAR 4300 v1
-网线两根
-刷路由器固件  去openwrt官网找到路由器对应的固件版本下载下来（一定要结尾是img的包，结尾是tar的是升级包）、 用网线连接PC和路由器的LAN口，在网页中输入192.168.1.1进入路由器管理界面。默认用户名是admin，密码是password 找到路由器固件升级的选项，选择刚才下好的img文件，开始固件升级。升级结束后可以再次进入192.168.1.1，若能进入openwrt的管理界面，则代表成功，这时用户名改成root，密码改为admin。 拔掉路由器电源，关闭路由器电源按钮。静置30s后再插上电源打开（不然无法开启5G信号）  配置路由器  再此进入openwrt的管理界面，在wireless中配置路由器的无线设置（密码，频率等） 进入interface选项中，配置WAN口的IP、网关、子网掩码等（根据在校园网申请IP后得到的信息一一填写，校园网上的MAC地址需要填写路由器WAN口的MAC地址） 配置路由器的ssh  设置脚本  ssh进入路由器，并执行如下命令
-opkg update opkg install python-light opkg install python-pip opkg install coreutils-nohup  去这个地址https://github.com/drcoms/jlu-drcom-client下载newclient.py脚本，并根据自己的IP信息修改代码中的config部分。
-server = '10.100.61.3'#学校的认证服务器 username='zhuff5515'#用户名，和客户端一样 password='11111111111'#密码，和客户端一样 host_ip = '49.140.110.110'#自己申请的ip地址 mac = 0xf01e567fe76b#网络中心上注册时IP对应的MAC，必须是路由器的MAC地址 host_name = '++++++++'#计算机名,随便写，不要超过71个字符 host_os = 'Windows 10'#操作系统，不要超过128个字符  通过ssh工具，将修改好的newclient.py放在路由器的/usr/bin目录
- cd进入/usr/bin目录，执行如下命令
-nohup python newclient.py &gt;/dev/null 2&gt;&amp;1   此时可以连上路由器的wifi或者LAN口，如果能够成功连接外网，则说明成功了。
-        </div>
-          <a href="/post/%E5%90%89%E5%A4%A7%E6%A0%A1%E5%9B%AD%E7%BD%91%E8%B7%AF%E7%94%B1%E5%99%A8%E9%85%8D%E7%BD%AE/" class="ba b--moon-gray bg-light-gray br2 color-inherit dib f7 hover-bg-moon-gray link mt2 ph2 pv1">read more</a>
-        
-      </div>
-    </div>
-  </div>
-</article>
-
-          </div>
-        
       </section>
 
       
       <section class="w-100">
         <h1 class="f3">More</h1>
         
+        
+          <h2 class="f5 fw4 mb4 dib mr3">
+            <a href="/post/%E5%90%89%E5%A4%A7%E6%A0%A1%E5%9B%AD%E7%BD%91%E8%B7%AF%E7%94%B1%E5%99%A8%E9%85%8D%E7%BD%AE/" class="link black dim">
+              吉大校园网路由器配置
+            </a>
+          </h2>
         
           <h2 class="f5 fw4 mb4 dib mr3">
             <a href="/post/bugflow/" class="link black dim">
