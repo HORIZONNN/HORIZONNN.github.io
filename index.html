@@ -33,7 +33,7 @@
 <meta property="og:type" content="website" />
 <meta property="og:url" content="https://horizonnn.github.io/" />
 
-<meta property="og:updated_time" content="2019-11-20T22:23:45+08:00" />
+<meta property="og:updated_time" content="2020-07-04T11:50:58+08:00" />
 <meta itemprop="name" content="Bridge : you &amp; me">
 <meta itemprop="description" content="The last theme you&#39;ll ever need. Maybe.">
 
@@ -132,20 +132,20 @@
       
       <div class="blah w-100">
         <h1 class="f3 fw1 athelas mt0 lh-title">
-          <a href="/post/%E5%9C%A8win10%E4%B8%8B%E5%AE%89%E8%A3%85gym%E7%8E%AF%E5%A2%83%E7%9A%84%E4%B8%A4%E7%A7%8D%E5%8A%9E%E6%B3%95/" class="color-inherit dim link">
-            在win10下安装gym环境的两种办法
+          <a href="/post/cbugflow/" class="color-inherit dim link">
+            CBugFlow
             </a>
         </h1>
         <div class="f6 f5-l lh-copy nested-copy-line-height nested-links">
-          Gym是强化学习中一个很重要的python库，里面包含了很多强化学习的环境。但比较可惜的是官方并没有提供Windows平台的支持，这对于习惯了Windows平台工作的强化学习研究人员来说很不方便，所以我找到了两个解决办法。
- 直接在win 10上安装Gym环境 利用WSL( Windows Subsystem for Linux )安装Gym环境  直接在win 10上安装Gym环境 安装 Microsoft Visual C++ 2017 Build Tools for Visual Studio 2017  下载链接 : Visual Studio 安装 Microsoft Visual C++ 2017 Build Tools  在Anaconda中创建python环境并安装相应的packages  在Anaconda中创建python环境
-conda create -n &lt;your_env_name&gt; python=3.7  如果需要在gym中录制视频，则需要安装ffmpeg
-conda install -c conda-forge ffmpeg  首先需要安装一个空的gym环境，因为在后面安装完全的gym环境的过程中会出现mujoco环境的错误，虽然这不影响其他模块的使用，但会导致gym不会被添加到环境中，也就没有办法import。
-pip install gym  安装pystan是ToyText环境的需要
-conda install pystan  这一步是安装gym环境成功的关键，国外大神kojoley成功地封装了atari模块使得安装这一补丁后，atari环境能够在win 10环境下成功运行
-conda install git pip install git+https://github.
+           编译问题 1. fatal error C1083: 无法打开包括文件: “basetsd.h”: No such file or directory  错误：
+fatal error C1083: 无法打开包括文件: “basetsd.h”: No such file or directory  原因：缺少basetsd.h文件
+ 解决办法：安装windows 10 SDK文件即可解决
+  2. LINK : fatal error LNK1158: cannot run &lsquo;rc.exe&rsquo;  错误
+LINK : fatal error LNK1158: cannot run 'rc.exe'  原因：在PATH所提供的环境中搜索不到rc.exe程序
+ 解决办法：安装winsows 8.1 SDK，并将路径&rdquo;C:\Program Files (x86)\Wexit()indows Kits\8.1\bin\x86&rdquo;路径 添加到环境变量中。
+  
         </div>
-          <a href="/post/%E5%9C%A8win10%E4%B8%8B%E5%AE%89%E8%A3%85gym%E7%8E%AF%E5%A2%83%E7%9A%84%E4%B8%A4%E7%A7%8D%E5%8A%9E%E6%B3%95/" class="ba b--moon-gray bg-light-gray br2 color-inherit dib f7 hover-bg-moon-gray link mt2 ph2 pv1">read more</a>
+          <a href="/post/cbugflow/" class="ba b--moon-gray bg-light-gray br2 color-inherit dib f7 hover-bg-moon-gray link mt2 ph2 pv1">read more</a>
         
       </div>
     </div>
@@ -162,25 +162,20 @@ conda install git pip install git+https://github.
       
       <div class="blah w-100">
         <h1 class="f3 fw1 athelas mt0 lh-title">
-          <a href="/post/%E5%88%A9%E7%94%A8frp%E5%AE%9E%E7%8E%B0%E9%BB%91%E7%BE%A4%E6%99%96%E5%86%85%E7%BD%91%E7%A9%BF%E9%80%8F/" class="color-inherit dim link">
-            利用frp实现黑群晖内网穿透
+          <a href="/post/%E5%9C%A8win10%E4%B8%8B%E5%AE%89%E8%A3%85gym%E7%8E%AF%E5%A2%83%E7%9A%84%E4%B8%A4%E7%A7%8D%E5%8A%9E%E6%B3%95/" class="color-inherit dim link">
+            在win10下安装gym环境的两种办法
             </a>
         </h1>
         <div class="f6 f5-l lh-copy nested-copy-line-height nested-links">
-          前一段时间捡了一台暴风酷播云矿机，想着拿来做NAS，装了黑群晖，无奈的是没有公网IP，只能局域网访问，因此需要做内网穿透。
-搜了搜方法，感觉frp还是比较不错的方案，开搞！
-相关链接  frp的github链接 群晖的中文官网  准备工具  使用frp做内网穿透，首先需要一台具有公网IP的主机，这里我租用了一台VPS 去frp的github链接里根据个人NAS以及公网IP主机的型号下载对应的压缩文件 去群晖官网下载drive client  配置过程 服务端  解压公网IP主机对应的frp文件，只保存frps和frps.ini文件，删掉其他文件
- 将上述两个文件上传到公网IP主机中
- 编辑frps.ini文件（vim frps.ini），写入以下内容
-[common] bind_port = 7000 vhost_http_port = 7008 vhost_https_port = 7010 dashboard_port = 7001 dashboard_user = admin dashboard_pwd = 123456   其中7008是http连接的端口，7001是frp后台管理的端口
-此外，在主机中开启7000、7008、7001、7010、6690（后文中会说到为什么开启这个端口）端口
- 运行frps
-./frps -c ./frps.ini   客户端  解压公网IP主机对应的frp文件，只保存frpc和frpc.ini文件，删掉其他文件
- 将上述两个文件上传到NAS主机中
- 编辑frpc.ini文件（vim frpc.ini），写入以下内容
-[common] server_addr = XXX.XXX.XXX.XXX server_port = 7000 [web1] type = http local_ip = 127.
+          Gym是强化学习中一个很重要的python库，里面包含了很多强化学习的环境。但比较可惜的是官方并没有提供Windows平台的支持，这对于习惯了Windows平台工作的强化学习研究人员来说很不方便，所以我找到了两个解决办法。
+ 直接在win 10上安装Gym环境 利用WSL( Windows Subsystem for Linux )安装Gym环境  直接在win 10上安装Gym环境 安装 Microsoft Visual C++ 2017 Build Tools  下载链接 : Visual Studio 安装 Microsoft Visual C++ 2017 Build Tools  在Anaconda中创建python环境并安装相应的packages  在Anaconda中创建python环境
+conda create -n &lt;your_env_name&gt; python=3.6  如果需要在gym中录制视频，则需要安装ffmpeg
+conda install -c conda-forge ffmpeg  首先需要安装一个空的gym环境，因为在后面安装完全的gym环境的过程中会出现mujoco环境的错误，虽然这不影响其他模块的使用，但会导致gym不会被添加到环境中，也就没有办法import。
+conda install -c conda-forge gym  安装pystan是ToyText环境的需要
+conda install -c conda-forge pystan  这一步是安装gym环境成功的关键，国外大神kojoley成功地封装了atari模块使得安装这一补丁后，atari环境能够在win 10环境下成功运行
+conda install git pip install git+https://github.
         </div>
-          <a href="/post/%E5%88%A9%E7%94%A8frp%E5%AE%9E%E7%8E%B0%E9%BB%91%E7%BE%A4%E6%99%96%E5%86%85%E7%BD%91%E7%A9%BF%E9%80%8F/" class="ba b--moon-gray bg-light-gray br2 color-inherit dib f7 hover-bg-moon-gray link mt2 ph2 pv1">read more</a>
+          <a href="/post/%E5%9C%A8win10%E4%B8%8B%E5%AE%89%E8%A3%85gym%E7%8E%AF%E5%A2%83%E7%9A%84%E4%B8%A4%E7%A7%8D%E5%8A%9E%E6%B3%95/" class="ba b--moon-gray bg-light-gray br2 color-inherit dib f7 hover-bg-moon-gray link mt2 ph2 pv1">read more</a>
         
       </div>
     </div>
@@ -197,13 +192,19 @@ conda install git pip install git+https://github.
         
         
           <h2 class="f5 fw4 mb4 dib mr3">
+            <a href="/post/%E5%88%A9%E7%94%A8frp%E5%AE%9E%E7%8E%B0%E9%BB%91%E7%BE%A4%E6%99%96%E5%86%85%E7%BD%91%E7%A9%BF%E9%80%8F/" class="link black dim">
+              利用frp实现黑群晖内网穿透
+            </a>
+          </h2>
+        
+          <h2 class="f5 fw4 mb4 dib mr3">
             <a href="/post/%E5%90%89%E5%A4%A7%E6%A0%A1%E5%9B%AD%E7%BD%91%E8%B7%AF%E7%94%B1%E5%99%A8%E9%85%8D%E7%BD%AE/" class="link black dim">
               吉大校园网路由器配置
             </a>
           </h2>
         
           <h2 class="f5 fw4 mb4 dib mr3">
-            <a href="/post/bugflow/" class="link black dim">
+            <a href="/post/pythonbugflow/" class="link black dim">
               BugFlow
             </a>
           </h2>
@@ -223,7 +224,7 @@ conda install git pip install git+https://github.
     <footer class="bg-black bottom-0 w-100 pa3" role="contentinfo">
   <div class="flex justify-between">
   <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="https://horizonnn.github.io/" >
-    &copy; 2019 Bridge : you &amp; me
+    &copy; 2020 Bridge : you &amp; me
   </a>
     <div>
 

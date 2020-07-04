@@ -27,11 +27,11 @@
 
     <meta property="og:title" content="在win10下安装gym环境的两种办法" />
 <meta property="og:description" content="Gym是强化学习中一个很重要的python库，里面包含了很多强化学习的环境。但比较可惜的是官方并没有提供Windows平台的支持，这对于习惯了Windows平台工作的强化学习研究人员来说很不方便，所以我找到了两个解决办法。
- 直接在win 10上安装Gym环境 利用WSL( Windows Subsystem for Linux )安装Gym环境  直接在win 10上安装Gym环境 安装 Microsoft Visual C&#43;&#43; 2017 Build Tools for Visual Studio 2017  下载链接 : Visual Studio 安装 Microsoft Visual C&#43;&#43; 2017 Build Tools  在Anaconda中创建python环境并安装相应的packages  在Anaconda中创建python环境
-conda create -n &lt;your_env_name&gt; python=3.7  如果需要在gym中录制视频，则需要安装ffmpeg
+ 直接在win 10上安装Gym环境 利用WSL( Windows Subsystem for Linux )安装Gym环境  直接在win 10上安装Gym环境 安装 Microsoft Visual C&#43;&#43; 2017 Build Tools  下载链接 : Visual Studio 安装 Microsoft Visual C&#43;&#43; 2017 Build Tools  在Anaconda中创建python环境并安装相应的packages  在Anaconda中创建python环境
+conda create -n &lt;your_env_name&gt; python=3.6  如果需要在gym中录制视频，则需要安装ffmpeg
 conda install -c conda-forge ffmpeg  首先需要安装一个空的gym环境，因为在后面安装完全的gym环境的过程中会出现mujoco环境的错误，虽然这不影响其他模块的使用，但会导致gym不会被添加到环境中，也就没有办法import。
-pip install gym  安装pystan是ToyText环境的需要
-conda install pystan  这一步是安装gym环境成功的关键，国外大神kojoley成功地封装了atari模块使得安装这一补丁后，atari环境能够在win 10环境下成功运行
+conda install -c conda-forge gym  安装pystan是ToyText环境的需要
+conda install -c conda-forge pystan  这一步是安装gym环境成功的关键，国外大神kojoley成功地封装了atari模块使得安装这一补丁后，atari环境能够在win 10环境下成功运行
 conda install git pip install git&#43;https://github." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://horizonnn.github.io/post/%E5%9C%A8win10%E4%B8%8B%E5%AE%89%E8%A3%85gym%E7%8E%AF%E5%A2%83%E7%9A%84%E4%B8%A4%E7%A7%8D%E5%8A%9E%E6%B3%95/" />
@@ -39,17 +39,17 @@ conda install git pip install git&#43;https://github." />
 <meta property="article:modified_time" content="2019-11-20T22:23:45+08:00" />
 <meta itemprop="name" content="在win10下安装gym环境的两种办法">
 <meta itemprop="description" content="Gym是强化学习中一个很重要的python库，里面包含了很多强化学习的环境。但比较可惜的是官方并没有提供Windows平台的支持，这对于习惯了Windows平台工作的强化学习研究人员来说很不方便，所以我找到了两个解决办法。
- 直接在win 10上安装Gym环境 利用WSL( Windows Subsystem for Linux )安装Gym环境  直接在win 10上安装Gym环境 安装 Microsoft Visual C&#43;&#43; 2017 Build Tools for Visual Studio 2017  下载链接 : Visual Studio 安装 Microsoft Visual C&#43;&#43; 2017 Build Tools  在Anaconda中创建python环境并安装相应的packages  在Anaconda中创建python环境
-conda create -n &lt;your_env_name&gt; python=3.7  如果需要在gym中录制视频，则需要安装ffmpeg
+ 直接在win 10上安装Gym环境 利用WSL( Windows Subsystem for Linux )安装Gym环境  直接在win 10上安装Gym环境 安装 Microsoft Visual C&#43;&#43; 2017 Build Tools  下载链接 : Visual Studio 安装 Microsoft Visual C&#43;&#43; 2017 Build Tools  在Anaconda中创建python环境并安装相应的packages  在Anaconda中创建python环境
+conda create -n &lt;your_env_name&gt; python=3.6  如果需要在gym中录制视频，则需要安装ffmpeg
 conda install -c conda-forge ffmpeg  首先需要安装一个空的gym环境，因为在后面安装完全的gym环境的过程中会出现mujoco环境的错误，虽然这不影响其他模块的使用，但会导致gym不会被添加到环境中，也就没有办法import。
-pip install gym  安装pystan是ToyText环境的需要
-conda install pystan  这一步是安装gym环境成功的关键，国外大神kojoley成功地封装了atari模块使得安装这一补丁后，atari环境能够在win 10环境下成功运行
+conda install -c conda-forge gym  安装pystan是ToyText环境的需要
+conda install -c conda-forge pystan  这一步是安装gym环境成功的关键，国外大神kojoley成功地封装了atari模块使得安装这一补丁后，atari环境能够在win 10环境下成功运行
 conda install git pip install git&#43;https://github.">
 
 
 <meta itemprop="datePublished" content="2019-11-20T22:23:45&#43;08:00" />
 <meta itemprop="dateModified" content="2019-11-20T22:23:45&#43;08:00" />
-<meta itemprop="wordCount" content="440">
+<meta itemprop="wordCount" content="436">
 
 
 
@@ -57,11 +57,11 @@ conda install git pip install git&#43;https://github.">
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="在win10下安装gym环境的两种办法"/>
 <meta name="twitter:description" content="Gym是强化学习中一个很重要的python库，里面包含了很多强化学习的环境。但比较可惜的是官方并没有提供Windows平台的支持，这对于习惯了Windows平台工作的强化学习研究人员来说很不方便，所以我找到了两个解决办法。
- 直接在win 10上安装Gym环境 利用WSL( Windows Subsystem for Linux )安装Gym环境  直接在win 10上安装Gym环境 安装 Microsoft Visual C&#43;&#43; 2017 Build Tools for Visual Studio 2017  下载链接 : Visual Studio 安装 Microsoft Visual C&#43;&#43; 2017 Build Tools  在Anaconda中创建python环境并安装相应的packages  在Anaconda中创建python环境
-conda create -n &lt;your_env_name&gt; python=3.7  如果需要在gym中录制视频，则需要安装ffmpeg
+ 直接在win 10上安装Gym环境 利用WSL( Windows Subsystem for Linux )安装Gym环境  直接在win 10上安装Gym环境 安装 Microsoft Visual C&#43;&#43; 2017 Build Tools  下载链接 : Visual Studio 安装 Microsoft Visual C&#43;&#43; 2017 Build Tools  在Anaconda中创建python环境并安装相应的packages  在Anaconda中创建python环境
+conda create -n &lt;your_env_name&gt; python=3.6  如果需要在gym中录制视频，则需要安装ffmpeg
 conda install -c conda-forge ffmpeg  首先需要安装一个空的gym环境，因为在后面安装完全的gym环境的过程中会出现mujoco环境的错误，虽然这不影响其他模块的使用，但会导致gym不会被添加到环境中，也就没有办法import。
-pip install gym  安装pystan是ToyText环境的需要
-conda install pystan  这一步是安装gym环境成功的关键，国外大神kojoley成功地封装了atari模块使得安装这一补丁后，atari环境能够在win 10环境下成功运行
+conda install -c conda-forge gym  安装pystan是ToyText环境的需要
+conda install -c conda-forge pystan  这一步是安装gym环境成功的关键，国外大神kojoley成功地封装了atari模块使得安装这一补丁后，atari环境能够在win 10环境下成功运行
 conda install git pip install git&#43;https://github."/>
 
   </head>
@@ -142,7 +142,7 @@ conda install git pip install git&#43;https://github."/>
 
 <h1 id="直接在win-10上安装gym环境">直接在win 10上安装Gym环境</h1>
 
-<h3 id="安装-microsoft-visual-c-2017-build-tools-for-visual-studio-2017">安装 Microsoft Visual C++ 2017 Build Tools for Visual Studio 2017</h3>
+<h3 id="安装-microsoft-visual-c-2017-build-tools">安装 Microsoft Visual C++ 2017 Build Tools</h3>
 
 <ol>
 <li>下载链接 : <a href="https://visualstudio.microsoft.com/downloads/">Visual Studio</a></li>
@@ -154,7 +154,7 @@ conda install git pip install git&#43;https://github."/>
 <ol>
 <li><p>在Anaconda中创建python环境</p>
 
-<pre><code class="language-shell">conda create -n &lt;your_env_name&gt; python=3.7
+<pre><code class="language-shell">conda create -n &lt;your_env_name&gt; python=3.6
 </code></pre></li>
 
 <li><p>如果需要在gym中录制视频，则需要安装ffmpeg</p>
@@ -164,18 +164,18 @@ conda install git pip install git&#43;https://github."/>
 
 <li><p>首先需要安装一个空的gym环境，因为在后面安装完全的gym环境的过程中会出现mujoco环境的错误，虽然这不影响其他模块的使用，但会导致gym不会被添加到环境中，也就没有办法import。</p>
 
-<pre><code class="language-shell">pip install gym
+<pre><code class="language-shell">conda install -c conda-forge gym
 </code></pre></li>
 
 <li><p>安装pystan是ToyText环境的需要</p>
 
-<pre><code class="language-shell">conda install pystan
+<pre><code class="language-shell">conda install -c conda-forge pystan
 </code></pre></li>
 
 <li><p>这一步是安装gym环境成功的关键，国外大神kojoley成功地封装了atari模块使得安装这一补丁后，atari环境能够在win 10环境下成功运行</p>
 
 <pre><code class="language-shell">conda install git
-pip install git+https://github.com/Kojoley/atari-py.git
+pip install git+https://github.com/Kojoley/atari-py.git # 或者 pip install --no-index -f https://github.com/Kojoley/atari-py/releases atari_py
 </code></pre></li>
 
 <li><p>运行这一步是为了安装Box2D环境</p>
@@ -183,6 +183,21 @@ pip install git+https://github.com/Kojoley/atari-py.git
 <pre><code class="language-shell">conda install swig
 pip install Box2D
 </code></pre></li>
+
+<li><p>安装mujoco的依赖</p>
+
+<ul>
+<li><p>下载mujoco的二进制文件并放到对应位置，并设置相应的环境变量，详见<a href="https://github.com/openai/mujoco-py">github</a></p></li>
+
+<li><p>将mujoco的mjkey.txt密钥文件放到对应位置,详见<a href="https://github.com/openai/mujoco-py">github</a></p></li>
+
+<li><p>确保已经安装了windows 10 SDK和windows 8.1 SDK。并且把&rdquo;C:\Program Files (x86)\Wexit()indows Kits\8.1\bin\x86&rdquo;路径 添加到环境变量中。</p></li>
+
+<li><p>安装mujoco_py</p>
+
+<pre><code class="language-shell">python -m pip install -U 'mujoco-py&lt;1.50.2,&gt;=1.50.1'
+</code></pre></li>
+</ul></li>
 
 <li><p>安装完整的gym环境，会有mujoco的错误出现，不过无所谓，不用在意</p>
 
@@ -204,7 +219,7 @@ pip install Box2D
 <h3 id="test">Test</h3>
 
 <ol>
-<li><p>可以运行如下代码来测试</p>
+<li><p>可以运行如下代码来测试Atari环境</p>
 
 <pre><code class="language-python">import gym
    
@@ -285,13 +300,16 @@ source activate &lt;env name&gt;
 
 <p>安装gym</p>
 
-<pre><code class="language-shell">   # 首先安装opengl---gym的需要
+<pre><code class="language-shell">   # 首先安装一下gym的依赖，可能还有其他的，如果出了bug就适当添加就可以了
+   sudo apt-get install cmake
+   # 首先安装opengl---gym的需要
    sudo apt-get install python-opengl
    # 安装pip以便能够安装gym
    sudo apt-get install python3-pip # or python-pip
    # 安装gym
-   pip3 install gym
-   pip3 install gym[atari]
+   # 不要直接使用pip install，这样可能会出现无法import的现象
+   python -m pip install gym
+   python -m pip install gym[atari]
 </code></pre>
 
 <ol>
@@ -305,19 +323,44 @@ source activate &lt;env name&gt;
 <ol>
 <li><p>在win 10 上下载 <a href="https://www.freedesktop.org/wiki/Software/PulseAudio/Ports/Windows/Support/">PulseAudio</a>并解压</p></li>
 
-<li><p>修改文件中的对应内容</p></li>
-</ol>
+<li><p>修改文件中的对应内容</p>
 
-<p>| 文件路径及行数        | 变化 | 内容                                                         |
-   | &mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash; | &mdash;- | &mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash; |
-   | etc\pulse\default.pa  | FROM | load-module module-waveout sink_name=output source_name=input |
-   | 42                    | TO   | load-module module-waveout sink_name=output source_name=input <strong>record=0</strong> |
-   | etc\pulse\default.pa  | FROM | #load-module module-native-protocol-tcp                     |
-   | 61                    | TO   | load-module module-native-protocol-tcp <strong>auth-ip-acl=127.0.0.1 auth-anonymous=1</strong> |
-   | etc\pulse\daemon.conf | FROM | ; exit-idle-time = 20                                        |
-   | 39                    | TO   | exit-idle-time = -1                                          |</p>
+<ul>
+<li><p>将etc\pulse\default.pa文件第32行的内容</p>
 
-<ol>
+<pre><code>load-module module-waveout sink_name=output source_name=input
+</code></pre></li>
+</ul>
+
+<p>改为</p>
+
+<pre><code> load-module module-waveout sink_name=output source_name=input **record=0**
+</code></pre>
+
+<ul>
+<li><p>将etc\pulse\default.pa文件第61行的内容</p>
+
+<pre><code>\#load-module module-native-protocol-tcp
+</code></pre></li>
+</ul>
+
+<p>改为</p>
+
+<pre><code> load-module module-native-protocol-tcp **auth-ip-acl=127.0.0.1 auth-anonymous=1**
+</code></pre>
+
+<ul>
+<li><p>将etc\pulse\daemon.conf文件第39行的内容</p>
+
+<pre><code>; exit-idle-time = 20
+</code></pre></li>
+</ul>
+
+<p>改为</p>
+
+<pre><code> exit-idle-time = -1
+</code></pre></li>
+
 <li><p>在WSL上设置 pulseaudio</p>
 
 <pre><code class="language-shell">sudo add-apt-repository ppa:therealkenc/wsl-pulseaudio
@@ -406,7 +449,7 @@ for k,v in test_envs.items():
     <footer class="bg-black bottom-0 w-100 pa3" role="contentinfo">
   <div class="flex justify-between">
   <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="https://horizonnn.github.io/" >
-    &copy; 2019 Bridge : you &amp; me
+    &copy; 2020 Bridge : you &amp; me
   </a>
     <div>
 

@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    
+    <title>Bridge : you &amp; me  | BugFlow</title>
+    <meta name="viewport" content="width=device-width,minimum-scale=1">
+    <meta name="generator" content="Hugo 0.57.2" />
+    
+    
+      <META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW">
+    
+
+    
+    
+      <link href="/dist/css/app.d98f2eb6bcd1eaedb7edf166bd16af26.css" rel="stylesheet">
+    
+
+    
+
+    
+      
+    
+
+    
+
+    <meta property="og:title" content="BugFlow" />
+<meta property="og:description" content="基础问题 1. AttributeError: module &lsquo;XXX&rsquo; has no attribute &lsquo;xxx&rsquo;  原因：一般module和attribute的名字没有拼错的情况下，出现这类问题通常是因为这个py文件所在的目录中存在与module同名的py文件，导致python的错误调用。
+ 解决办法：更改文件名。
+  2. AttributeError: module &lsquo;XXX&rsquo; has no attribute &lsquo;XXX&rsquo;  原因：一般情况下可能是因为拼写错误导致的改模块下确实没有对应的attribute。但还有另外一种情况是当前运行的python文件目录下有和此module模块重名的python文件，导致运行的python文件优先import了当前目录下的对应文件，所以不存在对应的attribute 解决办法：检查拼写错误或者改变文件名即可  TensorFlow 1. TypeError: Unexpected keyword argument passed to optimizer: name Traceback (most recent call last): File &quot;visualizing_the_convnet.py&quot;, line 3, in &lt;module&gt; model = load_model(&#39;cats_and_dogs_small_2.h5&#39;) ... TypeError: Unexpected keyword argument passed to optimizer: name   原因：这部分代码加载了H5文件保存的keras Model，但是由于保存Model和加载Model的keras的版本不一致，所以会产生这个问题
+ 解决办法：保持加载Model和保存Model的keras版本一致
+  2. failed to create cublas handle: CUBLAS_STATUS_ALLOC_FAILED  原因：申请GPU内存，空间不够被拒绝" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://horizonnn.github.io/post/pythonbugflow/" />
+<meta property="article:published_time" content="2019-08-25T21:21:34+08:00" />
+<meta property="article:modified_time" content="2019-08-25T21:21:34+08:00" />
+<meta itemprop="name" content="BugFlow">
+<meta itemprop="description" content="基础问题 1. AttributeError: module &lsquo;XXX&rsquo; has no attribute &lsquo;xxx&rsquo;  原因：一般module和attribute的名字没有拼错的情况下，出现这类问题通常是因为这个py文件所在的目录中存在与module同名的py文件，导致python的错误调用。
+ 解决办法：更改文件名。
+  2. AttributeError: module &lsquo;XXX&rsquo; has no attribute &lsquo;XXX&rsquo;  原因：一般情况下可能是因为拼写错误导致的改模块下确实没有对应的attribute。但还有另外一种情况是当前运行的python文件目录下有和此module模块重名的python文件，导致运行的python文件优先import了当前目录下的对应文件，所以不存在对应的attribute 解决办法：检查拼写错误或者改变文件名即可  TensorFlow 1. TypeError: Unexpected keyword argument passed to optimizer: name Traceback (most recent call last): File &quot;visualizing_the_convnet.py&quot;, line 3, in &lt;module&gt; model = load_model(&#39;cats_and_dogs_small_2.h5&#39;) ... TypeError: Unexpected keyword argument passed to optimizer: name   原因：这部分代码加载了H5文件保存的keras Model，但是由于保存Model和加载Model的keras的版本不一致，所以会产生这个问题
+ 解决办法：保持加载Model和保存Model的keras版本一致
+  2. failed to create cublas handle: CUBLAS_STATUS_ALLOC_FAILED  原因：申请GPU内存，空间不够被拒绝">
+
+
+<meta itemprop="datePublished" content="2019-08-25T21:21:34&#43;08:00" />
+<meta itemprop="dateModified" content="2019-08-25T21:21:34&#43;08:00" />
+<meta itemprop="wordCount" content="330">
+
+
+
+<meta itemprop="keywords" content="" />
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="BugFlow"/>
+<meta name="twitter:description" content="基础问题 1. AttributeError: module &lsquo;XXX&rsquo; has no attribute &lsquo;xxx&rsquo;  原因：一般module和attribute的名字没有拼错的情况下，出现这类问题通常是因为这个py文件所在的目录中存在与module同名的py文件，导致python的错误调用。
+ 解决办法：更改文件名。
+  2. AttributeError: module &lsquo;XXX&rsquo; has no attribute &lsquo;XXX&rsquo;  原因：一般情况下可能是因为拼写错误导致的改模块下确实没有对应的attribute。但还有另外一种情况是当前运行的python文件目录下有和此module模块重名的python文件，导致运行的python文件优先import了当前目录下的对应文件，所以不存在对应的attribute 解决办法：检查拼写错误或者改变文件名即可  TensorFlow 1. TypeError: Unexpected keyword argument passed to optimizer: name Traceback (most recent call last): File &quot;visualizing_the_convnet.py&quot;, line 3, in &lt;module&gt; model = load_model(&#39;cats_and_dogs_small_2.h5&#39;) ... TypeError: Unexpected keyword argument passed to optimizer: name   原因：这部分代码加载了H5文件保存的keras Model，但是由于保存Model和加载Model的keras的版本不一致，所以会产生这个问题
+ 解决办法：保持加载Model和保存Model的keras版本一致
+  2. failed to create cublas handle: CUBLAS_STATUS_ALLOC_FAILED  原因：申请GPU内存，空间不够被拒绝"/>
+
+  </head>
+
+  <body class="ma0 avenir bg-near-white">
+
+    
+   
+  
+
+  <header>
+    <div class="bg-black">
+      <nav class="pv3 ph3 ph4-ns" role="navigation">
+  <div class="flex-l justify-between items-center center">
+    <a href="https://horizonnn.github.io/" class="f3 fw2 hover-white no-underline white-90 dib">
+      Bridge : you &amp; me
+    </a>
+    <div class="flex-l items-center">
+      
+
+      
+        <ul class="pl0 mr3">
+          
+          <li class="list f5 f4-ns fw4 dib pr3">
+            <a class="hover-white no-underline white-90" href="/post/" title="Posts page">
+              Posts
+            </a>
+          </li>
+          
+        </ul>
+      
+      
+
+
+
+
+
+
+
+
+
+
+
+    </div>
+  </div>
+</nav>
+
+    </div>
+  </header>
+
+
+
+    <main class="pb7" role="main">
+      
+  
+  <article class="flex-l flex-wrap justify-between mw8 center ph3">
+
+    <header class="mt4 w-100">
+      <p class="f6 b helvetica tracked">
+          
+        POSTS
+      </p>
+      <h1 class="f1 athelas mb1">BugFlow</h1>
+      
+      <time class="f6 mv4 dib tracked" datetime="2019-08-25T21:21:34&#43;08:00">August 25, 2019</time>
+      
+      
+    </header>
+
+    <section class="nested-copy-line-height lh-copy serif f4 nested-links nested-img mid-gray pr4-l w-two-thirds-l">
+
+<h1 id="基础问题">基础问题</h1>
+
+<h3 id="1-attributeerror-module-xxx-has-no-attribute-xxx">1. AttributeError: module &lsquo;XXX&rsquo; has no attribute &lsquo;xxx&rsquo;</h3>
+
+<ul>
+<li><p>原因：一般module和attribute的名字没有拼错的情况下，出现这类问题通常是因为这个py文件所在的目录中存在与module同名的py文件，导致python的错误调用。</p></li>
+
+<li><p>解决办法：更改文件名。</p></li>
+</ul>
+
+<h3 id="2-attributeerror-module-xxx-has-no-attribute-xxx">2. AttributeError: module &lsquo;XXX&rsquo; has no attribute &lsquo;XXX&rsquo;</h3>
+
+<ul>
+<li>原因：一般情况下可能是因为拼写错误导致的改模块下确实没有对应的attribute。但还有另外一种情况是当前运行的python文件目录下有和此module模块重名的python文件，导致运行的python文件优先import了当前目录下的对应文件，所以不存在对应的attribute</li>
+<li>解决办法：检查拼写错误或者改变文件名即可</li>
+</ul>
+
+<h1 id="tensorflow">TensorFlow</h1>
+
+<h3 id="1-typeerror-unexpected-keyword-argument-passed-to-optimizer-name">1. TypeError: Unexpected keyword argument passed to optimizer: name</h3>
+
+<pre><code class="language-shell">Traceback (most recent call last):
+  File &quot;visualizing_the_convnet.py&quot;, line 3, in &lt;module&gt;
+    model = load_model('cats_and_dogs_small_2.h5')
+  ...
+TypeError: Unexpected keyword argument passed to optimizer: name
+</code></pre>
+
+<ul>
+<li><p>原因：这部分代码加载了H5文件保存的keras Model，但是由于保存Model和加载Model的keras的版本不一致，所以会产生这个问题</p></li>
+
+<li><p>解决办法：保持加载Model和保存Model的keras版本一致</p></li>
+</ul>
+
+<h3 id="2-failed-to-create-cublas-handle-cublas-status-alloc-failed">2. failed to create cublas handle: CUBLAS_STATUS_ALLOC_FAILED</h3>
+
+<ul>
+<li><p>原因：申请GPU内存，空间不够被拒绝</p></li>
+
+<li><p>解决办法：在代码中加入动态申请内存的显式设定</p>
+
+<pre><code class="language-python">config = tf.ConfigProto()
+config.gpu_options.allow_growth = True
+session = tf.Session(config=config)
+</code></pre></li>
+</ul>
+
+<h1 id="pytorch">Pytorch</h1>
+
+<h3 id="1-runtimeerror-expected-object-of-scalar-type-double-but-got-scalar-type-float-for-argument-2-weight-in-call-to-thnn-conv2d-forward">1. RuntimeError: Expected object of scalar type Double but got scalar type Float for argument #2 &lsquo;weight&rsquo; in call to _thnn_conv2d_forward</h3>
+
+<ul>
+<li><p>原因：错误提示其实很明显了，就是对应对象的“weight”参数类型错误。一般来说是因为将double(float64)类型的Tensor传入了定义的网络中，而在pytorch中定义网络权重的默认类型都是float32，所以会导致这一错误</p></li>
+
+<li><p>解决办法：将input数据和network model权重设置为统一类型即可
+To convert your inputs to float (recommended):</p>
+
+<pre><code class="language-python">inputs, labels = data
+inputs = inputs.float()
+labels = labels.float()
+inputs, labels = Variable(inputs), Variable(labels)
+</code></pre></li>
+</ul>
+
+<p>To convert your model to double:</p>
+
+<pre><code class="language-python">  model = Net()
+  model.double()
+</code></pre>
+
+<p>I recommend using floats instead of doubles. It’s the default tensor type in PyTorch. On GPUs, float calculations are much faster than double calculations.</p>
+
+<h3 id="2-the-derivative-for-target-is-not-implemented">2. the derivative for target is not implemented</h3>
+
+<ul>
+<li><p>原因：在定义损失函数时，作为target的参数依然存在梯度，即其requires_grad为True。这通常在训练某个神经网络子网络的是偶出现。</p></li>
+
+<li><p>解决办法：将设置为target的参数应用一下detach函数再传入。</p>
+
+<pre><code>target_ = target.detach()
+loss = crieterion(y, target_)
+</code></pre></li>
+</ul>
+
+<h1 id="numpy">numpy</h1>
+
+<h3 id="1-valueerror-setting-an-array-element-with-sequence">1. ValueError: setting an array element with sequence</h3>
+
+<ul>
+<li><p>原因：numpy可以通过并行的方式加速向量间的运算，但是它要求向量中的元素应该是同一类型，若是不同类型，则进一步操作容易出现此类错误</p></li>
+
+<li><p>解决办法：若是一定要让numpy中元素分别是不同类型的，则可以加一个object的type标识</p>
+
+<pre><code class="language-python">x = np.array([5, [1,2,3], &quot;123&quot;])
+</code></pre></li>
+</ul>
+
+<h1 id="matplotlib">matplotlib</h1>
+
+<h3 id="1-调用imshow-显示出的图像全白">1. 调用imshow()显示出的图像全白</h3>
+
+<ul>
+<li><p>原因：imshow可以接受float或者int类型的参数，其有效范围分别为[0,1]和[0,255]。当参数类型为float时，imshow会默认将其裁剪到[0,1]的区间内。所以通常是输入了按照[0,255]的区间范围的float参数会出现上述问题</p></li>
+
+<li><p>解决办法：将float参数手动转换到[0,1]区间（x = x / 255），或者将其转换为int类型（x = x.astype(&lsquo;int32&rsquo;)）。</p></li>
+</ul>
+
+<h1 id="anaconda">Anaconda</h1>
+
+<h3 id="1-condahttperror-sslerror">1. CondaHTTPError  SSLError</h3>
+
+<p>Collecting package metadata (current_repodata.json): failed</p>
+
+<p>CondaHTTPError: HTTP 000 CONNECTION FAILED for url <a href="https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud/conda-forge/win-64/current_repodata.json">https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud/conda-forge/win-64/current_repodata.json</a>
+Elapsed: -</p>
+
+<p>An HTTP error occurred when trying to retrieve this URL.
+HTTP errors are often intermittent, and a simple retry will get you on your way.
+SSLError(MaxRetryError(&lsquo;HTTPSConnectionPool(host=\&lsquo;mirrors.tuna.tsinghua.edu.cn\&lsquo;, port=443): Max retries exceeded with url: /anaconda/cloud/conda-forge/win-64/current_repodata.json (Caused by SSLError(&ldquo;Can\&rsquo;t connect to HTTPS URL because the SSL module is not available.&ldquo;))&lsquo;))</p>
+
+<p>PS C:\WINDOWS\system32&gt; conda create -n rl-tf python=3.6
+Collecting package metadata (current_repodata.json): done
+Solving environment: done</p>
+
+<ul>
+<li>解决办法：安装openssl并将其添加到环境变量中。</li>
+</ul>
+
+<h3 id="2-unsatisfiableerror">2. UnsatisfiableError</h3>
+
+<ul>
+<li><p>错误：</p>
+
+<pre><code>UnsatisfiableError: The following specifications were found to be incompatible with each other:
+Output in format: Requested package -&gt; Available versionsThe following specifications were found to be incompatible with your CUDA driver:
+feature:/win-64::__cuda==11.0=0
+feature:|@/win-64::__cuda==11.0=0
+Your installed CUDA driver is: 11.0
+</code></pre></li>
+
+<li><p>原因：可能是conda源的问题</p></li>
+
+<li><p>解决办法：采用<code>conda install -c conda-forge &lt;package_name&gt;</code>的安装方式</p></li>
+</ul>
+<ul class="pa0">
+  
+</ul>
+<div class="mt6">
+      
+      
+      </div>
+    </section>
+
+    <aside class="w-30-l mt6-l">
+
+
+
+
+</aside>
+
+  </article>
+
+    </main>
+    <footer class="bg-black bottom-0 w-100 pa3" role="contentinfo">
+  <div class="flex justify-between">
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="https://horizonnn.github.io/" >
+    &copy; 2020 Bridge : you &amp; me
+  </a>
+    <div>
+
+
+
+
+
+
+
+
+
+
+</div>
+  </div>
+</footer>
+
+    
+
+  <script src="/dist/js/app.3fc0f988d21662902933.js"></script>
+
+
+  </body>
+</html>
