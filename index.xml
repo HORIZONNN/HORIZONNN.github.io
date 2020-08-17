@@ -6,10 +6,19 @@
     <description>Recent content on Bridge : you &amp; me</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 04 Jul 2020 11:50:58 +0800</lastBuildDate>
+    <lastBuildDate>Mon, 17 Aug 2020 10:48:11 +0800</lastBuildDate>
     
 	<atom:link href="https://horizonnn.github.io/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>强化学习重要参考资源</title>
+      <link>https://horizonnn.github.io/post/%E5%BC%BA%E5%8C%96%E5%AD%A6%E4%B9%A0%E9%87%8D%E8%A6%81%E5%8F%82%E8%80%83%E8%B5%84%E6%BA%90/</link>
+      <pubDate>Mon, 17 Aug 2020 10:48:11 +0800</pubDate>
+      
+      <guid>https://horizonnn.github.io/post/%E5%BC%BA%E5%8C%96%E5%AD%A6%E4%B9%A0%E9%87%8D%E8%A6%81%E5%8F%82%E8%80%83%E8%B5%84%E6%BA%90/</guid>
+      <description> 强化学习中Ornstein-Uhlenbeck噪声是鸡肋吗？  </description>
+    </item>
     
     <item>
       <title>CBugFlow</title>
