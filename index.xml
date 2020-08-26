@@ -6,10 +6,21 @@
     <description>Recent content on Bridge : you &amp; me</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 17 Aug 2020 10:48:11 +0800</lastBuildDate>
+    <lastBuildDate>Wed, 26 Aug 2020 17:27:58 +0800</lastBuildDate>
     
 	<atom:link href="https://horizonnn.github.io/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Python常查问题</title>
+      <link>https://horizonnn.github.io/post/python%E5%B8%B8%E6%9F%A5%E9%97%AE%E9%A2%98/</link>
+      <pubDate>Wed, 26 Aug 2020 17:27:58 +0800</pubDate>
+      
+      <guid>https://horizonnn.github.io/post/python%E5%B8%B8%E6%9F%A5%E9%97%AE%E9%A2%98/</guid>
+      <description> Seleunium 不打印chromedriver的日志信息 from selenium import webdriver chrome_options = Options() chrome_options.add_experimental_option(&#39;excludeSwitches&#39;, [&#39;enable-logging&#39;]) chrome_options.add_argument(&#39;--headless&#39;) browser = webdriver.Chrome(chrome_options=chrome_options)  使用chrome/firefox的已存在的cookie访问网站 chrome
+from selenium import webdriver profile_dir=r&amp;quot;C:\Users\leonyu\AppData\Local\Google\Chrome\User Data&amp;quot; # 对应你的chrome的用户数据存放路径 chrome_options=webdriver.ChromeOptions() chrome_options.add_argument(&amp;quot;user-data-dir=&amp;quot;+os.path.abspath(profile_dir)) browser=webdriver.Chrome(chrome_options=chrome_options)  firefox
+from selenium import webdriver fp=webdriver.FirefoxProfile(r&#39;C:\Users\leony\AppData\Roaming\Mozilla\Firefox\Profiles\btnc8mzb.default&#39;) browser=webdriver.Firefox(fp)  </description>
+    </item>
     
     <item>
       <title>强化学习重要参考资源</title>

@@ -33,7 +33,7 @@
 <meta property="og:type" content="website" />
 <meta property="og:url" content="https://horizonnn.github.io/post/" />
 
-<meta property="og:updated_time" content="2020-08-17T10:48:11+08:00" />
+<meta property="og:updated_time" content="2020-08-26T17:27:58+08:00" />
 <meta itemprop="name" content="Posts">
 <meta itemprop="description" content="The last theme you&#39;ll ever need. Maybe.">
 
@@ -110,6 +110,32 @@
             <div class="mb3 pa4 mid-gray overflow-hidden">
     
       <div class="f6">
+        November 20, 2019
+      </div>
+    
+    <h1 class="f3 near-black">
+      <a href="/post/%E5%9C%A8win10%E4%B8%8B%E5%AE%89%E8%A3%85gym%E7%8E%AF%E5%A2%83%E7%9A%84%E4%B8%A4%E7%A7%8D%E5%8A%9E%E6%B3%95/" class="link black dim">
+        在win10下安装gym环境的两种办法
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+      Gym是强化学习中一个很重要的python库，里面包含了很多强化学习的环境。但比较可惜的是官方并没有提供Windows平台的支持，这对于习惯了Windows平台工作的强化学习研究人员来说很不方便，所以我找到了两个解决办法。
+ 直接在win 10上安装Gym环境 利用WSL( Windows Subsystem for Linux )安装Gym环境  直接在win 10上安装Gym环境 安装 Microsoft Visual C++ 2017 Build Tools  下载链接 : Visual Studio 安装 Microsoft Visual C++ 2017 Build Tools  在Anaconda中创建python环境并安装相应的packages  在Anaconda中创建python环境
+conda create -n &lt;your_env_name&gt; python=3.6  如果需要在gym中录制视频，则需要安装ffmpeg
+conda install -c conda-forge ffmpeg  首先需要安装一个空的gym环境，因为在后面安装完全的gym环境的过程中会出现mujoco环境的错误，虽然这不影响其他模块的使用，但会导致gym不会被添加到环境中，也就没有办法import。
+conda install -c conda-forge gym  安装pystan是ToyText环境的需要
+conda install -c conda-forge pystan  这一步是安装gym环境成功的关键，国外大神kojoley成功地封装了atari模块使得安装这一补丁后，atari环境能够在win 10环境下成功运行
+conda install git pip install git+https://github.
+    </div>
+  </div>
+
+        </div>
+      
+        <div class="relative w-100 w-30-l mb4 bg-white">
+          
+            <div class="mb3 pa4 mid-gray overflow-hidden">
+    
+      <div class="f6">
         September 28, 2019
       </div>
     
@@ -162,30 +188,6 @@ nohup python newclient.py &gt;/dev/null 2&gt;&amp;1   此时可以连上路由�
 
         </div>
       
-        <div class="relative w-100 w-30-l mb4 bg-white">
-          
-            <div class="mb3 pa4 mid-gray overflow-hidden">
-    
-      <div class="f6">
-        August 25, 2019
-      </div>
-    
-    <h1 class="f3 near-black">
-      <a href="/post/pythonbugflow/" class="link black dim">
-        BugFlow
-      </a>
-    </h1>
-    <div class="nested-links f5 lh-copy nested-copy-line-height">
-      基础问题 1. AttributeError: module &lsquo;XXX&rsquo; has no attribute &lsquo;xxx&rsquo;  原因：一般module和attribute的名字没有拼错的情况下，出现这类问题通常是因为这个py文件所在的目录中存在与module同名的py文件，导致python的错误调用。
- 解决办法：更改文件名。
-  2. AttributeError: module &lsquo;XXX&rsquo; has no attribute &lsquo;XXX&rsquo;  原因：一般情况下可能是因为拼写错误导致的改模块下确实没有对应的attribute。但还有另外一种情况是当前运行的python文件目录下有和此module模块重名的python文件，导致运行的python文件优先import了当前目录下的对应文件，所以不存在对应的attribute 解决办法：检查拼写错误或者改变文件名即可  TensorFlow 1. TypeError: Unexpected keyword argument passed to optimizer: name Traceback (most recent call last): File &quot;visualizing_the_convnet.py&quot;, line 3, in &lt;module&gt; model = load_model('cats_and_dogs_small_2.h5') ... TypeError: Unexpected keyword argument passed to optimizer: name   原因：这部分代码加载了H5文件保存的keras Model，但是由于保存Model和加载Model的keras的版本不一致，所以会产生这个问题
- 解决办法：保持加载Model和保存Model的keras版本一致
-  2. failed to create cublas handle: CUBLAS_STATUS_ALLOC_FAILED  原因：申请GPU内存，空间不够被拒绝
-    </div>
-  </div>
-
-        </div>
-      
     </aside>
     
 
@@ -223,12 +225,23 @@ nohup python newclient.py &gt;/dev/null 2&gt;&amp;1   此时可以连上路由�
     <li class="page-item active"><a class="page-link" href="/post/page/2/">2</a></li>
     
     
-    <li class="page-item disabled">
-    <a  class="page-link" aria-label="Next"><span aria-hidden="true">&raquo;</span></a>
+    
+    
+    
+    
+        
+        
+    
+    
+    <li class="page-item"><a class="page-link" href="/post/page/3/">3</a></li>
+    
+    
+    <li class="page-item">
+    <a href="/post/page/3/" class="page-link" aria-label="Next"><span aria-hidden="true">&raquo;</span></a>
     </li>
     
     <li class="page-item">
-        <a href="/post/page/2/" class="page-link" aria-label="Last"><span aria-hidden="true">&raquo;&raquo;</span></a>
+        <a href="/post/page/3/" class="page-link" aria-label="Last"><span aria-hidden="true">&raquo;&raquo;</span></a>
     </li>
     
 </ul>

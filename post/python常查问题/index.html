@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    
+    <title>Bridge : you &amp; me  | Python常查问题</title>
+    <meta name="viewport" content="width=device-width,minimum-scale=1">
+    <meta name="generator" content="Hugo 0.57.2" />
+    
+    
+      <META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW">
+    
+
+    
+    
+      <link href="/dist/css/app.d98f2eb6bcd1eaedb7edf166bd16af26.css" rel="stylesheet">
+    
+
+    
+
+    
+      
+    
+
+    
+
+    <meta property="og:title" content="Python常查问题" />
+<meta property="og:description" content=" Seleunium 不打印chromedriver的日志信息 from selenium import webdriver chrome_options = Options() chrome_options.add_experimental_option(&#39;excludeSwitches&#39;, [&#39;enable-logging&#39;]) chrome_options.add_argument(&#39;--headless&#39;) browser = webdriver.Chrome(chrome_options=chrome_options)  使用chrome/firefox的已存在的cookie访问网站 chrome
+from selenium import webdriver profile_dir=r&quot;C:\Users\leonyu\AppData\Local\Google\Chrome\User Data&quot; # 对应你的chrome的用户数据存放路径 chrome_options=webdriver.ChromeOptions() chrome_options.add_argument(&quot;user-data-dir=&quot;&#43;os.path.abspath(profile_dir)) browser=webdriver.Chrome(chrome_options=chrome_options)  firefox
+from selenium import webdriver fp=webdriver.FirefoxProfile(r&#39;C:\Users\leony\AppData\Roaming\Mozilla\Firefox\Profiles\btnc8mzb.default&#39;) browser=webdriver.Firefox(fp)  " />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://horizonnn.github.io/post/python%E5%B8%B8%E6%9F%A5%E9%97%AE%E9%A2%98/" />
+<meta property="article:published_time" content="2020-08-26T17:27:58+08:00" />
+<meta property="article:modified_time" content="2020-08-26T17:27:58+08:00" />
+<meta itemprop="name" content="Python常查问题">
+<meta itemprop="description" content=" Seleunium 不打印chromedriver的日志信息 from selenium import webdriver chrome_options = Options() chrome_options.add_experimental_option(&#39;excludeSwitches&#39;, [&#39;enable-logging&#39;]) chrome_options.add_argument(&#39;--headless&#39;) browser = webdriver.Chrome(chrome_options=chrome_options)  使用chrome/firefox的已存在的cookie访问网站 chrome
+from selenium import webdriver profile_dir=r&quot;C:\Users\leonyu\AppData\Local\Google\Chrome\User Data&quot; # 对应你的chrome的用户数据存放路径 chrome_options=webdriver.ChromeOptions() chrome_options.add_argument(&quot;user-data-dir=&quot;&#43;os.path.abspath(profile_dir)) browser=webdriver.Chrome(chrome_options=chrome_options)  firefox
+from selenium import webdriver fp=webdriver.FirefoxProfile(r&#39;C:\Users\leony\AppData\Roaming\Mozilla\Firefox\Profiles\btnc8mzb.default&#39;) browser=webdriver.Firefox(fp)  ">
+
+
+<meta itemprop="datePublished" content="2020-08-26T17:27:58&#43;08:00" />
+<meta itemprop="dateModified" content="2020-08-26T17:27:58&#43;08:00" />
+<meta itemprop="wordCount" content="35">
+
+
+
+<meta itemprop="keywords" content="" />
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Python常查问题"/>
+<meta name="twitter:description" content=" Seleunium 不打印chromedriver的日志信息 from selenium import webdriver chrome_options = Options() chrome_options.add_experimental_option(&#39;excludeSwitches&#39;, [&#39;enable-logging&#39;]) chrome_options.add_argument(&#39;--headless&#39;) browser = webdriver.Chrome(chrome_options=chrome_options)  使用chrome/firefox的已存在的cookie访问网站 chrome
+from selenium import webdriver profile_dir=r&quot;C:\Users\leonyu\AppData\Local\Google\Chrome\User Data&quot; # 对应你的chrome的用户数据存放路径 chrome_options=webdriver.ChromeOptions() chrome_options.add_argument(&quot;user-data-dir=&quot;&#43;os.path.abspath(profile_dir)) browser=webdriver.Chrome(chrome_options=chrome_options)  firefox
+from selenium import webdriver fp=webdriver.FirefoxProfile(r&#39;C:\Users\leony\AppData\Roaming\Mozilla\Firefox\Profiles\btnc8mzb.default&#39;) browser=webdriver.Firefox(fp)  "/>
+
+  </head>
+
+  <body class="ma0 avenir bg-near-white">
+
+    
+   
+  
+
+  <header>
+    <div class="bg-black">
+      <nav class="pv3 ph3 ph4-ns" role="navigation">
+  <div class="flex-l justify-between items-center center">
+    <a href="https://horizonnn.github.io/" class="f3 fw2 hover-white no-underline white-90 dib">
+      Bridge : you &amp; me
+    </a>
+    <div class="flex-l items-center">
+      
+
+      
+        <ul class="pl0 mr3">
+          
+          <li class="list f5 f4-ns fw4 dib pr3">
+            <a class="hover-white no-underline white-90" href="/post/" title="Posts page">
+              Posts
+            </a>
+          </li>
+          
+        </ul>
+      
+      
+
+
+
+
+
+
+
+
+
+
+
+    </div>
+  </div>
+</nav>
+
+    </div>
+  </header>
+
+
+
+    <main class="pb7" role="main">
+      
+  
+  <article class="flex-l flex-wrap justify-between mw8 center ph3">
+
+    <header class="mt4 w-100">
+      <p class="f6 b helvetica tracked">
+          
+        POSTS
+      </p>
+      <h1 class="f1 athelas mb1">Python常查问题</h1>
+      
+      <time class="f6 mv4 dib tracked" datetime="2020-08-26T17:27:58&#43;08:00">August 26, 2020</time>
+      
+      
+    </header>
+
+    <section class="nested-copy-line-height lh-copy serif f4 nested-links nested-img mid-gray pr4-l w-two-thirds-l">
+
+<h1 id="seleunium">Seleunium</h1>
+
+<h3 id="不打印chromedriver的日志信息">不打印chromedriver的日志信息</h3>
+
+<pre><code class="language-python">from selenium import webdriver
+chrome_options = Options()
+chrome_options.add_experimental_option('excludeSwitches', ['enable-logging'])
+chrome_options.add_argument('--headless')
+browser = webdriver.Chrome(chrome_options=chrome_options)
+</code></pre>
+
+<h3 id="使用chrome-firefox的已存在的cookie访问网站">使用chrome/firefox的已存在的cookie访问网站</h3>
+
+<p>chrome</p>
+
+<pre><code class="language-python">from selenium import webdriver
+profile_dir=r&quot;C:\Users\leonyu\AppData\Local\Google\Chrome\User Data&quot;    # 对应你的chrome的用户数据存放路径  
+chrome_options=webdriver.ChromeOptions()  
+chrome_options.add_argument(&quot;user-data-dir=&quot;+os.path.abspath(profile_dir))  
+  
+browser=webdriver.Chrome(chrome_options=chrome_options)  
+</code></pre>
+
+<p>firefox</p>
+
+<pre><code class="language-python">from selenium import webdriver
+fp=webdriver.FirefoxProfile(r'C:\Users\leony\AppData\Roaming\Mozilla\Firefox\Profiles\btnc8mzb.default')  
+browser=webdriver.Firefox(fp)  
+</code></pre>
+<ul class="pa0">
+  
+</ul>
+<div class="mt6">
+      
+      
+      </div>
+    </section>
+
+    <aside class="w-30-l mt6-l">
+
+
+
+
+</aside>
+
+  </article>
+
+    </main>
+    <footer class="bg-black bottom-0 w-100 pa3" role="contentinfo">
+  <div class="flex justify-between">
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="https://horizonnn.github.io/" >
+    &copy; 2020 Bridge : you &amp; me
+  </a>
+    <div>
+
+
+
+
+
+
+
+
+
+
+</div>
+  </div>
+</footer>
+
+    
+
+  <script src="/dist/js/app.3fc0f988d21662902933.js"></script>
+
+
+  </body>
+</html>

@@ -110,64 +110,20 @@
             <div class="mb3 pa4 mid-gray overflow-hidden">
     
       <div class="f6">
-        August 26, 2020
+        August 25, 2019
       </div>
     
     <h1 class="f3 near-black">
-      <a href="/post/python%E5%B8%B8%E6%9F%A5%E9%97%AE%E9%A2%98/" class="link black dim">
-        Python常查问题
+      <a href="/post/pythonbugflow/" class="link black dim">
+        BugFlow
       </a>
     </h1>
     <div class="nested-links f5 lh-copy nested-copy-line-height">
-       Seleunium 不打印chromedriver的日志信息 from selenium import webdriver chrome_options = Options() chrome_options.add_experimental_option('excludeSwitches', ['enable-logging']) chrome_options.add_argument('--headless') browser = webdriver.Chrome(chrome_options=chrome_options)  使用chrome/firefox的已存在的cookie访问网站 chrome
-from selenium import webdriver profile_dir=r&quot;C:\Users\leonyu\AppData\Local\Google\Chrome\User Data&quot; # 对应你的chrome的用户数据存放路径 chrome_options=webdriver.ChromeOptions() chrome_options.add_argument(&quot;user-data-dir=&quot;+os.path.abspath(profile_dir)) browser=webdriver.Chrome(chrome_options=chrome_options)  firefox
-from selenium import webdriver fp=webdriver.FirefoxProfile(r'C:\Users\leony\AppData\Roaming\Mozilla\Firefox\Profiles\btnc8mzb.default') browser=webdriver.Firefox(fp)  
-    </div>
-  </div>
-
-        </div>
-      
-        <div class="relative w-100 w-30-l mb4 bg-white">
-          
-            <div class="mb3 pa4 mid-gray overflow-hidden">
-    
-      <div class="f6">
-        August 17, 2020
-      </div>
-    
-    <h1 class="f3 near-black">
-      <a href="/post/%E5%BC%BA%E5%8C%96%E5%AD%A6%E4%B9%A0%E9%87%8D%E8%A6%81%E5%8F%82%E8%80%83%E8%B5%84%E6%BA%90/" class="link black dim">
-        强化学习重要参考资源
-      </a>
-    </h1>
-    <div class="nested-links f5 lh-copy nested-copy-line-height">
-       概述  David Sliver强化学习视频十讲 《Reinforcement Learning》书籍  博文  强化学习中Ornstein-Uhlenbeck噪声是鸡肋吗？  
-    </div>
-  </div>
-
-        </div>
-      
-        <div class="relative w-100 w-30-l mb4 bg-white">
-          
-            <div class="mb3 pa4 mid-gray overflow-hidden">
-    
-      <div class="f6">
-        July 4, 2020
-      </div>
-    
-    <h1 class="f3 near-black">
-      <a href="/post/cbugflow/" class="link black dim">
-        CBugFlow
-      </a>
-    </h1>
-    <div class="nested-links f5 lh-copy nested-copy-line-height">
-       编译问题 1. fatal error C1083: 无法打开包括文件: “basetsd.h”: No such file or directory  错误：
-fatal error C1083: 无法打开包括文件: “basetsd.h”: No such file or directory  原因：缺少basetsd.h文件
- 解决办法：安装windows 10 SDK文件即可解决
-  2. LINK : fatal error LNK1158: cannot run &lsquo;rc.exe&rsquo;  错误
-LINK : fatal error LNK1158: cannot run 'rc.exe'  原因：在PATH所提供的环境中搜索不到rc.exe程序
- 解决办法：安装winsows 8.1 SDK，并将路径&rdquo;C:\Program Files (x86)\Wexit()indows Kits\8.1\bin\x86&rdquo;路径 添加到环境变量中。
-  
+      基础问题 1. AttributeError: module &lsquo;XXX&rsquo; has no attribute &lsquo;xxx&rsquo;  原因：一般module和attribute的名字没有拼错的情况下，出现这类问题通常是因为这个py文件所在的目录中存在与module同名的py文件，导致python的错误调用。
+ 解决办法：更改文件名。
+  2. AttributeError: module &lsquo;XXX&rsquo; has no attribute &lsquo;XXX&rsquo;  原因：一般情况下可能是因为拼写错误导致的改模块下确实没有对应的attribute。但还有另外一种情况是当前运行的python文件目录下有和此module模块重名的python文件，导致运行的python文件优先import了当前目录下的对应文件，所以不存在对应的attribute 解决办法：检查拼写错误或者改变文件名即可  TensorFlow 1. TypeError: Unexpected keyword argument passed to optimizer: name Traceback (most recent call last): File &quot;visualizing_the_convnet.py&quot;, line 3, in &lt;module&gt; model = load_model('cats_and_dogs_small_2.h5') ... TypeError: Unexpected keyword argument passed to optimizer: name   原因：这部分代码加载了H5文件保存的keras Model，但是由于保存Model和加载Model的keras的版本不一致，所以会产生这个问题
+ 解决办法：保持加载Model和保存Model的keras版本一致
+  2. failed to create cublas handle: CUBLAS_STATUS_ALLOC_FAILED  原因：申请GPU内存，空间不够被拒绝
     </div>
   </div>
 
@@ -182,8 +138,8 @@ LINK : fatal error LNK1158: cannot run 'rc.exe'  原因：在PATH所提供的环
         <a href="/post/" class="page-link" aria-label="First"><span aria-hidden="true">&laquo;&laquo;</span></a>
     </li>
     
-    <li class="page-item disabled">
-    <a  class="page-link" aria-label="Previous"><span aria-hidden="true">&laquo;</span></a>
+    <li class="page-item">
+    <a href="/post/page/2/" class="page-link" aria-label="Previous"><span aria-hidden="true">&laquo;</span></a>
     </li>
     
     
@@ -196,7 +152,7 @@ LINK : fatal error LNK1158: cannot run 'rc.exe'  原因：在PATH所提供的环
         
     
     
-    <li class="page-item active"><a class="page-link" href="/post/">1</a></li>
+    <li class="page-item"><a class="page-link" href="/post/">1</a></li>
     
     
     
@@ -218,11 +174,11 @@ LINK : fatal error LNK1158: cannot run 'rc.exe'  原因：在PATH所提供的环
         
     
     
-    <li class="page-item"><a class="page-link" href="/post/page/3/">3</a></li>
+    <li class="page-item active"><a class="page-link" href="/post/page/3/">3</a></li>
     
     
-    <li class="page-item">
-    <a href="/post/page/2/" class="page-link" aria-label="Next"><span aria-hidden="true">&raquo;</span></a>
+    <li class="page-item disabled">
+    <a  class="page-link" aria-label="Next"><span aria-hidden="true">&raquo;</span></a>
     </li>
     
     <li class="page-item">
