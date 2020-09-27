@@ -49,7 +49,7 @@ conda install git pip install git&#43;https://github.">
 
 <meta itemprop="datePublished" content="2019-11-20T22:23:45&#43;08:00" />
 <meta itemprop="dateModified" content="2019-11-20T22:23:45&#43;08:00" />
-<meta itemprop="wordCount" content="436">
+<meta itemprop="wordCount" content="535">
 
 
 
@@ -191,7 +191,7 @@ pip install Box2D
 
 <li><p>将mujoco的mjkey.txt密钥文件放到对应位置,详见<a href="https://github.com/openai/mujoco-py">github</a></p></li>
 
-<li><p>确保已经安装了windows 10 SDK和windows 8.1 SDK。并且把&rdquo;C:\Program Files (x86)\Wexit()indows Kits\8.1\bin\x86&rdquo;路径 添加到环境变量中。</p></li>
+<li><p>确保已经安装了windows 10 SDK和windows 8.1 SDK。并且把&rdquo;C:\Program Files (x86)\Windows Kits\8.1\bin\x86&rdquo;路径 添加到环境变量中。</p></li>
 
 <li><p>安装mujoco_py</p>
 
@@ -387,7 +387,84 @@ source ~/.bashrc
 <li><a href="https://research.wmz.ninja/articles/2017/11/setting-up-wsl-with-graphics-and-audio.html">setting up wsl with graphics and audio</a></li>
 </ol>
 
-<h1 id="gym环境完整性测试程序">gym环境完整性测试程序</h1>
+<h1 id="gym环境简要介绍">gym环境简要介绍</h1>
+
+<h3 id="环境">环境</h3>
+
+<ol>
+<li><p>最简代码测试</p>
+
+<pre><code class="language-python">import gym
+env = gym.make('CartPole-v0')
+env.reset()
+for _ in range(1000):
+   env.render()
+   env.step(env.action_space.sample()) # random sample from the actions
+</code></pre></li>
+</ol>
+
+<p>如果想要测试其他环境只需要替换gym.make()中的参数，比如<a href="http://gym.openai.com/envs/MountainCar-v0"><code>MountainCar-v0</code></a>, <a href="http://gym.openai.com/envs/MsPacman-v0"><code>MsPacman-v0</code></a> （需要 <a href="https://github.com/openai/gym#atari">Atari dependency</a>）, 或者 <a href="http://gym.openai.com/envs/Hopper-v1"><code>Hopper-v1</code></a> (需要 <a href="https://github.com/openai/gym#mujoco">MuJoCo dependencies</a> ）. 这些环境全都继承于 <a href="https://github.com/openai/gym/blob/master/gym/core.py"><code>Env</code></a> 基类.</p>
+
+<ol>
+<li><p><a href="http://gym.openai.com/envs/#classic_control">全部环境清单</a></p></li>
+
+<li><p>如果想要列出所有已安装的环境，只需要执行<code>gym.envs.registry</code>
+如果想要加入自己的，只需要使得它们可以被<code>gym.make()</code>调用：在启动时<code>register()</code>它们</p></li>
+
+<li><p>保持环境可视化</p>
+
+<pre><code class="language-python">env.render()
+</code></pre></li>
+</ol>
+
+<h3 id="观测">观测</h3>
+
+<ol>
+<li><p>环境的<code>step()</code>函数会返回四个值，分别为：</p>
+
+<ul>
+<li><code>observation(object)</code>：表示环境当前的观测状态。比如可视化环境的像素值，比如机器人的角度和角速度</li>
+<li><code>reward(float)</code>：前一个动作获得的奖励</li>
+<li><code>done(boolean)</code>：当前回合是否结束的标识，也可以看作是环境是否重启的标识</li>
+<li><code>info(dict)</code>：方便用于调试的针对信息，例如，它可能包含环境上次状态更改背后的原始概率</li>
+</ul></li>
+
+<li><p>如果想要启动或者重启环境可以调用<code>reset()</code>函数，它会返回一个<code>observation</code></p></li>
+
+<li><p>改变状态</p>
+
+<pre><code class="language-python">env.env.s = 114
+</code></pre></li>
+</ol>
+
+<h3 id="空间">空间</h3>
+
+<ol>
+<li><p>动作空间</p>
+
+<pre><code class="language-python">env = env = gym.make('CartPole-v0')
+print(env.action_space)
+print(env.action_space.n) # number of actions
+</code></pre></li>
+
+<li><p>状态空间</p>
+
+<pre><code class="language-python">print(env.observation_space)
+print(env.observation_space.n) # number of actions
+</code></pre></li>
+
+<li><p>定义空间</p>
+
+<pre><code class="language-python">from gym import spaces
+# or : space = spaces.Box(8)
+space = spaces.Discrete(8) # Set with 8 elements{0,1,2,3,4,5,6,7}
+x = space.sample()
+assert space.contains(x)
+assert space.n = 8
+</code></pre></li>
+</ol>
+
+<h3 id="环境完整性测试代码">环境完整性测试代码</h3>
 
 <pre><code class="language-python">import time
 import gym

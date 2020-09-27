@@ -6,10 +6,60 @@
     <description>Recent content on Bridge : you &amp; me</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 26 Aug 2020 17:27:58 +0800</lastBuildDate>
+    <lastBuildDate>Sun, 27 Sep 2020 13:39:50 +0800</lastBuildDate>
     
 	<atom:link href="https://horizonnn.github.io/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>ToolsBugFlow</title>
+      <link>https://horizonnn.github.io/post/toolsbugflow/</link>
+      <pubDate>Sun, 27 Sep 2020 13:39:50 +0800</pubDate>
+      
+      <guid>https://horizonnn.github.io/post/toolsbugflow/</guid>
+      <description>Anaconda 1. CondaHTTPError SSLError Collecting package metadata (current_repodata.json): failed
+CondaHTTPError: HTTP 000 CONNECTION FAILED for url https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud/conda-forge/win-64/current_repodata.json Elapsed: -
+An HTTP error occurred when trying to retrieve this URL. HTTP errors are often intermittent, and a simple retry will get you on your way. SSLError(MaxRetryError(&amp;lsquo;HTTPSConnectionPool(host=\&amp;lsquo;mirrors.tuna.tsinghua.edu.cn\&amp;lsquo;, port=443): Max retries exceeded with url: /anaconda/cloud/conda-forge/win-64/current_repodata.json (Caused by SSLError(&amp;ldquo;Can\&amp;rsquo;t connect to HTTPS URL because the SSL module is not available.&amp;ldquo;))&amp;lsquo;))
+PS C:\WINDOWS\system32&amp;gt; conda create -n rl-tf python=3.</description>
+    </item>
+    
+    <item>
+      <title>线性回归评估指标</title>
+      <link>https://horizonnn.github.io/post/%E7%BA%BF%E6%80%A7%E5%9B%9E%E5%BD%92%E8%AF%84%E4%BC%B0%E6%8C%87%E6%A0%87/</link>
+      <pubDate>Sat, 26 Sep 2020 11:09:07 +0800</pubDate>
+      
+      <guid>https://horizonnn.github.io/post/%E7%BA%BF%E6%80%A7%E5%9B%9E%E5%BD%92%E8%AF%84%E4%BC%B0%E6%8C%87%E6%A0%87/</guid>
+      <description>在回归问题中，常见的评估指标（Metric）有：
+ 平均绝对误差（Mean Absolute Error, MAE） 均方误差（Mean Square Error, MSE） 均方根误差（Root Mean Error, RMSE） 平均绝对百分误差（Mean Absolute Percentage Error, MAPE） R2  线性回归评估指标 平均绝对误差  公式 $$ MAE = \frac{1}{n} \sum^n_{i=1} |y_i - \hat{y_i}|, \in [0, +\infty) $$
+ 代码表示
+def MAE(y, y_pre): return np.mean(np.abs(y - y_pre))   均方误差  公式 $$ MSE = \frac{1}{n} \sum^n_{i=1} (y_i - \hat{y_i})^2, \in[0, +\infty) $$
+ 代码表示
+def MSE(y, y_pre): return np.mean((y - y_pre)**2)   均方根误差  公式 $$ RMSE = \sqrt{ \frac{1}{n} \sum^n_{i=1} (y_i - \hat{y_i})^2 }, \in[0, +\infty) $$</description>
+    </item>
+    
+    <item>
+      <title>基本特征选择方法</title>
+      <link>https://horizonnn.github.io/post/%E5%9F%BA%E6%9C%AC%E7%89%B9%E5%BE%81%E9%80%89%E6%8B%A9%E6%96%B9%E6%B3%95/</link>
+      <pubDate>Sat, 26 Sep 2020 11:08:40 +0800</pubDate>
+      
+      <guid>https://horizonnn.github.io/post/%E5%9F%BA%E6%9C%AC%E7%89%B9%E5%BE%81%E9%80%89%E6%8B%A9%E6%96%B9%E6%B3%95/</guid>
+      <description>其中data为特征的DataFrame，y为目标值的Series，y_pre为预测值的Series
+Filter 基于统计量的预处理  缺失值比例删除：删除高缺失值的特征（列）
+percent = data.isnull().sum() / len(data) * 100 result = data.loc[percent &amp;lt; 50]  方差值删除：删除低方差的特征（列）
+var = data.var() result = data.loc[var &amp;gt; 0.1]  相关性矩阵：首先计算出特征之间的相关性，然后根据相关性的大小排序，按顺序删除冗余的特征
+# 将数值范围变化到0-1之间 data = data.apply(lambda x: (x - np.min(x)) / (np.max(x) - np.min(x))) # 相关性矩阵 cor = data.corr() # 按相关性大小逐步剔除 drop_pairs = [] for i in range(len(cor.index)): for j in range(len(cor.columns)): if cor.iloc[i,j] &amp;gt;= 0.8 and i != j: drop_pairs.append([cor.index[i], cor.</description>
+    </item>
+    
+    <item>
+      <title>AndroidBugFlow</title>
+      <link>https://horizonnn.github.io/post/androidbugflow/</link>
+      <pubDate>Tue, 08 Sep 2020 21:05:54 +0800</pubDate>
+      
+      <guid>https://horizonnn.github.io/post/androidbugflow/</guid>
+      <description> 1. android.content.ActivityNotFoundException: No Activity found to handle Intent { act=android.intent.action.VIEW dat=www.baidu.com }  原因：在调用intent启动其他activity的时候，使用Uri.parse()时传递的网页url参数中没加“https://”前缀
+ 解决办法：在调用Uri.parse()函数的时候一定要把参数写完整，如
+val intent = Intent(Intent.ACTION_VIEW) intent.data = Uri.parse(&amp;quot;https://www.baidu.com&amp;quot;) startActivity(intent)   </description>
+    </item>
     
     <item>
       <title>Python常查问题</title>
@@ -28,7 +78,7 @@ from selenium import webdriver fp=webdriver.FirefoxProfile(r&#39;C:\Users\leony\
       <pubDate>Mon, 17 Aug 2020 10:48:11 +0800</pubDate>
       
       <guid>https://horizonnn.github.io/post/%E5%BC%BA%E5%8C%96%E5%AD%A6%E4%B9%A0%E9%87%8D%E8%A6%81%E5%8F%82%E8%80%83%E8%B5%84%E6%BA%90/</guid>
-      <description> 概述  David Sliver强化学习视频十讲 《Reinforcement Learning》书籍  博文  强化学习中Ornstein-Uhlenbeck噪声是鸡肋吗？  </description>
+      <description> 概述  David Sliver强化学习视频十讲 《Reinforcement Learning》书籍  博文  强化学习中Ornstein-Uhlenbeck噪声是鸡肋吗？ &amp;mdash; 说明了OU噪声并非比高斯噪声差，只是其在时序相关的问题中会作用更明显 Reinforcement learning never worked, and &amp;lsquo;deep&amp;rsquo; only helped a bit &amp;mdash; 虽然深度学习的泛化性对于强化学习中的探索利用平衡具有一定的帮助，但强化学习中还有其他一些很关键的问题深度学习并不能解决。  </description>
     </item>
     
     <item>
@@ -97,7 +147,7 @@ nohup python newclient.py &amp;gt;/dev/null 2&amp;gt;&amp;amp;1   此时可以�
     </item>
     
     <item>
-      <title>BugFlow</title>
+      <title>PythonBugFlow</title>
       <link>https://horizonnn.github.io/post/pythonbugflow/</link>
       <pubDate>Sun, 25 Aug 2019 21:21:34 +0800</pubDate>
       

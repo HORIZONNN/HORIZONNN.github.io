@@ -110,18 +110,22 @@
             <div class="mb3 pa4 mid-gray overflow-hidden">
     
       <div class="f6">
-        September 8, 2020
+        September 14, 2019
       </div>
     
     <h1 class="f3 near-black">
-      <a href="/post/androidbugflow/" class="link black dim">
-        AndroidBugFlow
+      <a href="/post/%E5%90%89%E5%A4%A7%E6%A0%A1%E5%9B%AD%E7%BD%91%E8%B7%AF%E7%94%B1%E5%99%A8%E9%85%8D%E7%BD%AE/" class="link black dim">
+        吉大校园网路由器配置
       </a>
     </h1>
     <div class="nested-links f5 lh-copy nested-copy-line-height">
-       1. android.content.ActivityNotFoundException: No Activity found to handle Intent { act=android.intent.action.VIEW dat=www.baidu.com }  原因：在调用intent启动其他activity的时候，使用Uri.parse()时传递的网页url参数中没加“https://”前缀
- 解决办法：在调用Uri.parse()函数的时候一定要把参数写完整，如
-val intent = Intent(Intent.ACTION_VIEW) intent.data = Uri.parse(&quot;https://www.baidu.com&quot;) startActivity(intent)   
+      设备配置 路由器：NETGEAR 4300 v1
+网线两根
+刷路由器固件  去openwrt官网找到路由器对应的固件版本下载下来（一定要结尾是img的包，结尾是tar的是升级包）、 用网线连接PC和路由器的LAN口，在网页中输入192.168.1.1进入路由器管理界面。默认用户名是admin，密码是password 找到路由器固件升级的选项，选择刚才下好的img文件，开始固件升级。升级结束后可以再次进入192.168.1.1，若能进入openwrt的管理界面，则代表成功，这时用户名改成root，密码改为admin。 拔掉路由器电源，关闭路由器电源按钮。静置30s后再插上电源打开（不然无法开启5G信号）  配置路由器  再此进入openwrt的管理界面，在wireless中配置路由器的无线设置（密码，频率等） 进入interface选项中，配置WAN口的IP、网关、子网掩码等（根据在校园网申请IP后得到的信息一一填写，校园网上的MAC地址需要填写路由器WAN口的MAC地址） 配置路由器的ssh  设置脚本  ssh进入路由器，并执行如下命令
+opkg update opkg install python-light opkg install python-pip opkg install coreutils-nohup  去这个地址https://github.com/drcoms/jlu-drcom-client下载newclient.py脚本，并根据自己的IP信息修改代码中的config部分。
+server = '10.100.61.3'#学校的认证服务器 username='zhuff5515'#用户名，和客户端一样 password='11111111111'#密码，和客户端一样 host_ip = '49.140.110.110'#自己申请的ip地址 mac = 0xf01e567fe76b#网络中心上注册时IP对应的MAC，必须是路由器的MAC地址 host_name = '++++++++'#计算机名,随便写，不要超过71个字符 host_os = 'Windows 10'#操作系统，不要超过128个字符  通过ssh工具，将修改好的newclient.py放在路由器的/usr/bin目录
+ cd进入/usr/bin目录，执行如下命令
+nohup python newclient.py &gt;/dev/null 2&gt;&amp;1   此时可以连上路由器的wifi或者LAN口，如果能够成功连接外网，则说明成功了。
     </div>
   </div>
 
@@ -132,38 +136,20 @@ val intent = Intent(Intent.ACTION_VIEW) intent.data = Uri.parse(&quot;https://ww
             <div class="mb3 pa4 mid-gray overflow-hidden">
     
       <div class="f6">
-        August 26, 2020
+        August 25, 2019
       </div>
     
     <h1 class="f3 near-black">
-      <a href="/post/python%E5%B8%B8%E6%9F%A5%E9%97%AE%E9%A2%98/" class="link black dim">
-        Python常查问题
+      <a href="/post/pythonbugflow/" class="link black dim">
+        PythonBugFlow
       </a>
     </h1>
     <div class="nested-links f5 lh-copy nested-copy-line-height">
-       Seleunium 不打印chromedriver的日志信息 from selenium import webdriver chrome_options = Options() chrome_options.add_experimental_option('excludeSwitches', ['enable-logging']) chrome_options.add_argument('--headless') browser = webdriver.Chrome(chrome_options=chrome_options)  使用chrome/firefox的已存在的cookie访问网站 chrome
-from selenium import webdriver profile_dir=r&quot;C:\Users\leonyu\AppData\Local\Google\Chrome\User Data&quot; # 对应你的chrome的用户数据存放路径 chrome_options=webdriver.ChromeOptions() chrome_options.add_argument(&quot;user-data-dir=&quot;+os.path.abspath(profile_dir)) browser=webdriver.Chrome(chrome_options=chrome_options)  firefox
-from selenium import webdriver fp=webdriver.FirefoxProfile(r'C:\Users\leony\AppData\Roaming\Mozilla\Firefox\Profiles\btnc8mzb.default') browser=webdriver.Firefox(fp)  
-    </div>
-  </div>
-
-        </div>
-      
-        <div class="relative w-100 w-30-l mb4 bg-white">
-          
-            <div class="mb3 pa4 mid-gray overflow-hidden">
-    
-      <div class="f6">
-        August 17, 2020
-      </div>
-    
-    <h1 class="f3 near-black">
-      <a href="/post/%E5%BC%BA%E5%8C%96%E5%AD%A6%E4%B9%A0%E9%87%8D%E8%A6%81%E5%8F%82%E8%80%83%E8%B5%84%E6%BA%90/" class="link black dim">
-        强化学习重要参考资源
-      </a>
-    </h1>
-    <div class="nested-links f5 lh-copy nested-copy-line-height">
-       概述  David Sliver强化学习视频十讲 《Reinforcement Learning》书籍  博文  强化学习中Ornstein-Uhlenbeck噪声是鸡肋吗？ &mdash; 说明了OU噪声并非比高斯噪声差，只是其在时序相关的问题中会作用更明显 Reinforcement learning never worked, and &lsquo;deep&rsquo; only helped a bit &mdash; 虽然深度学习的泛化性对于强化学习中的探索利用平衡具有一定的帮助，但强化学习中还有其他一些很关键的问题深度学习并不能解决。  
+      基础问题 1. AttributeError: module &lsquo;XXX&rsquo; has no attribute &lsquo;xxx&rsquo;  原因：一般module和attribute的名字没有拼错的情况下，出现这类问题通常是因为这个py文件所在的目录中存在与module同名的py文件，导致python的错误调用。
+ 解决办法：更改文件名。
+  2. AttributeError: module &lsquo;XXX&rsquo; has no attribute &lsquo;XXX&rsquo;  原因：一般情况下可能是因为拼写错误导致的改模块下确实没有对应的attribute。但还有另外一种情况是当前运行的python文件目录下有和此module模块重名的python文件，导致运行的python文件优先import了当前目录下的对应文件，所以不存在对应的attribute 解决办法：检查拼写错误或者改变文件名即可  TensorFlow 1. TypeError: Unexpected keyword argument passed to optimizer: name Traceback (most recent call last): File &quot;visualizing_the_convnet.py&quot;, line 3, in &lt;module&gt; model = load_model('cats_and_dogs_small_2.h5') ... TypeError: Unexpected keyword argument passed to optimizer: name   原因：这部分代码加载了H5文件保存的keras Model，但是由于保存Model和加载Model的keras的版本不一致，所以会产生这个问题
+ 解决办法：保持加载Model和保存Model的keras版本一致
+  2. failed to create cublas handle: CUBLAS_STATUS_ALLOC_FAILED  原因：申请GPU内存，空间不够被拒绝
     </div>
   </div>
 
@@ -179,7 +165,7 @@ from selenium import webdriver fp=webdriver.FirefoxProfile(r'C:\Users\leony\AppD
     </li>
     
     <li class="page-item">
-    <a href="/post/" class="page-link" aria-label="Previous"><span aria-hidden="true">&laquo;</span></a>
+    <a href="/post/page/3/" class="page-link" aria-label="Previous"><span aria-hidden="true">&laquo;</span></a>
     </li>
     
     
@@ -203,7 +189,7 @@ from selenium import webdriver fp=webdriver.FirefoxProfile(r'C:\Users\leony\AppD
         
     
     
-    <li class="page-item active"><a class="page-link" href="/post/page/2/">2</a></li>
+    <li class="page-item"><a class="page-link" href="/post/page/2/">2</a></li>
     
     
     
@@ -225,11 +211,11 @@ from selenium import webdriver fp=webdriver.FirefoxProfile(r'C:\Users\leony\AppD
         
     
     
-    <li class="page-item"><a class="page-link" href="/post/page/4/">4</a></li>
+    <li class="page-item active"><a class="page-link" href="/post/page/4/">4</a></li>
     
     
-    <li class="page-item">
-    <a href="/post/page/3/" class="page-link" aria-label="Next"><span aria-hidden="true">&raquo;</span></a>
+    <li class="page-item disabled">
+    <a  class="page-link" aria-label="Next"><span aria-hidden="true">&raquo;</span></a>
     </li>
     
     <li class="page-item">
