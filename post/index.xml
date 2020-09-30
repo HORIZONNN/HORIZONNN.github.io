@@ -6,10 +6,19 @@
     <description>Recent content in Posts on Bridge : you &amp; me</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 27 Sep 2020 13:39:50 +0800</lastBuildDate>
+    <lastBuildDate>Wed, 30 Sep 2020 16:28:29 +0800</lastBuildDate>
     
 	<atom:link href="https://horizonnn.github.io/post/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>数学相关知识点</title>
+      <link>https://horizonnn.github.io/post/%E6%95%B0%E5%AD%A6%E7%9B%B8%E5%85%B3%E7%9F%A5%E8%AF%86%E7%82%B9/</link>
+      <pubDate>Wed, 30 Sep 2020 16:28:29 +0800</pubDate>
+      
+      <guid>https://horizonnn.github.io/post/%E6%95%B0%E5%AD%A6%E7%9B%B8%E5%85%B3%E7%9F%A5%E8%AF%86%E7%82%B9/</guid>
+      <description> 统计学  详解最大似然估计、最大后验概率估计以及贝叶斯公式的理解 为什么样本方差里面要除以（n-1）而不是n  </description>
+    </item>
     
     <item>
       <title>ToolsBugFlow</title>
@@ -78,7 +87,7 @@ from selenium import webdriver fp=webdriver.FirefoxProfile(r&#39;C:\Users\leony\
       <pubDate>Mon, 17 Aug 2020 10:48:11 +0800</pubDate>
       
       <guid>https://horizonnn.github.io/post/%E5%BC%BA%E5%8C%96%E5%AD%A6%E4%B9%A0%E9%87%8D%E8%A6%81%E5%8F%82%E8%80%83%E8%B5%84%E6%BA%90/</guid>
-      <description> 概述  David Sliver强化学习视频十讲 《Reinforcement Learning》书籍  博文  强化学习中Ornstein-Uhlenbeck噪声是鸡肋吗？ &amp;mdash; 说明了OU噪声并非比高斯噪声差，只是其在时序相关的问题中会作用更明显 Reinforcement learning never worked, and &amp;lsquo;deep&amp;rsquo; only helped a bit &amp;mdash; 虽然深度学习的泛化性对于强化学习中的探索利用平衡具有一定的帮助，但强化学习中还有其他一些很关键的问题深度学习并不能解决。  </description>
+      <description> 概述  David Sliver强化学习视频十讲 《Reinforcement Learning》书籍  博文  强化学习中Ornstein-Uhlenbeck噪声是鸡肋吗？ &amp;mdash; 说明了OU噪声并非比高斯噪声差，只是其在时序相关的问题中会作用更明显 Reinforcement learning never worked, and &amp;lsquo;deep&amp;rsquo; only helped a bit &amp;mdash; 虽然深度学习的泛化性对于强化学习中的探索利用平衡具有一定的帮助，但强化学习中还有其他一些很关键的问题深度学习并不能解决。 策略迭代和值迭代的区别 &amp;mdash; 通过算法对比阐述了策略迭代和值迭代的区别，适合初学者区分概念。 强化学习方法分类 &amp;mdash; 概述了强化学习中几个概念分类，便于初学者进行概念区分。  </description>
     </item>
     
     <item>
