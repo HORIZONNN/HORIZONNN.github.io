@@ -6,7 +6,7 @@
     
     <title>Bridge : you &amp; me  | AndroidBugFlow</title>
     <meta name="viewport" content="width=device-width,minimum-scale=1">
-    <meta name="generator" content="Hugo 0.57.2" />
+    <meta name="generator" content="Hugo 0.75.1" />
     
     
       <META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW">
@@ -26,31 +26,29 @@
     
 
     <meta property="og:title" content="AndroidBugFlow" />
-<meta property="og:description" content=" 1. android.content.ActivityNotFoundException: No Activity found to handle Intent { act=android.intent.action.VIEW dat=www.baidu.com }  原因：在调用intent启动其他activity的时候，使用Uri.parse()时传递的网页url参数中没加“https://”前缀
- 解决办法：在调用Uri.parse()函数的时候一定要把参数写完整，如
-val intent = Intent(Intent.ACTION_VIEW) intent.data = Uri.parse(&quot;https://www.baidu.com&quot;) startActivity(intent)   " />
+<meta property="og:description" content="1. android.content.ActivityNotFoundException: No Activity found to handle Intent   原因：在调用intent启动其他activity的时候，使用Uri.parse()时传递的网页url参数中没加“https://”前缀
+  解决办法：在调用Uri.parse()函数的时候一定要把参数写完整，如
+val intent = Intent(Intent.ACTION_VIEW) intent.data = Uri.parse(&#34;https://www.baidu.com&#34;) startActivity(intent)   " />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://horizonnn.github.io/post/androidbugflow/" />
 <meta property="article:published_time" content="2020-09-08T21:05:54+08:00" />
 <meta property="article:modified_time" content="2020-09-08T21:05:54+08:00" />
 <meta itemprop="name" content="AndroidBugFlow">
-<meta itemprop="description" content=" 1. android.content.ActivityNotFoundException: No Activity found to handle Intent { act=android.intent.action.VIEW dat=www.baidu.com }  原因：在调用intent启动其他activity的时候，使用Uri.parse()时传递的网页url参数中没加“https://”前缀
- 解决办法：在调用Uri.parse()函数的时候一定要把参数写完整，如
-val intent = Intent(Intent.ACTION_VIEW) intent.data = Uri.parse(&quot;https://www.baidu.com&quot;) startActivity(intent)   ">
-
-
-<meta itemprop="datePublished" content="2020-09-08T21:05:54&#43;08:00" />
-<meta itemprop="dateModified" content="2020-09-08T21:05:54&#43;08:00" />
-<meta itemprop="wordCount" content="22">
+<meta itemprop="description" content="1. android.content.ActivityNotFoundException: No Activity found to handle Intent   原因：在调用intent启动其他activity的时候，使用Uri.parse()时传递的网页url参数中没加“https://”前缀
+  解决办法：在调用Uri.parse()函数的时候一定要把参数写完整，如
+val intent = Intent(Intent.ACTION_VIEW) intent.data = Uri.parse(&#34;https://www.baidu.com&#34;) startActivity(intent)   ">
+<meta itemprop="datePublished" content="2020-09-08T21:05:54+08:00" />
+<meta itemprop="dateModified" content="2020-09-08T21:05:54+08:00" />
+<meta itemprop="wordCount" content="18">
 
 
 
 <meta itemprop="keywords" content="" />
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="AndroidBugFlow"/>
-<meta name="twitter:description" content=" 1. android.content.ActivityNotFoundException: No Activity found to handle Intent { act=android.intent.action.VIEW dat=www.baidu.com }  原因：在调用intent启动其他activity的时候，使用Uri.parse()时传递的网页url参数中没加“https://”前缀
- 解决办法：在调用Uri.parse()函数的时候一定要把参数写完整，如
-val intent = Intent(Intent.ACTION_VIEW) intent.data = Uri.parse(&quot;https://www.baidu.com&quot;) startActivity(intent)   "/>
+<meta name="twitter:description" content="1. android.content.ActivityNotFoundException: No Activity found to handle Intent   原因：在调用intent启动其他activity的时候，使用Uri.parse()时传递的网页url参数中没加“https://”前缀
+  解决办法：在调用Uri.parse()函数的时候一定要把参数写完整，如
+val intent = Intent(Intent.ACTION_VIEW) intent.data = Uri.parse(&#34;https://www.baidu.com&#34;) startActivity(intent)   "/>
 
   </head>
 
@@ -119,19 +117,17 @@ val intent = Intent(Intent.ACTION_VIEW) intent.data = Uri.parse(&quot;https://ww
       
     </header>
 
-    <section class="nested-copy-line-height lh-copy serif f4 nested-links nested-img mid-gray pr4-l w-two-thirds-l">
-
-<h3 id="1-android-content-activitynotfoundexception-no-activity-found-to-handle-intent-act-android-intent-action-view-dat-www-baidu-com">1. android.content.ActivityNotFoundException: No Activity found to handle Intent { act=android.intent.action.VIEW dat=www.baidu.com }</h3>
-
+    <section class="nested-copy-line-height lh-copy serif f4 nested-links nested-img mid-gray pr4-l w-two-thirds-l"><h3 act="android.intent.action.VIEW" dat="www.baidu.com" id="1-androidcontentactivitynotfoundexception-no-activity-found-to-handle-intent">1. android.content.ActivityNotFoundException: No Activity found to handle Intent</h3>
 <ul>
-<li><p>原因：在调用intent启动其他activity的时候，使用<code>Uri.parse()</code>时传递的网页url参数中没加“https://”前缀</p></li>
-
-<li><p>解决办法：在调用<code>Uri.parse()</code>函数的时候一定要把参数写完整，如</p>
-
-<pre><code class="language-kotlin">val intent = Intent(Intent.ACTION_VIEW)
-intent.data = Uri.parse(&quot;https://www.baidu.com&quot;)
+<li>
+<p>原因：在调用intent启动其他activity的时候，使用<code>Uri.parse()</code>时传递的网页url参数中没加“https://”前缀</p>
+</li>
+<li>
+<p>解决办法：在调用<code>Uri.parse()</code>函数的时候一定要把参数写完整，如</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-kotlin" data-lang="kotlin"><span style="color:#66d9ef">val</span> intent = Intent(Intent.ACTION_VIEW)
+intent.<span style="color:#66d9ef">data</span> = Uri.parse(<span style="color:#e6db74">&#34;https://www.baidu.com&#34;</span>)
 startActivity(intent)
-</code></pre></li>
+</code></pre></div></li>
 </ul>
 <ul class="pa0">
   

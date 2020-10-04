@@ -6,7 +6,7 @@
     
     <title>Bridge : you &amp; me </title>
     <meta name="viewport" content="width=device-width,minimum-scale=1">
-    <meta name="generator" content="Hugo 0.57.2" />
+    <meta name="generator" content="Hugo 0.75.1" />
     
     
       <META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW">
@@ -32,11 +32,9 @@
 <meta property="og:description" content="The last theme you&#39;ll ever need. Maybe." />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="https://horizonnn.github.io/post/" />
-
-<meta property="og:updated_time" content="2020-09-30T16:28:29+08:00" />
+<meta property="og:updated_time" content="2020-09-30T16:46:41+08:00" />
 <meta itemprop="name" content="Posts">
 <meta itemprop="description" content="The last theme you&#39;ll ever need. Maybe.">
-
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Posts"/>
 <meta name="twitter:description" content="The last theme you&#39;ll ever need. Maybe."/>
@@ -114,12 +112,32 @@
       </div>
     
     <h1 class="f3 near-black">
+      <a href="/post/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0%E9%87%8D%E8%A6%81%E5%8F%82%E8%80%83%E8%B5%84%E6%BA%90/" class="link black dim">
+        深度学习重要参考资源
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+      书籍  Deep Learning Machine learning yearning Mathematics for machine learning  视频 组织或个人  fast.ai 李宏毅 苏剑林科学空间 mlcourse.ai  
+    </div>
+  </div>
+
+        </div>
+      
+        <div class="relative w-100 w-30-l mb4 bg-white">
+          
+            <div class="mb3 pa4 mid-gray overflow-hidden">
+    
+      <div class="f6">
+        September 30, 2020
+      </div>
+    
+    <h1 class="f3 near-black">
       <a href="/post/%E6%95%B0%E5%AD%A6%E7%9B%B8%E5%85%B3%E7%9F%A5%E8%AF%86%E7%82%B9/" class="link black dim">
         数学相关知识点
       </a>
     </h1>
     <div class="nested-links f5 lh-copy nested-copy-line-height">
-       统计学  详解最大似然估计、最大后验概率估计以及贝叶斯公式的理解 为什么样本方差里面要除以（n-1）而不是n  
+      统计学  详解最大似然估计、最大后验概率估计以及贝叶斯公式的理解 为什么样本方差里面要除以（n-1）而不是n  
     </div>
   </div>
 
@@ -141,33 +159,8 @@
     <div class="nested-links f5 lh-copy nested-copy-line-height">
       Anaconda 1. CondaHTTPError SSLError Collecting package metadata (current_repodata.json): failed
 CondaHTTPError: HTTP 000 CONNECTION FAILED for url https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud/conda-forge/win-64/current_repodata.json Elapsed: -
-An HTTP error occurred when trying to retrieve this URL. HTTP errors are often intermittent, and a simple retry will get you on your way. SSLError(MaxRetryError(&lsquo;HTTPSConnectionPool(host=\&lsquo;mirrors.tuna.tsinghua.edu.cn\&lsquo;, port=443): Max retries exceeded with url: /anaconda/cloud/conda-forge/win-64/current_repodata.json (Caused by SSLError(&ldquo;Can\&rsquo;t connect to HTTPS URL because the SSL module is not available.&ldquo;))&lsquo;))
+An HTTP error occurred when trying to retrieve this URL. HTTP errors are often intermittent, and a simple retry will get you on your way. SSLError(MaxRetryError(&lsquo;HTTPSConnectionPool(host='mirrors.tuna.tsinghua.edu.cn', port=443): Max retries exceeded with url: /anaconda/cloud/conda-forge/win-64/current_repodata.json (Caused by SSLError(&ldquo;Can't connect to HTTPS URL because the SSL module is not available.&quot;))'))
 PS C:\WINDOWS\system32&gt; conda create -n rl-tf python=3.
-    </div>
-  </div>
-
-        </div>
-      
-        <div class="relative w-100 w-30-l mb4 bg-white">
-          
-            <div class="mb3 pa4 mid-gray overflow-hidden">
-    
-      <div class="f6">
-        September 26, 2020
-      </div>
-    
-    <h1 class="f3 near-black">
-      <a href="/post/%E7%BA%BF%E6%80%A7%E5%9B%9E%E5%BD%92%E8%AF%84%E4%BC%B0%E6%8C%87%E6%A0%87/" class="link black dim">
-        线性回归评估指标
-      </a>
-    </h1>
-    <div class="nested-links f5 lh-copy nested-copy-line-height">
-      在回归问题中，常见的评估指标（Metric）有：
- 平均绝对误差（Mean Absolute Error, MAE） 均方误差（Mean Square Error, MSE） 均方根误差（Root Mean Error, RMSE） 平均绝对百分误差（Mean Absolute Percentage Error, MAPE） R2  线性回归评估指标 平均绝对误差  公式 $$ MAE = \frac{1}{n} \sum^n_{i=1} |y_i - \hat{y_i}|, \in [0, +\infty) $$
- 代码表示
-def MAE(y, y_pre): return np.mean(np.abs(y - y_pre))   均方误差  公式 $$ MSE = \frac{1}{n} \sum^n_{i=1} (y_i - \hat{y_i})^2, \in[0, +\infty) $$
- 代码表示
-def MSE(y, y_pre): return np.mean((y - y_pre)**2)   均方根误差  公式 $$ RMSE = \sqrt{ \frac{1}{n} \sum^n_{i=1} (y_i - \hat{y_i})^2 }, \in[0, +\infty) $$
     </div>
   </div>
 
@@ -175,71 +168,34 @@ def MSE(y, y_pre): return np.mean((y - y_pre)**2)   均方根误差  公式 $$ R
       
     </aside>
     
-
 <ul class="pagination">
-    
-    <li class="page-item">
-        <a href="/post/" class="page-link" aria-label="First"><span aria-hidden="true">&laquo;&laquo;</span></a>
-    </li>
-    
-    <li class="page-item disabled">
+  <li class="page-item">
+    <a href="/post/" class="page-link" aria-label="First"><span aria-hidden="true">&laquo;&laquo;</span></a>
+  </li>
+  <li class="page-item disabled">
     <a  class="page-link" aria-label="Previous"><span aria-hidden="true">&laquo;</span></a>
-    </li>
-    
-    
-    
-    
-    
-    
-    
-        
-        
-    
-    
-    <li class="page-item active"><a class="page-link" href="/post/">1</a></li>
-    
-    
-    
-    
-    
-    
-        
-        
-    
-    
-    <li class="page-item"><a class="page-link" href="/post/page/2/">2</a></li>
-    
-    
-    
-    
-    
-    
-        
-        
-    
-    
-    <li class="page-item"><a class="page-link" href="/post/page/3/">3</a></li>
-    
-    
-    
-    
-    
-    
-        
-        
-    
-    
-    <li class="page-item"><a class="page-link" href="/post/page/4/">4</a></li>
-    
-    
-    <li class="page-item">
+  </li>
+  <li class="page-item active">
+    <a class="page-link" href="/post/">1</a>
+  </li>
+  <li class="page-item">
+    <a class="page-link" href="/post/page/2/">2</a>
+  </li>
+  <li class="page-item">
+    <a class="page-link" href="/post/page/3/">3</a>
+  </li>
+  <li class="page-item disabled">
+    <span aria-hidden="true">&nbsp;&hellip;&nbsp;</span>
+  </li>
+  <li class="page-item">
+    <a class="page-link" href="/post/page/5/">5</a>
+  </li>
+  <li class="page-item">
     <a href="/post/page/2/" class="page-link" aria-label="Next"><span aria-hidden="true">&raquo;</span></a>
-    </li>
-    
-    <li class="page-item">
-        <a href="/post/page/4/" class="page-link" aria-label="Last"><span aria-hidden="true">&raquo;&raquo;</span></a>
-    </li>
-    
+  </li>
+  <li class="page-item">
+    <a href="/post/page/5/" class="page-link" aria-label="Last"><span aria-hidden="true">&raquo;&raquo;</span></a>
+  </li>
 </ul>
 
 

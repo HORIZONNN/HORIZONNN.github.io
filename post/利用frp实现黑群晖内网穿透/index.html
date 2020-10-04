@@ -6,7 +6,7 @@
     
     <title>Bridge : you &amp; me  | 利用frp实现黑群晖内网穿透</title>
     <meta name="viewport" content="width=device-width,minimum-scale=1">
-    <meta name="generator" content="Hugo 0.57.2" />
+    <meta name="generator" content="Hugo 0.75.1" />
     
     
       <META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW">
@@ -28,16 +28,16 @@
     <meta property="og:title" content="利用frp实现黑群晖内网穿透" />
 <meta property="og:description" content="前一段时间捡了一台暴风酷播云矿机，想着拿来做NAS，装了黑群晖，无奈的是没有公网IP，只能局域网访问，因此需要做内网穿透。
 搜了搜方法，感觉frp还是比较不错的方案，开搞！
-相关链接  frp的github链接 群晖的中文官网  准备工具  使用frp做内网穿透，首先需要一台具有公网IP的主机，这里我租用了一台VPS 去frp的github链接里根据个人NAS以及公网IP主机的型号下载对应的压缩文件 去群晖官网下载drive client  配置过程 服务端  解压公网IP主机对应的frp文件，只保存frps和frps.ini文件，删掉其他文件
- 将上述两个文件上传到公网IP主机中
- 编辑frps.ini文件（vim frps.ini），写入以下内容
-[common] bind_port = 7000 vhost_http_port = 7008 vhost_https_port = 7010 dashboard_port = 7001 dashboard_user = admin dashboard_pwd = 123456   其中7008是http连接的端口，7001是frp后台管理的端口
+相关链接  frp的github链接 群晖的中文官网  准备工具  使用frp做内网穿透，首先需要一台具有公网IP的主机，这里我租用了一台VPS 去frp的github链接里根据个人NAS以及公网IP主机的型号下载对应的压缩文件 去群晖官网下载drive client  配置过程 服务端   解压公网IP主机对应的frp文件，只保存frps和frps.ini文件，删掉其他文件
+  将上述两个文件上传到公网IP主机中
+  编辑frps.ini文件（vim frps.ini），写入以下内容
+[common] bind_port = 7000  vhost_http_port = 7008 vhost_https_port = 7010  dashboard_port = 7001 dashboard_user = admin dashboard_pwd = 123456 其中7008是http连接的端口，7001是frp后台管理的端口
 此外，在主机中开启7000、7008、7001、7010、6690（后文中会说到为什么开启这个端口）端口
- 运行frps
-./frps -c ./frps.ini   客户端  解压公网IP主机对应的frp文件，只保存frpc和frpc.ini文件，删掉其他文件
- 将上述两个文件上传到NAS主机中
- 编辑frpc.ini文件（vim frpc.ini），写入以下内容
-[common] server_addr = XXX.XXX.XXX.XXX server_port = 7000 [web1] type = http local_ip = 127." />
+  运行frps
+./frps -c ./frps.ini   客户端   解压公网IP主机对应的frp文件，只保存frpc和frpc.ini文件，删掉其他文件
+  将上述两个文件上传到NAS主机中
+  编辑frpc.ini文件（vim frpc.ini），写入以下内容
+[common] server_addr = XXX." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://horizonnn.github.io/post/%E5%88%A9%E7%94%A8frp%E5%AE%9E%E7%8E%B0%E9%BB%91%E7%BE%A4%E6%99%96%E5%86%85%E7%BD%91%E7%A9%BF%E9%80%8F/" />
 <meta property="article:published_time" content="2019-09-28T20:37:36+08:00" />
@@ -45,20 +45,18 @@
 <meta itemprop="name" content="利用frp实现黑群晖内网穿透">
 <meta itemprop="description" content="前一段时间捡了一台暴风酷播云矿机，想着拿来做NAS，装了黑群晖，无奈的是没有公网IP，只能局域网访问，因此需要做内网穿透。
 搜了搜方法，感觉frp还是比较不错的方案，开搞！
-相关链接  frp的github链接 群晖的中文官网  准备工具  使用frp做内网穿透，首先需要一台具有公网IP的主机，这里我租用了一台VPS 去frp的github链接里根据个人NAS以及公网IP主机的型号下载对应的压缩文件 去群晖官网下载drive client  配置过程 服务端  解压公网IP主机对应的frp文件，只保存frps和frps.ini文件，删掉其他文件
- 将上述两个文件上传到公网IP主机中
- 编辑frps.ini文件（vim frps.ini），写入以下内容
-[common] bind_port = 7000 vhost_http_port = 7008 vhost_https_port = 7010 dashboard_port = 7001 dashboard_user = admin dashboard_pwd = 123456   其中7008是http连接的端口，7001是frp后台管理的端口
+相关链接  frp的github链接 群晖的中文官网  准备工具  使用frp做内网穿透，首先需要一台具有公网IP的主机，这里我租用了一台VPS 去frp的github链接里根据个人NAS以及公网IP主机的型号下载对应的压缩文件 去群晖官网下载drive client  配置过程 服务端   解压公网IP主机对应的frp文件，只保存frps和frps.ini文件，删掉其他文件
+  将上述两个文件上传到公网IP主机中
+  编辑frps.ini文件（vim frps.ini），写入以下内容
+[common] bind_port = 7000  vhost_http_port = 7008 vhost_https_port = 7010  dashboard_port = 7001 dashboard_user = admin dashboard_pwd = 123456 其中7008是http连接的端口，7001是frp后台管理的端口
 此外，在主机中开启7000、7008、7001、7010、6690（后文中会说到为什么开启这个端口）端口
- 运行frps
-./frps -c ./frps.ini   客户端  解压公网IP主机对应的frp文件，只保存frpc和frpc.ini文件，删掉其他文件
- 将上述两个文件上传到NAS主机中
- 编辑frpc.ini文件（vim frpc.ini），写入以下内容
-[common] server_addr = XXX.XXX.XXX.XXX server_port = 7000 [web1] type = http local_ip = 127.">
-
-
-<meta itemprop="datePublished" content="2019-09-28T20:37:36&#43;08:00" />
-<meta itemprop="dateModified" content="2019-09-28T20:37:36&#43;08:00" />
+  运行frps
+./frps -c ./frps.ini   客户端   解压公网IP主机对应的frp文件，只保存frpc和frpc.ini文件，删掉其他文件
+  将上述两个文件上传到NAS主机中
+  编辑frpc.ini文件（vim frpc.ini），写入以下内容
+[common] server_addr = XXX.">
+<meta itemprop="datePublished" content="2019-09-28T20:37:36+08:00" />
+<meta itemprop="dateModified" content="2019-09-28T20:37:36+08:00" />
 <meta itemprop="wordCount" content="109">
 
 
@@ -68,16 +66,16 @@
 <meta name="twitter:title" content="利用frp实现黑群晖内网穿透"/>
 <meta name="twitter:description" content="前一段时间捡了一台暴风酷播云矿机，想着拿来做NAS，装了黑群晖，无奈的是没有公网IP，只能局域网访问，因此需要做内网穿透。
 搜了搜方法，感觉frp还是比较不错的方案，开搞！
-相关链接  frp的github链接 群晖的中文官网  准备工具  使用frp做内网穿透，首先需要一台具有公网IP的主机，这里我租用了一台VPS 去frp的github链接里根据个人NAS以及公网IP主机的型号下载对应的压缩文件 去群晖官网下载drive client  配置过程 服务端  解压公网IP主机对应的frp文件，只保存frps和frps.ini文件，删掉其他文件
- 将上述两个文件上传到公网IP主机中
- 编辑frps.ini文件（vim frps.ini），写入以下内容
-[common] bind_port = 7000 vhost_http_port = 7008 vhost_https_port = 7010 dashboard_port = 7001 dashboard_user = admin dashboard_pwd = 123456   其中7008是http连接的端口，7001是frp后台管理的端口
+相关链接  frp的github链接 群晖的中文官网  准备工具  使用frp做内网穿透，首先需要一台具有公网IP的主机，这里我租用了一台VPS 去frp的github链接里根据个人NAS以及公网IP主机的型号下载对应的压缩文件 去群晖官网下载drive client  配置过程 服务端   解压公网IP主机对应的frp文件，只保存frps和frps.ini文件，删掉其他文件
+  将上述两个文件上传到公网IP主机中
+  编辑frps.ini文件（vim frps.ini），写入以下内容
+[common] bind_port = 7000  vhost_http_port = 7008 vhost_https_port = 7010  dashboard_port = 7001 dashboard_user = admin dashboard_pwd = 123456 其中7008是http连接的端口，7001是frp后台管理的端口
 此外，在主机中开启7000、7008、7001、7010、6690（后文中会说到为什么开启这个端口）端口
- 运行frps
-./frps -c ./frps.ini   客户端  解压公网IP主机对应的frp文件，只保存frpc和frpc.ini文件，删掉其他文件
- 将上述两个文件上传到NAS主机中
- 编辑frpc.ini文件（vim frpc.ini），写入以下内容
-[common] server_addr = XXX.XXX.XXX.XXX server_port = 7000 [web1] type = http local_ip = 127."/>
+  运行frps
+./frps -c ./frps.ini   客户端   解压公网IP主机对应的frp文件，只保存frpc和frpc.ini文件，删掉其他文件
+  将上述两个文件上传到NAS主机中
+  编辑frpc.ini文件（vim frpc.ini），写入以下内容
+[common] server_addr = XXX."/>
 
   </head>
 
@@ -146,105 +144,91 @@
       
     </header>
 
-    <section class="nested-copy-line-height lh-copy serif f4 nested-links nested-img mid-gray pr4-l w-two-thirds-l">
-
-<p>前一段时间捡了一台暴风酷播云矿机，想着拿来做NAS，装了黑群晖，无奈的是没有公网IP，只能局域网访问，因此需要做内网穿透。</p>
-
+    <section class="nested-copy-line-height lh-copy serif f4 nested-links nested-img mid-gray pr4-l w-two-thirds-l"><p>前一段时间捡了一台暴风酷播云矿机，想着拿来做NAS，装了黑群晖，无奈的是没有公网IP，只能局域网访问，因此需要做内网穿透。</p>
 <p>搜了搜方法，感觉frp还是比较不错的方案，开搞！</p>
-
 <h1 id="相关链接">相关链接</h1>
-
 <ol>
 <li><a href="https://github.com/fatedier/frp">frp的github链接</a></li>
 <li><a href="https://www.synology.cn/zh-cn">群晖的中文官网</a></li>
 </ol>
-
 <h1 id="准备工具">准备工具</h1>
-
 <ol>
 <li>使用frp做内网穿透，首先需要一台具有公网IP的主机，这里我租用了一台VPS</li>
 <li>去frp的github链接里根据个人NAS以及公网IP主机的型号下载对应的压缩文件</li>
 <li>去群晖官网下载drive client</li>
 </ol>
-
 <h1 id="配置过程">配置过程</h1>
-
 <h3 id="服务端">服务端</h3>
-
 <ol>
-<li><p>解压公网IP主机对应的frp文件，只保存<code>frps</code>和<code>frps.ini</code>文件，删掉其他文件</p></li>
-
-<li><p>将上述两个文件上传到公网IP主机中</p></li>
-
-<li><p>编辑frps.ini文件（<code>vim frps.ini</code>），写入以下内容</p>
-
-<pre><code class="language-ini">[common]
-bind_port = 7000 
-vhost_http_port = 7008
-vhost_https_port = 7010
-   
-dashboard_port = 7001
-dashboard_user = admin
-dashboard_pwd = 123456
-</code></pre></li>
-</ol>
-
-<p>其中7008是http连接的端口，7001是frp后台管理的端口</p>
-
+<li>
+<p>解压公网IP主机对应的frp文件，只保存<code>frps</code>和<code>frps.ini</code>文件，删掉其他文件</p>
+</li>
+<li>
+<p>将上述两个文件上传到公网IP主机中</p>
+</li>
+<li>
+<p>编辑frps.ini文件（<code>vim frps.ini</code>），写入以下内容</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ini" data-lang="ini"><span style="color:#66d9ef">[common]</span>
+<span style="color:#a6e22e">bind_port</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">7000 </span>
+<span style="color:#a6e22e">vhost_http_port</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">7008</span>
+<span style="color:#a6e22e">vhost_https_port</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">7010
+</span><span style="color:#e6db74">   </span>
+<span style="color:#a6e22e">dashboard_port</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">7001</span>
+<span style="color:#a6e22e">dashboard_user</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">admin</span>
+<span style="color:#a6e22e">dashboard_pwd</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">123456</span>
+</code></pre></div><p>其中7008是http连接的端口，7001是frp后台管理的端口</p>
 <p>此外，在主机中开启7000、7008、7001、7010、6690（后文中会说到为什么开启这个端口）端口</p>
-
-<ol>
-<li><p>运行frps</p>
-
-<pre><code class="language-shell">./frps -c ./frps.ini
-</code></pre></li>
+</li>
+<li>
+<p>运行frps</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">./frps -c ./frps.ini
+</code></pre></div></li>
 </ol>
-
 <h3 id="客户端">客户端</h3>
-
 <ol>
-<li><p>解压公网IP主机对应的frp文件，只保存<code>frpc</code>和<code>frpc.ini</code>文件，删掉其他文件</p></li>
-
-<li><p>将上述两个文件上传到NAS主机中</p></li>
-
-<li><p>编辑frpc.ini文件（<code>vim frpc.ini</code>），写入以下内容</p>
-
-<pre><code class="language-ini">[common]
-server_addr = XXX.XXX.XXX.XXX
-server_port = 7000
-   
-[web1]
-type = http
-local_ip = 127.0.0.1
-local_port = 5000
-custom_domains = XXX.XXX.XXX.XXX
-   
-[web2]
-type = https
-local_ip = 127.0.0.1
-local_port = 5001
-custom_domains = XXX.XXX.XXX.XXX
-   
-[ssh]
-type = tcp
-local_ip = 127.0.0.1
-local_port = 22
-remote_port = 6000
-   
-[drive]
-type = tcp
-local_ip = 102.168.XXX.XXX
-local_port = 6690
-remote_port = 6690
-</code></pre></li>
-</ol>
-
-<p>其中<code>server_addr</code>和<code>custom_domains</code>填写公网主机的IP，或者相应的域名，<code>local_ip</code>字段则填写NAS主机在局域网中的IP地址，之所以drive部分端口选取6690是因为这是群晖drive的默认端口，改写会导致连接有问题</p>
-
-<ol>
-<li><p>至此，在浏览器中输入<code>http://公网主机IP:7008</code>就可以进入到NAS的管理界面了</p></li>
-
-<li><p>最后一步则要运行drive client，在填写过程中，IP直接填写公网主机IP即可</p></li>
+<li>
+<p>解压公网IP主机对应的frp文件，只保存<code>frpc</code>和<code>frpc.ini</code>文件，删掉其他文件</p>
+</li>
+<li>
+<p>将上述两个文件上传到NAS主机中</p>
+</li>
+<li>
+<p>编辑frpc.ini文件（<code>vim frpc.ini</code>），写入以下内容</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ini" data-lang="ini"><span style="color:#66d9ef">[common]</span>
+<span style="color:#a6e22e">server_addr</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">XXX.XXX.XXX.XXX</span>
+<span style="color:#a6e22e">server_port</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">7000
+</span><span style="color:#e6db74">   </span>
+<span style="color:#66d9ef">[web1]</span>
+<span style="color:#a6e22e">type</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">http</span>
+<span style="color:#a6e22e">local_ip</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">127.0.0.1</span>
+<span style="color:#a6e22e">local_port</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">5000</span>
+<span style="color:#a6e22e">custom_domains</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">XXX.XXX.XXX.XXX
+</span><span style="color:#e6db74">   </span>
+<span style="color:#66d9ef">[web2]</span>
+<span style="color:#a6e22e">type</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">https</span>
+<span style="color:#a6e22e">local_ip</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">127.0.0.1</span>
+<span style="color:#a6e22e">local_port</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">5001</span>
+<span style="color:#a6e22e">custom_domains</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">XXX.XXX.XXX.XXX
+</span><span style="color:#e6db74">   </span>
+<span style="color:#66d9ef">[ssh]</span>
+<span style="color:#a6e22e">type</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">tcp</span>
+<span style="color:#a6e22e">local_ip</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">127.0.0.1</span>
+<span style="color:#a6e22e">local_port</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">22</span>
+<span style="color:#a6e22e">remote_port</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">6000
+</span><span style="color:#e6db74">   </span>
+<span style="color:#66d9ef">[drive]</span>
+<span style="color:#a6e22e">type</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">tcp</span>
+<span style="color:#a6e22e">local_ip</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">102.168.XXX.XXX</span>
+<span style="color:#a6e22e">local_port</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">6690</span>
+<span style="color:#a6e22e">remote_port</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">6690</span>
+</code></pre></div><p>其中<code>server_addr</code>和<code>custom_domains</code>填写公网主机的IP，或者相应的域名，<code>local_ip</code>字段则填写NAS主机在局域网中的IP地址，之所以drive部分端口选取6690是因为这是群晖drive的默认端口，改写会导致连接有问题</p>
+</li>
+<li>
+<p>至此，在浏览器中输入<code>http://公网主机IP:7008</code>就可以进入到NAS的管理界面了</p>
+</li>
+<li>
+<p>最后一步则要运行drive client，在填写过程中，IP直接填写公网主机IP即可</p>
+</li>
 </ol>
 <ul class="pa0">
   

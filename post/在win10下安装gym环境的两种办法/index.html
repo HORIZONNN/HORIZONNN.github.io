@@ -6,7 +6,7 @@
     
     <title>Bridge : you &amp; me  | 在win10下安装gym环境的两种办法</title>
     <meta name="viewport" content="width=device-width,minimum-scale=1">
-    <meta name="generator" content="Hugo 0.57.2" />
+    <meta name="generator" content="Hugo 0.75.1" />
     
     
       <META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW">
@@ -27,28 +27,24 @@
 
     <meta property="og:title" content="在win10下安装gym环境的两种办法" />
 <meta property="og:description" content="Gym是强化学习中一个很重要的python库，里面包含了很多强化学习的环境。但比较可惜的是官方并没有提供Windows平台的支持，这对于习惯了Windows平台工作的强化学习研究人员来说很不方便，所以我找到了两个解决办法。
- 直接在win 10上安装Gym环境 利用WSL( Windows Subsystem for Linux )安装Gym环境  直接在win 10上安装Gym环境 安装 Microsoft Visual C&#43;&#43; 2017 Build Tools  下载链接 : Visual Studio 安装 Microsoft Visual C&#43;&#43; 2017 Build Tools  在Anaconda中创建python环境并安装相应的packages  在Anaconda中创建python环境
-conda create -n &lt;your_env_name&gt; python=3.6  如果需要在gym中录制视频，则需要安装ffmpeg
-conda install -c conda-forge ffmpeg  首先需要安装一个空的gym环境，因为在后面安装完全的gym环境的过程中会出现mujoco环境的错误，虽然这不影响其他模块的使用，但会导致gym不会被添加到环境中，也就没有办法import。
-conda install -c conda-forge gym  安装pystan是ToyText环境的需要
-conda install -c conda-forge pystan  这一步是安装gym环境成功的关键，国外大神kojoley成功地封装了atari模块使得安装这一补丁后，atari环境能够在win 10环境下成功运行
-conda install git pip install git&#43;https://github." />
+ 直接在win 10上安装Gym环境 利用WSL( Windows Subsystem for Linux )安装Gym环境  直接在win 10上安装Gym环境 安装 Microsoft Visual C&#43;&#43; 2017 Build Tools  下载链接 : Visual Studio 安装 Microsoft Visual C&#43;&#43; 2017 Build Tools  在Anaconda中创建python环境并安装相应的packages   在Anaconda中创建python环境
+conda create -n &lt;your_env_name&gt; python=3.6   如果需要在gym中录制视频，则需要安装ffmpeg
+conda install -c conda-forge ffmpeg   首先需要安装一个空的gym环境，因为在后面安装完全的gym环境的过程中会出现mujoco环境的错误，虽然这不影响其他模块的使用，但会导致gym不会被添加到环境中，也就没有办法import。
+conda install -c conda-forge gym   安装pystan是ToyText环境的需要
+conda install -c conda-forge pystan   这一步是安装gym环境成功的关键，国外大神kojoley成功地封装了atari模块使得安装这一补丁后，atari环境能够在win 10环境下成功运行" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://horizonnn.github.io/post/%E5%9C%A8win10%E4%B8%8B%E5%AE%89%E8%A3%85gym%E7%8E%AF%E5%A2%83%E7%9A%84%E4%B8%A4%E7%A7%8D%E5%8A%9E%E6%B3%95/" />
 <meta property="article:published_time" content="2019-11-20T22:23:45+08:00" />
 <meta property="article:modified_time" content="2019-11-20T22:23:45+08:00" />
 <meta itemprop="name" content="在win10下安装gym环境的两种办法">
 <meta itemprop="description" content="Gym是强化学习中一个很重要的python库，里面包含了很多强化学习的环境。但比较可惜的是官方并没有提供Windows平台的支持，这对于习惯了Windows平台工作的强化学习研究人员来说很不方便，所以我找到了两个解决办法。
- 直接在win 10上安装Gym环境 利用WSL( Windows Subsystem for Linux )安装Gym环境  直接在win 10上安装Gym环境 安装 Microsoft Visual C&#43;&#43; 2017 Build Tools  下载链接 : Visual Studio 安装 Microsoft Visual C&#43;&#43; 2017 Build Tools  在Anaconda中创建python环境并安装相应的packages  在Anaconda中创建python环境
-conda create -n &lt;your_env_name&gt; python=3.6  如果需要在gym中录制视频，则需要安装ffmpeg
-conda install -c conda-forge ffmpeg  首先需要安装一个空的gym环境，因为在后面安装完全的gym环境的过程中会出现mujoco环境的错误，虽然这不影响其他模块的使用，但会导致gym不会被添加到环境中，也就没有办法import。
-conda install -c conda-forge gym  安装pystan是ToyText环境的需要
-conda install -c conda-forge pystan  这一步是安装gym环境成功的关键，国外大神kojoley成功地封装了atari模块使得安装这一补丁后，atari环境能够在win 10环境下成功运行
-conda install git pip install git&#43;https://github.">
-
-
-<meta itemprop="datePublished" content="2019-11-20T22:23:45&#43;08:00" />
-<meta itemprop="dateModified" content="2019-11-20T22:23:45&#43;08:00" />
+ 直接在win 10上安装Gym环境 利用WSL( Windows Subsystem for Linux )安装Gym环境  直接在win 10上安装Gym环境 安装 Microsoft Visual C&#43;&#43; 2017 Build Tools  下载链接 : Visual Studio 安装 Microsoft Visual C&#43;&#43; 2017 Build Tools  在Anaconda中创建python环境并安装相应的packages   在Anaconda中创建python环境
+conda create -n &lt;your_env_name&gt; python=3.6   如果需要在gym中录制视频，则需要安装ffmpeg
+conda install -c conda-forge ffmpeg   首先需要安装一个空的gym环境，因为在后面安装完全的gym环境的过程中会出现mujoco环境的错误，虽然这不影响其他模块的使用，但会导致gym不会被添加到环境中，也就没有办法import。
+conda install -c conda-forge gym   安装pystan是ToyText环境的需要
+conda install -c conda-forge pystan   这一步是安装gym环境成功的关键，国外大神kojoley成功地封装了atari模块使得安装这一补丁后，atari环境能够在win 10环境下成功运行">
+<meta itemprop="datePublished" content="2019-11-20T22:23:45+08:00" />
+<meta itemprop="dateModified" content="2019-11-20T22:23:45+08:00" />
 <meta itemprop="wordCount" content="535">
 
 
@@ -57,12 +53,11 @@ conda install git pip install git&#43;https://github.">
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="在win10下安装gym环境的两种办法"/>
 <meta name="twitter:description" content="Gym是强化学习中一个很重要的python库，里面包含了很多强化学习的环境。但比较可惜的是官方并没有提供Windows平台的支持，这对于习惯了Windows平台工作的强化学习研究人员来说很不方便，所以我找到了两个解决办法。
- 直接在win 10上安装Gym环境 利用WSL( Windows Subsystem for Linux )安装Gym环境  直接在win 10上安装Gym环境 安装 Microsoft Visual C&#43;&#43; 2017 Build Tools  下载链接 : Visual Studio 安装 Microsoft Visual C&#43;&#43; 2017 Build Tools  在Anaconda中创建python环境并安装相应的packages  在Anaconda中创建python环境
-conda create -n &lt;your_env_name&gt; python=3.6  如果需要在gym中录制视频，则需要安装ffmpeg
-conda install -c conda-forge ffmpeg  首先需要安装一个空的gym环境，因为在后面安装完全的gym环境的过程中会出现mujoco环境的错误，虽然这不影响其他模块的使用，但会导致gym不会被添加到环境中，也就没有办法import。
-conda install -c conda-forge gym  安装pystan是ToyText环境的需要
-conda install -c conda-forge pystan  这一步是安装gym环境成功的关键，国外大神kojoley成功地封装了atari模块使得安装这一补丁后，atari环境能够在win 10环境下成功运行
-conda install git pip install git&#43;https://github."/>
+ 直接在win 10上安装Gym环境 利用WSL( Windows Subsystem for Linux )安装Gym环境  直接在win 10上安装Gym环境 安装 Microsoft Visual C&#43;&#43; 2017 Build Tools  下载链接 : Visual Studio 安装 Microsoft Visual C&#43;&#43; 2017 Build Tools  在Anaconda中创建python环境并安装相应的packages   在Anaconda中创建python环境
+conda create -n &lt;your_env_name&gt; python=3.6   如果需要在gym中录制视频，则需要安装ffmpeg
+conda install -c conda-forge ffmpeg   首先需要安装一个空的gym环境，因为在后面安装完全的gym环境的过程中会出现mujoco环境的错误，虽然这不影响其他模块的使用，但会导致gym不会被添加到环境中，也就没有办法import。
+conda install -c conda-forge gym   安装pystan是ToyText环境的需要
+conda install -c conda-forge pystan   这一步是安装gym环境成功的关键，国外大神kojoley成功地封装了atari模块使得安装这一补丁后，atari环境能够在win 10环境下成功运行"/>
 
   </head>
 
@@ -131,380 +126,318 @@ conda install git pip install git&#43;https://github."/>
       
     </header>
 
-    <section class="nested-copy-line-height lh-copy serif f4 nested-links nested-img mid-gray pr4-l w-two-thirds-l">
-
-<p>Gym是强化学习中一个很重要的python库，里面包含了很多强化学习的环境。但比较可惜的是官方并没有提供Windows平台的支持，这对于习惯了Windows平台工作的强化学习研究人员来说很不方便，所以我找到了两个解决办法。</p>
-
+    <section class="nested-copy-line-height lh-copy serif f4 nested-links nested-img mid-gray pr4-l w-two-thirds-l"><p>Gym是强化学习中一个很重要的python库，里面包含了很多强化学习的环境。但比较可惜的是官方并没有提供Windows平台的支持，这对于习惯了Windows平台工作的强化学习研究人员来说很不方便，所以我找到了两个解决办法。</p>
 <ul>
 <li>直接在win 10上安装Gym环境</li>
 <li>利用WSL( Windows Subsystem for Linux )安装Gym环境</li>
 </ul>
-
 <h1 id="直接在win-10上安装gym环境">直接在win 10上安装Gym环境</h1>
-
 <h3 id="安装-microsoft-visual-c-2017-build-tools">安装 Microsoft Visual C++ 2017 Build Tools</h3>
-
 <ol>
 <li>下载链接 : <a href="https://visualstudio.microsoft.com/downloads/">Visual Studio</a></li>
 <li>安装 Microsoft Visual C++ 2017 Build Tools</li>
 </ol>
-
 <h3 id="在anaconda中创建python环境并安装相应的packages">在Anaconda中创建python环境并安装相应的packages</h3>
-
 <ol>
-<li><p>在Anaconda中创建python环境</p>
-
-<pre><code class="language-shell">conda create -n &lt;your_env_name&gt; python=3.6
-</code></pre></li>
-
-<li><p>如果需要在gym中录制视频，则需要安装ffmpeg</p>
-
-<pre><code class="language-shell">conda install -c conda-forge ffmpeg
-</code></pre></li>
-
-<li><p>首先需要安装一个空的gym环境，因为在后面安装完全的gym环境的过程中会出现mujoco环境的错误，虽然这不影响其他模块的使用，但会导致gym不会被添加到环境中，也就没有办法import。</p>
-
-<pre><code class="language-shell">conda install -c conda-forge gym
-</code></pre></li>
-
-<li><p>安装pystan是ToyText环境的需要</p>
-
-<pre><code class="language-shell">conda install -c conda-forge pystan
-</code></pre></li>
-
-<li><p>这一步是安装gym环境成功的关键，国外大神kojoley成功地封装了atari模块使得安装这一补丁后，atari环境能够在win 10环境下成功运行</p>
-
-<pre><code class="language-shell">conda install git
-pip install git+https://github.com/Kojoley/atari-py.git # 或者 pip install --no-index -f https://github.com/Kojoley/atari-py/releases atari_py
-</code></pre></li>
-
-<li><p>运行这一步是为了安装Box2D环境</p>
-
-<pre><code class="language-shell">conda install swig
+<li>
+<p>在Anaconda中创建python环境</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">conda create -n &lt;your_env_name&gt; python<span style="color:#f92672">=</span>3.6
+</code></pre></div></li>
+<li>
+<p>如果需要在gym中录制视频，则需要安装ffmpeg</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">conda install -c conda-forge ffmpeg
+</code></pre></div></li>
+<li>
+<p>首先需要安装一个空的gym环境，因为在后面安装完全的gym环境的过程中会出现mujoco环境的错误，虽然这不影响其他模块的使用，但会导致gym不会被添加到环境中，也就没有办法import。</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">conda install -c conda-forge gym
+</code></pre></div></li>
+<li>
+<p>安装pystan是ToyText环境的需要</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">conda install -c conda-forge pystan
+</code></pre></div></li>
+<li>
+<p>这一步是安装gym环境成功的关键，国外大神kojoley成功地封装了atari模块使得安装这一补丁后，atari环境能够在win 10环境下成功运行</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">conda install git
+pip install git+https://github.com/Kojoley/atari-py.git <span style="color:#75715e"># 或者 pip install --no-index -f https://github.com/Kojoley/atari-py/releases atari_py</span>
+</code></pre></div></li>
+<li>
+<p>运行这一步是为了安装Box2D环境</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">conda install swig
 pip install Box2D
-</code></pre></li>
-
-<li><p>安装mujoco的依赖</p>
-
+</code></pre></div></li>
+<li>
+<p>安装mujoco的依赖</p>
 <ul>
-<li><p>下载mujoco的二进制文件并放到对应位置，并设置相应的环境变量，详见<a href="https://github.com/openai/mujoco-py">github</a></p></li>
-
-<li><p>将mujoco的mjkey.txt密钥文件放到对应位置,详见<a href="https://github.com/openai/mujoco-py">github</a></p></li>
-
-<li><p>确保已经安装了windows 10 SDK和windows 8.1 SDK。并且把&rdquo;C:\Program Files (x86)\Windows Kits\8.1\bin\x86&rdquo;路径 添加到环境变量中。</p></li>
-
-<li><p>安装mujoco_py</p>
-
-<pre><code class="language-shell">python -m pip install -U 'mujoco-py&lt;1.50.2,&gt;=1.50.1'
-</code></pre></li>
-</ul></li>
-
-<li><p>安装完整的gym环境，会有mujoco的错误出现，不过无所谓，不用在意</p>
-
-<pre><code class="language-shell">pip install gym[all]
-</code></pre></li>
+<li>
+<p>下载mujoco的二进制文件并放到对应位置，并设置相应的环境变量，详见<a href="https://github.com/openai/mujoco-py">github</a></p>
+</li>
+<li>
+<p>将mujoco的mjkey.txt密钥文件放到对应位置,详见<a href="https://github.com/openai/mujoco-py">github</a></p>
+</li>
+<li>
+<p>确保已经安装了windows 10 SDK和windows 8.1 SDK。并且把&quot;C:\Program Files (x86)\Windows Kits\8.1\bin\x86&quot;路径 添加到环境变量中。</p>
+</li>
+<li>
+<p>安装mujoco_py</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">python -m pip install -U <span style="color:#e6db74">&#39;mujoco-py&lt;1.50.2,&gt;=1.50.1&#39;</span>
+</code></pre></div></li>
+</ul>
+</li>
+<li>
+<p>安装完整的gym环境，会有mujoco的错误出现，不过无所谓，不用在意</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">pip install gym<span style="color:#f92672">[</span>all<span style="color:#f92672">]</span>
+</code></pre></div></li>
 </ol>
-
-<h3 id="环境可视化-env-render">环境可视化(env.render())</h3>
-
+<h3 id="环境可视化envrender">环境可视化(env.render())</h3>
 <ol>
-<li><p>下载<a href="https://sourceforge.net/projects/xming/">Xming</a>并按照提示安装</p></li>
-
-<li><p>每次运行gym环境前，在win 10的cmd或者powershell中运行如下命令</p>
-
-<pre><code class="language-shell">set DISPLAY=:0
-</code></pre></li>
+<li>
+<p>下载<a href="https://sourceforge.net/projects/xming/">Xming</a>并按照提示安装</p>
+</li>
+<li>
+<p>每次运行gym环境前，在win 10的cmd或者powershell中运行如下命令</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">set DISPLAY<span style="color:#f92672">=</span>:0
+</code></pre></div></li>
 </ol>
-
 <h3 id="test">Test</h3>
-
 <ol>
-<li><p>可以运行如下代码来测试Atari环境</p>
-
-<pre><code class="language-python">import gym
+<li>
+<p>可以运行如下代码来测试Atari环境</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">import</span> gym
    
-env = gym.make('Pong-v0')
-env.reset()
+env <span style="color:#f92672">=</span> gym<span style="color:#f92672">.</span>make(<span style="color:#e6db74">&#39;Pong-v0&#39;</span>)
+env<span style="color:#f92672">.</span>reset()
    
-for i in range(1000):
-   env.render()
-   env.step(env.action_space.sample())
-</code></pre></li>
+<span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> range(<span style="color:#ae81ff">1000</span>):
+    env<span style="color:#f92672">.</span>render()
+    env<span style="color:#f92672">.</span>step(env<span style="color:#f92672">.</span>action_space<span style="color:#f92672">.</span>sample())
+</code></pre></div></li>
 </ol>
-
 <h3 id="参考文献">参考文献</h3>
-
 <ol>
 <li><a href="https://arztsamuel.github.io/en/blogs/2018/Gym-and-Baselines-on-Windows.html">Gym and Baselines on Windows</a></li>
 <li><a href="https://towardsdatascience.com/how-to-install-openai-gym-in-a-windows-environment-338969e24d30">How to install OpenAI Gym in a Windows environment</a></li>
 </ol>
-
 <h1 id="利用wsl-windows-subsystem-for-linux-安装gym环境">利用WSL( Windows Subsystem for Linux )安装Gym环境</h1>
-
 <h3 id="安装-ubuntu-wsl">安装 ubuntu WSL</h3>
-
 <ol>
-<li><p>控制面板 -&gt; 程序 -&gt; 启用或关闭windows功能 -&gt; 适用于linux的windows子系统
+<li>
+<p>控制面板 -&gt; 程序 -&gt; 启用或关闭windows功能 -&gt; 适用于linux的windows子系统
 或者在powershell中运行如下命令</p>
-
-<pre><code class="language-powershell">Enable-WindowsOptionalFeature -Online -FeatureName Microsoft-Windows-Subsystem-Linux
-</code></pre></li>
-
-<li><p>去微软应用商店安装ubuntu 18.04的子系统，需要几分钟进行安装</p></li>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-powershell" data-lang="powershell">Enable-WindowsOptionalFeature -Online -FeatureName Microsoft-Windows-Subsystem-Linux
+</code></pre></div></li>
+<li>
+<p>去微软应用商店安装ubuntu 18.04的子系统，需要几分钟进行安装</p>
+</li>
 </ol>
-
 <h3 id="在wsl中安装需要的软件包">在WSL中安装需要的软件包</h3>
-
 <ol>
-<li><p>运行如下命令先更新ubuntu的软件库</p>
-
-<pre><code class="language-shell">sudo apt-get update &amp;&amp; sudo apt-get upgrade -y &amp;&amp; sudo apt-get upgrade -y &amp;&amp; sudo apt-get dist-upgrade -y &amp;&amp; sudo apt-get autoremove -y
-</code></pre></li>
+<li>
+<p>运行如下命令先更新ubuntu的软件库</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">sudo apt-get update <span style="color:#f92672">&amp;&amp;</span> sudo apt-get upgrade -y <span style="color:#f92672">&amp;&amp;</span> sudo apt-get upgrade -y <span style="color:#f92672">&amp;&amp;</span> sudo apt-get dist-upgrade -y <span style="color:#f92672">&amp;&amp;</span> sudo apt-get autoremove -y
+</code></pre></div></li>
 </ol>
-
 <h3 id="可视化">可视化</h3>
-
 <ol>
-<li><p>跟前一种方法一样，在windows上下载<a href="https://sourceforge.net/projects/xming/">Xming</a>用来可视化WSL的图形画面</p></li>
-
-<li><p>在ubuntu上进行画面输出的配置</p>
-
-<pre><code class="language-shell">echo &quot;export DISPLAY=localhost:0.0&quot; &gt;&gt; ~/.bashrc
+<li>
+<p>跟前一种方法一样，在windows上下载<a href="https://sourceforge.net/projects/xming/">Xming</a>用来可视化WSL的图形画面</p>
+</li>
+<li>
+<p>在ubuntu上进行画面输出的配置</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">echo <span style="color:#e6db74">&#34;export DISPLAY=localhost:0.0&#34;</span> &gt;&gt; ~/.bashrc
 source ~/.bashrc
 sudo apt-get install x11-apps
-# start a demo application for test
+<span style="color:#75715e"># start a demo application for test</span>
 xeyes
-</code></pre></li>
+</code></pre></div></li>
 </ol>
-
 <h3 id="install-anaconda-and-gym">install anaconda and gym</h3>
-
 <ol>
-<li><p>下载Anaconda的安装脚本并进行安装</p>
-
-<pre><code class="language-shell">cd /tmp
+<li>
+<p>下载Anaconda的安装脚本并进行安装</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">cd /tmp
 curl -O &lt;url of anaconda&gt;
 chmod +x &lt;the script of anaconda&gt;
 ./&lt;the script of anaconda&gt;
 source ~/.bashrc
-</code></pre></li>
-
-<li><p>创建python环境</p>
-
-<pre><code class="language-shell"># Create the environment
-conda create --name &lt;env name&gt; python=3.7
-# Activate the environment
+</code></pre></div></li>
+<li>
+<p>创建python环境</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell"><span style="color:#75715e"># Create the environment</span>
+conda create --name &lt;env name&gt; python<span style="color:#f92672">=</span>3.7
+<span style="color:#75715e"># Activate the environment</span>
 source activate &lt;env name&gt;
-</code></pre></li>
+</code></pre></div><p>安装gym</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell"><span style="color:#75715e"># 首先安装一下gym的依赖，可能还有其他的，如果出了bug就适当添加就可以了</span>
+sudo apt-get install cmake
+<span style="color:#75715e"># 首先安装opengl---gym的需要</span>
+sudo apt-get install python-opengl
+<span style="color:#75715e"># 安装pip以便能够安装gym</span>
+sudo apt-get install python3-pip <span style="color:#75715e"># or python-pip</span>
+<span style="color:#75715e"># 安装gym</span>
+<span style="color:#75715e"># 不要直接使用pip install，这样可能会出现无法import的现象</span>
+python -m pip install gym
+python -m pip install gym<span style="color:#f92672">[</span>atari<span style="color:#f92672">]</span>
+</code></pre></div></li>
+<li>
+<p>然后就可以写一个demo程序进行测试了</p>
+</li>
 </ol>
-
-<p>安装gym</p>
-
-<pre><code class="language-shell">   # 首先安装一下gym的依赖，可能还有其他的，如果出了bug就适当添加就可以了
-   sudo apt-get install cmake
-   # 首先安装opengl---gym的需要
-   sudo apt-get install python-opengl
-   # 安装pip以便能够安装gym
-   sudo apt-get install python3-pip # or python-pip
-   # 安装gym
-   # 不要直接使用pip install，这样可能会出现无法import的现象
-   python -m pip install gym
-   python -m pip install gym[atari]
-</code></pre>
-
-<ol>
-<li>然后就可以写一个demo程序进行测试了</li>
-</ol>
-
 <h3 id="可听化">可听化</h3>
-
 <p>因为Xming不支持声音，所以WSL上有关声音的操作无法完成，比如flyppy-bird调用了pygame的声音模块导致其无法正常在wsl上运行，所以需要找到解决方案</p>
-
 <ol>
-<li><p>在win 10 上下载 <a href="https://www.freedesktop.org/wiki/Software/PulseAudio/Ports/Windows/Support/">PulseAudio</a>并解压</p></li>
-
-<li><p>修改文件中的对应内容</p>
-
+<li>
+<p>在win 10 上下载 <a href="https://www.freedesktop.org/wiki/Software/PulseAudio/Ports/Windows/Support/">PulseAudio</a>并解压</p>
+</li>
+<li>
+<p>修改文件中的对应内容</p>
 <ul>
-<li><p>将etc\pulse\default.pa文件第32行的内容</p>
-
+<li>
+<p>将etc\pulse\default.pa文件第32行的内容</p>
 <pre><code>load-module module-waveout sink_name=output source_name=input
+</code></pre><p>改为</p>
+<pre><code>load-module module-waveout sink_name=output source_name=input **record=0**
 </code></pre></li>
-</ul>
-
-<p>改为</p>
-
-<pre><code> load-module module-waveout sink_name=output source_name=input **record=0**
-</code></pre>
-
-<ul>
-<li><p>将etc\pulse\default.pa文件第61行的内容</p>
-
+<li>
+<p>将etc\pulse\default.pa文件第61行的内容</p>
 <pre><code>\#load-module module-native-protocol-tcp
+</code></pre><p>改为</p>
+<pre><code>load-module module-native-protocol-tcp **auth-ip-acl=127.0.0.1 auth-anonymous=1**
 </code></pre></li>
-</ul>
-
-<p>改为</p>
-
-<pre><code> load-module module-native-protocol-tcp **auth-ip-acl=127.0.0.1 auth-anonymous=1**
-</code></pre>
-
-<ul>
-<li><p>将etc\pulse\daemon.conf文件第39行的内容</p>
-
+<li>
+<p>将etc\pulse\daemon.conf文件第39行的内容</p>
 <pre><code>; exit-idle-time = 20
+</code></pre><p>改为</p>
+<pre><code>exit-idle-time = -1
 </code></pre></li>
 </ul>
-
-<p>改为</p>
-
-<pre><code> exit-idle-time = -1
-</code></pre></li>
-
-<li><p>在WSL上设置 pulseaudio</p>
-
-<pre><code class="language-shell">sudo add-apt-repository ppa:therealkenc/wsl-pulseaudio
+</li>
+<li>
+<p>在WSL上设置 pulseaudio</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">sudo add-apt-repository ppa:therealkenc/wsl-pulseaudio
 sudo apt-get update
    
 sudo apt-get install pulseaudio
-</code></pre>
-
-<p>安装完成无误后，运行如下配置命令使得PulseAudio能够通过TCP运行</p>
-
-<pre><code class="language-shell">echo &quot;export PULSE_SERVER=tcp:localhost&quot; &gt;&gt; ~/.bashrc
+</code></pre></div><p>安装完成无误后，运行如下配置命令使得PulseAudio能够通过TCP运行</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">echo <span style="color:#e6db74">&#34;export PULSE_SERVER=tcp:localhost&#34;</span> &gt;&gt; ~/.bashrc
 source ~/.bashrc
-</code></pre></li>
-
-<li><p>在cmd或者powershell中运行bin文件夹下的 <code>pulseaudio.exe</code></p></li>
+</code></pre></div></li>
+<li>
+<p>在cmd或者powershell中运行bin文件夹下的 <code>pulseaudio.exe</code></p>
+</li>
 </ol>
-
 <h3 id="参考文献-1">参考文献</h3>
-
 <ol>
 <li><a href="https://dibranmulder.github.io/2019/09/06/Running-an-OpenAI-Gym-on-Windows-with-WSL/">install gym with WSL</a></li>
 <li><a href="https://trzeci.eu/configure-graphic-and-sound-on-wsl/">configure graphic and sound on wsl</a></li>
 <li><a href="https://token2shell.com/howto/x410/enabling-sound-in-wsl-ubuntu-let-it-sing/">enabling sound in wsl ubuntu let it sing</a></li>
 <li><a href="https://research.wmz.ninja/articles/2017/11/setting-up-wsl-with-graphics-and-audio.html">setting up wsl with graphics and audio</a></li>
 </ol>
-
 <h1 id="gym环境简要介绍">gym环境简要介绍</h1>
-
 <h3 id="环境">环境</h3>
-
 <ol>
-<li><p>最简代码测试</p>
-
-<pre><code class="language-python">import gym
-env = gym.make('CartPole-v0')
-env.reset()
-for _ in range(1000):
-   env.render()
-   env.step(env.action_space.sample()) # random sample from the actions
-</code></pre></li>
+<li>
+<p>最简代码测试</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">import</span> gym
+env <span style="color:#f92672">=</span> gym<span style="color:#f92672">.</span>make(<span style="color:#e6db74">&#39;CartPole-v0&#39;</span>)
+env<span style="color:#f92672">.</span>reset()
+<span style="color:#66d9ef">for</span> _ <span style="color:#f92672">in</span> range(<span style="color:#ae81ff">1000</span>):
+    env<span style="color:#f92672">.</span>render()
+    env<span style="color:#f92672">.</span>step(env<span style="color:#f92672">.</span>action_space<span style="color:#f92672">.</span>sample()) <span style="color:#75715e"># random sample from the actions</span>
+</code></pre></div><p>如果想要测试其他环境只需要替换gym.make()中的参数，比如<a href="http://gym.openai.com/envs/MountainCar-v0"><code>MountainCar-v0</code></a>, <a href="http://gym.openai.com/envs/MsPacman-v0"><code>MsPacman-v0</code></a> （需要 <a href="https://github.com/openai/gym#atari">Atari dependency</a>）, 或者 <a href="http://gym.openai.com/envs/Hopper-v1"><code>Hopper-v1</code></a> (需要 <a href="https://github.com/openai/gym#mujoco">MuJoCo dependencies</a> ）. 这些环境全都继承于 <a href="https://github.com/openai/gym/blob/master/gym/core.py"><code>Env</code></a> 基类.</p>
+</li>
+<li>
+<p><a href="http://gym.openai.com/envs/#classic_control">全部环境清单</a></p>
+</li>
+<li>
+<p>如果想要列出所有已安装的环境，只需要执行<code>gym.envs.registry</code>
+如果想要加入自己的，只需要使得它们可以被<code>gym.make()</code>调用：在启动时<code>register()</code>它们</p>
+</li>
+<li>
+<p>保持环境可视化</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">env<span style="color:#f92672">.</span>render()
+</code></pre></div></li>
 </ol>
-
-<p>如果想要测试其他环境只需要替换gym.make()中的参数，比如<a href="http://gym.openai.com/envs/MountainCar-v0"><code>MountainCar-v0</code></a>, <a href="http://gym.openai.com/envs/MsPacman-v0"><code>MsPacman-v0</code></a> （需要 <a href="https://github.com/openai/gym#atari">Atari dependency</a>）, 或者 <a href="http://gym.openai.com/envs/Hopper-v1"><code>Hopper-v1</code></a> (需要 <a href="https://github.com/openai/gym#mujoco">MuJoCo dependencies</a> ）. 这些环境全都继承于 <a href="https://github.com/openai/gym/blob/master/gym/core.py"><code>Env</code></a> 基类.</p>
-
-<ol>
-<li><p><a href="http://gym.openai.com/envs/#classic_control">全部环境清单</a></p></li>
-
-<li><p>如果想要列出所有已安装的环境，只需要执行<code>gym.envs.registry</code>
-如果想要加入自己的，只需要使得它们可以被<code>gym.make()</code>调用：在启动时<code>register()</code>它们</p></li>
-
-<li><p>保持环境可视化</p>
-
-<pre><code class="language-python">env.render()
-</code></pre></li>
-</ol>
-
 <h3 id="观测">观测</h3>
-
 <ol>
-<li><p>环境的<code>step()</code>函数会返回四个值，分别为：</p>
-
+<li>
+<p>环境的<code>step()</code>函数会返回四个值，分别为：</p>
 <ul>
 <li><code>observation(object)</code>：表示环境当前的观测状态。比如可视化环境的像素值，比如机器人的角度和角速度</li>
 <li><code>reward(float)</code>：前一个动作获得的奖励</li>
 <li><code>done(boolean)</code>：当前回合是否结束的标识，也可以看作是环境是否重启的标识</li>
 <li><code>info(dict)</code>：方便用于调试的针对信息，例如，它可能包含环境上次状态更改背后的原始概率</li>
-</ul></li>
-
-<li><p>如果想要启动或者重启环境可以调用<code>reset()</code>函数，它会返回一个<code>observation</code></p></li>
-
-<li><p>改变状态</p>
-
-<pre><code class="language-python">env.env.s = 114
-</code></pre></li>
+</ul>
+</li>
+<li>
+<p>如果想要启动或者重启环境可以调用<code>reset()</code>函数，它会返回一个<code>observation</code></p>
+</li>
+<li>
+<p>改变状态</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">env<span style="color:#f92672">.</span>env<span style="color:#f92672">.</span>s <span style="color:#f92672">=</span> <span style="color:#ae81ff">114</span>
+</code></pre></div></li>
 </ol>
-
 <h3 id="空间">空间</h3>
-
 <ol>
-<li><p>动作空间</p>
-
-<pre><code class="language-python">env = env = gym.make('CartPole-v0')
-print(env.action_space)
-print(env.action_space.n) # number of actions
-</code></pre></li>
-
-<li><p>状态空间</p>
-
-<pre><code class="language-python">print(env.observation_space)
-print(env.observation_space.n) # number of actions
-</code></pre></li>
-
-<li><p>定义空间</p>
-
-<pre><code class="language-python">from gym import spaces
-# or : space = spaces.Box(8)
-space = spaces.Discrete(8) # Set with 8 elements{0,1,2,3,4,5,6,7}
-x = space.sample()
-assert space.contains(x)
-assert space.n = 8
-</code></pre></li>
+<li>
+<p>动作空间</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">env <span style="color:#f92672">=</span> env <span style="color:#f92672">=</span> gym<span style="color:#f92672">.</span>make(<span style="color:#e6db74">&#39;CartPole-v0&#39;</span>)
+<span style="color:#66d9ef">print</span>(env<span style="color:#f92672">.</span>action_space)
+<span style="color:#66d9ef">print</span>(env<span style="color:#f92672">.</span>action_space<span style="color:#f92672">.</span>n) <span style="color:#75715e"># number of actions</span>
+</code></pre></div></li>
+<li>
+<p>状态空间</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#66d9ef">print</span>(env<span style="color:#f92672">.</span>observation_space)
+<span style="color:#66d9ef">print</span>(env<span style="color:#f92672">.</span>observation_space<span style="color:#f92672">.</span>n) <span style="color:#75715e"># number of actions</span>
+</code></pre></div></li>
+<li>
+<p>定义空间</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">from</span> gym <span style="color:#f92672">import</span> spaces
+<span style="color:#75715e"># or : space = spaces.Box(8)</span>
+space <span style="color:#f92672">=</span> spaces<span style="color:#f92672">.</span>Discrete(<span style="color:#ae81ff">8</span>) <span style="color:#75715e"># Set with 8 elements{0,1,2,3,4,5,6,7}</span>
+x <span style="color:#f92672">=</span> space<span style="color:#f92672">.</span>sample()
+<span style="color:#66d9ef">assert</span> space<span style="color:#f92672">.</span>contains(x)
+<span style="color:#66d9ef">assert</span> space<span style="color:#f92672">.</span>n <span style="color:#f92672">=</span> <span style="color:#ae81ff">8</span>
+</code></pre></div></li>
 </ol>
-
 <h3 id="环境完整性测试代码">环境完整性测试代码</h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">import</span> time
+<span style="color:#f92672">import</span> gym
 
-<pre><code class="language-python">import time
-import gym
+test_envs<span style="color:#f92672">=</span>{<span style="color:#e6db74">&#39;algorithm&#39;</span>:<span style="color:#e6db74">&#39;Copy-v0&#39;</span>,
+           <span style="color:#e6db74">&#39;toy_text&#39;</span>:<span style="color:#e6db74">&#39;FrozenLake-v0&#39;</span>,
+           <span style="color:#e6db74">&#39;control&#39;</span>:<span style="color:#e6db74">&#39;CartPole-v0&#39;</span>,  
+           <span style="color:#e6db74">&#39;atari&#39;</span>:<span style="color:#e6db74">&#39;Pong-v0&#39;</span>,
+           <span style="color:#e6db74">&#39;mujoco&#39;</span>:<span style="color:#e6db74">&#39;Humanoid-v1&#39;</span>,    
+           <span style="color:#e6db74">&#39;box2d&#39;</span>:<span style="color:#e6db74">&#39;LunarLander-v2&#39;</span> }
 
-test_envs={'algorithm':'Copy-v0',
-           'toy_text':'FrozenLake-v0',
-           'control':'CartPole-v0',  
-           'atari':'Pong-v0',
-           'mujoco':'Humanoid-v1',    
-           'box2d':'LunarLander-v2' }
+<span style="color:#66d9ef">for</span> k,v <span style="color:#f92672">in</span> test_envs<span style="color:#f92672">.</span>items():
 
-for k,v in test_envs.items():
-
-    try:
-    	env = gym.make(v)
-    except Error:
-        print(&quot;failed to run {} environment&quot;.format(k))
-        continue
+    <span style="color:#66d9ef">try</span>:
+    	env <span style="color:#f92672">=</span> gym<span style="color:#f92672">.</span>make(v)
+    <span style="color:#66d9ef">except</span> Error:
+        <span style="color:#66d9ef">print</span>(<span style="color:#e6db74">&#34;failed to run {} environment&#34;</span><span style="color:#f92672">.</span>format(k))
+        <span style="color:#66d9ef">continue</span>
         
-    num_episodes = 1
+    num_episodes <span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span>
 
-    for i in range(num_episodes):
-        state = env.reset()
-        totalReward = 0
+    <span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> range(num_episodes):
+        state <span style="color:#f92672">=</span> env<span style="color:#f92672">.</span>reset()
+        totalReward <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>
 
-        for _ in range(100):
-            env.render()
+        <span style="color:#66d9ef">for</span> _ <span style="color:#f92672">in</span> range(<span style="color:#ae81ff">100</span>):
+            env<span style="color:#f92672">.</span>render()
 
-            # take a random action
-            randomAction = env.action_space.sample()
-            observation,reward,done,info = env.step(randomAction) 
+            <span style="color:#75715e"># take a random action</span>
+            randomAction <span style="color:#f92672">=</span> env<span style="color:#f92672">.</span>action_space<span style="color:#f92672">.</span>sample()
+            observation,reward,done,info <span style="color:#f92672">=</span> env<span style="color:#f92672">.</span>step(randomAction) 
 
-            time.sleep(0.1)
-            totalReward += reward
+            time<span style="color:#f92672">.</span>sleep(<span style="color:#ae81ff">0.1</span>)
+            totalReward <span style="color:#f92672">+=</span> reward
 
-        print(&quot;success to run {} environment&quot;.format(k))
+        <span style="color:#66d9ef">print</span>(<span style="color:#e6db74">&#34;success to run {} environment&#34;</span><span style="color:#f92672">.</span>format(k))
 
-    env.close()
-</code></pre>
-<ul class="pa0">
+    env<span style="color:#f92672">.</span>close()
+</code></pre></div><ul class="pa0">
   
 </ul>
 <div class="mt6">

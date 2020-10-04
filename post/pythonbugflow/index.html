@@ -6,7 +6,7 @@
     
     <title>Bridge : you &amp; me  | PythonBugFlow</title>
     <meta name="viewport" content="width=device-width,minimum-scale=1">
-    <meta name="generator" content="Hugo 0.57.2" />
+    <meta name="generator" content="Hugo 0.75.1" />
     
     
       <META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW">
@@ -26,25 +26,23 @@
     
 
     <meta property="og:title" content="PythonBugFlow" />
-<meta property="og:description" content="基础问题 1. AttributeError: module &lsquo;XXX&rsquo; has no attribute &lsquo;xxx&rsquo;  原因：一般module和attribute的名字没有拼错的情况下，出现这类问题通常是因为这个py文件所在的目录中存在与module同名的py文件，导致python的错误调用。
- 解决办法：更改文件名。
-  2. AttributeError: module &lsquo;XXX&rsquo; has no attribute &lsquo;XXX&rsquo;  原因：一般情况下可能是因为拼写错误导致的改模块下确实没有对应的attribute。但还有另外一种情况是当前运行的python文件目录下有和此module模块重名的python文件，导致运行的python文件优先import了当前目录下的对应文件，所以不存在对应的attribute 解决办法：检查拼写错误或者改变文件名即可  TensorFlow 1. TypeError: Unexpected keyword argument passed to optimizer: name Traceback (most recent call last): File &quot;visualizing_the_convnet.py&quot;, line 3, in &lt;module&gt; model = load_model(&#39;cats_and_dogs_small_2.h5&#39;) ... TypeError: Unexpected keyword argument passed to optimizer: name   原因：这部分代码加载了H5文件保存的keras Model，但是由于保存Model和加载Model的keras的版本不一致，所以会产生这个问题
- 解决办法：保持加载Model和保存Model的keras版本一致
-  2. failed to create cublas handle: CUBLAS_STATUS_ALLOC_FAILED  原因：申请GPU内存，空间不够被拒绝" />
+<meta property="og:description" content="基础问题 1. AttributeError: module &lsquo;XXX&rsquo; has no attribute &lsquo;xxx&rsquo;   原因：一般module和attribute的名字没有拼错的情况下，出现这类问题通常是因为这个py文件所在的目录中存在与module同名的py文件，导致python的错误调用。
+  解决办法：更改文件名。
+  2. AttributeError: module &lsquo;XXX&rsquo; has no attribute &lsquo;XXX&rsquo;  原因：一般情况下可能是因为拼写错误导致的改模块下确实没有对应的attribute。但还有另外一种情况是当前运行的python文件目录下有和此module模块重名的python文件，导致运行的python文件优先import了当前目录下的对应文件，所以不存在对应的attribute 解决办法：检查拼写错误或者改变文件名即可  TensorFlow 1. TypeError: Unexpected keyword argument passed to optimizer: name Traceback (most recent call last): File &#34;visualizing_the_convnet.py&#34;, line 3, in &lt;module&gt; model = load_model(&#39;cats_and_dogs_small_2.h5&#39;) ... TypeError: Unexpected keyword argument passed to optimizer: name   原因：这部分代码加载了H5文件保存的keras Model，但是由于保存Model和加载Model的keras的版本不一致，所以会产生这个问题
+  解决办法：保持加载Model和保存Model的keras版本一致
+  2." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://horizonnn.github.io/post/pythonbugflow/" />
 <meta property="article:published_time" content="2019-08-25T21:21:34+08:00" />
 <meta property="article:modified_time" content="2019-08-25T21:21:34+08:00" />
 <meta itemprop="name" content="PythonBugFlow">
-<meta itemprop="description" content="基础问题 1. AttributeError: module &lsquo;XXX&rsquo; has no attribute &lsquo;xxx&rsquo;  原因：一般module和attribute的名字没有拼错的情况下，出现这类问题通常是因为这个py文件所在的目录中存在与module同名的py文件，导致python的错误调用。
- 解决办法：更改文件名。
-  2. AttributeError: module &lsquo;XXX&rsquo; has no attribute &lsquo;XXX&rsquo;  原因：一般情况下可能是因为拼写错误导致的改模块下确实没有对应的attribute。但还有另外一种情况是当前运行的python文件目录下有和此module模块重名的python文件，导致运行的python文件优先import了当前目录下的对应文件，所以不存在对应的attribute 解决办法：检查拼写错误或者改变文件名即可  TensorFlow 1. TypeError: Unexpected keyword argument passed to optimizer: name Traceback (most recent call last): File &quot;visualizing_the_convnet.py&quot;, line 3, in &lt;module&gt; model = load_model(&#39;cats_and_dogs_small_2.h5&#39;) ... TypeError: Unexpected keyword argument passed to optimizer: name   原因：这部分代码加载了H5文件保存的keras Model，但是由于保存Model和加载Model的keras的版本不一致，所以会产生这个问题
- 解决办法：保持加载Model和保存Model的keras版本一致
-  2. failed to create cublas handle: CUBLAS_STATUS_ALLOC_FAILED  原因：申请GPU内存，空间不够被拒绝">
-
-
-<meta itemprop="datePublished" content="2019-08-25T21:21:34&#43;08:00" />
-<meta itemprop="dateModified" content="2019-08-25T21:21:34&#43;08:00" />
+<meta itemprop="description" content="基础问题 1. AttributeError: module &lsquo;XXX&rsquo; has no attribute &lsquo;xxx&rsquo;   原因：一般module和attribute的名字没有拼错的情况下，出现这类问题通常是因为这个py文件所在的目录中存在与module同名的py文件，导致python的错误调用。
+  解决办法：更改文件名。
+  2. AttributeError: module &lsquo;XXX&rsquo; has no attribute &lsquo;XXX&rsquo;  原因：一般情况下可能是因为拼写错误导致的改模块下确实没有对应的attribute。但还有另外一种情况是当前运行的python文件目录下有和此module模块重名的python文件，导致运行的python文件优先import了当前目录下的对应文件，所以不存在对应的attribute 解决办法：检查拼写错误或者改变文件名即可  TensorFlow 1. TypeError: Unexpected keyword argument passed to optimizer: name Traceback (most recent call last): File &#34;visualizing_the_convnet.py&#34;, line 3, in &lt;module&gt; model = load_model(&#39;cats_and_dogs_small_2.h5&#39;) ... TypeError: Unexpected keyword argument passed to optimizer: name   原因：这部分代码加载了H5文件保存的keras Model，但是由于保存Model和加载Model的keras的版本不一致，所以会产生这个问题
+  解决办法：保持加载Model和保存Model的keras版本一致
+  2.">
+<meta itemprop="datePublished" content="2019-08-25T21:21:34+08:00" />
+<meta itemprop="dateModified" content="2019-08-25T21:21:34+08:00" />
 <meta itemprop="wordCount" content="200">
 
 
@@ -52,11 +50,11 @@
 <meta itemprop="keywords" content="" />
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="PythonBugFlow"/>
-<meta name="twitter:description" content="基础问题 1. AttributeError: module &lsquo;XXX&rsquo; has no attribute &lsquo;xxx&rsquo;  原因：一般module和attribute的名字没有拼错的情况下，出现这类问题通常是因为这个py文件所在的目录中存在与module同名的py文件，导致python的错误调用。
- 解决办法：更改文件名。
-  2. AttributeError: module &lsquo;XXX&rsquo; has no attribute &lsquo;XXX&rsquo;  原因：一般情况下可能是因为拼写错误导致的改模块下确实没有对应的attribute。但还有另外一种情况是当前运行的python文件目录下有和此module模块重名的python文件，导致运行的python文件优先import了当前目录下的对应文件，所以不存在对应的attribute 解决办法：检查拼写错误或者改变文件名即可  TensorFlow 1. TypeError: Unexpected keyword argument passed to optimizer: name Traceback (most recent call last): File &quot;visualizing_the_convnet.py&quot;, line 3, in &lt;module&gt; model = load_model(&#39;cats_and_dogs_small_2.h5&#39;) ... TypeError: Unexpected keyword argument passed to optimizer: name   原因：这部分代码加载了H5文件保存的keras Model，但是由于保存Model和加载Model的keras的版本不一致，所以会产生这个问题
- 解决办法：保持加载Model和保存Model的keras版本一致
-  2. failed to create cublas handle: CUBLAS_STATUS_ALLOC_FAILED  原因：申请GPU内存，空间不够被拒绝"/>
+<meta name="twitter:description" content="基础问题 1. AttributeError: module &lsquo;XXX&rsquo; has no attribute &lsquo;xxx&rsquo;   原因：一般module和attribute的名字没有拼错的情况下，出现这类问题通常是因为这个py文件所在的目录中存在与module同名的py文件，导致python的错误调用。
+  解决办法：更改文件名。
+  2. AttributeError: module &lsquo;XXX&rsquo; has no attribute &lsquo;XXX&rsquo;  原因：一般情况下可能是因为拼写错误导致的改模块下确实没有对应的attribute。但还有另外一种情况是当前运行的python文件目录下有和此module模块重名的python文件，导致运行的python文件优先import了当前目录下的对应文件，所以不存在对应的attribute 解决办法：检查拼写错误或者改变文件名即可  TensorFlow 1. TypeError: Unexpected keyword argument passed to optimizer: name Traceback (most recent call last): File &#34;visualizing_the_convnet.py&#34;, line 3, in &lt;module&gt; model = load_model(&#39;cats_and_dogs_small_2.h5&#39;) ... TypeError: Unexpected keyword argument passed to optimizer: name   原因：这部分代码加载了H5文件保存的keras Model，但是由于保存Model和加载Model的keras的版本不一致，所以会产生这个问题
+  解决办法：保持加载Model和保存Model的keras版本一致
+  2."/>
 
   </head>
 
@@ -125,113 +123,98 @@
       
     </header>
 
-    <section class="nested-copy-line-height lh-copy serif f4 nested-links nested-img mid-gray pr4-l w-two-thirds-l">
-
-<h1 id="基础问题">基础问题</h1>
-
+    <section class="nested-copy-line-height lh-copy serif f4 nested-links nested-img mid-gray pr4-l w-two-thirds-l"><h1 id="基础问题">基础问题</h1>
 <h3 id="1-attributeerror-module-xxx-has-no-attribute-xxx">1. AttributeError: module &lsquo;XXX&rsquo; has no attribute &lsquo;xxx&rsquo;</h3>
-
 <ul>
-<li><p>原因：一般module和attribute的名字没有拼错的情况下，出现这类问题通常是因为这个py文件所在的目录中存在与module同名的py文件，导致python的错误调用。</p></li>
-
-<li><p>解决办法：更改文件名。</p></li>
+<li>
+<p>原因：一般module和attribute的名字没有拼错的情况下，出现这类问题通常是因为这个py文件所在的目录中存在与module同名的py文件，导致python的错误调用。</p>
+</li>
+<li>
+<p>解决办法：更改文件名。</p>
+</li>
 </ul>
-
 <h3 id="2-attributeerror-module-xxx-has-no-attribute-xxx">2. AttributeError: module &lsquo;XXX&rsquo; has no attribute &lsquo;XXX&rsquo;</h3>
-
 <ul>
 <li>原因：一般情况下可能是因为拼写错误导致的改模块下确实没有对应的attribute。但还有另外一种情况是当前运行的python文件目录下有和此module模块重名的python文件，导致运行的python文件优先import了当前目录下的对应文件，所以不存在对应的attribute</li>
 <li>解决办法：检查拼写错误或者改变文件名即可</li>
 </ul>
-
 <h1 id="tensorflow">TensorFlow</h1>
-
 <h3 id="1-typeerror-unexpected-keyword-argument-passed-to-optimizer-name">1. TypeError: Unexpected keyword argument passed to optimizer: name</h3>
-
-<pre><code class="language-shell">Traceback (most recent call last):
-  File &quot;visualizing_the_convnet.py&quot;, line 3, in &lt;module&gt;
-    model = load_model('cats_and_dogs_small_2.h5')
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">Traceback <span style="color:#f92672">(</span>most recent call last<span style="color:#f92672">)</span>:
+  File <span style="color:#e6db74">&#34;visualizing_the_convnet.py&#34;</span>, line 3, in &lt;module&gt;
+    model <span style="color:#f92672">=</span> load_model<span style="color:#f92672">(</span><span style="color:#e6db74">&#39;cats_and_dogs_small_2.h5&#39;</span><span style="color:#f92672">)</span>
   ...
 TypeError: Unexpected keyword argument passed to optimizer: name
-</code></pre>
-
-<ul>
-<li><p>原因：这部分代码加载了H5文件保存的keras Model，但是由于保存Model和加载Model的keras的版本不一致，所以会产生这个问题</p></li>
-
-<li><p>解决办法：保持加载Model和保存Model的keras版本一致</p></li>
+</code></pre></div><ul>
+<li>
+<p>原因：这部分代码加载了H5文件保存的keras Model，但是由于保存Model和加载Model的keras的版本不一致，所以会产生这个问题</p>
+</li>
+<li>
+<p>解决办法：保持加载Model和保存Model的keras版本一致</p>
+</li>
 </ul>
-
-<h3 id="2-failed-to-create-cublas-handle-cublas-status-alloc-failed">2. failed to create cublas handle: CUBLAS_STATUS_ALLOC_FAILED</h3>
-
+<h3 id="2-failed-to-create-cublas-handle-cublas_status_alloc_failed">2. failed to create cublas handle: CUBLAS_STATUS_ALLOC_FAILED</h3>
 <ul>
-<li><p>原因：申请GPU内存，空间不够被拒绝</p></li>
-
-<li><p>解决办法：在代码中加入动态申请内存的显式设定</p>
-
-<pre><code class="language-python">config = tf.ConfigProto()
-config.gpu_options.allow_growth = True
-session = tf.Session(config=config)
-</code></pre></li>
+<li>
+<p>原因：申请GPU内存，空间不够被拒绝</p>
+</li>
+<li>
+<p>解决办法：在代码中加入动态申请内存的显式设定</p>
+</li>
 </ul>
-
-<h1 id="pytorch">Pytorch</h1>
-
-<h3 id="1-runtimeerror-expected-object-of-scalar-type-double-but-got-scalar-type-float-for-argument-2-weight-in-call-to-thnn-conv2d-forward">1. RuntimeError: Expected object of scalar type Double but got scalar type Float for argument #2 &lsquo;weight&rsquo; in call to _thnn_conv2d_forward</h3>
-
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">config <span style="color:#f92672">=</span> tf<span style="color:#f92672">.</span>ConfigProto()
+config<span style="color:#f92672">.</span>gpu_options<span style="color:#f92672">.</span>allow_growth <span style="color:#f92672">=</span> True
+session <span style="color:#f92672">=</span> tf<span style="color:#f92672">.</span>Session(config<span style="color:#f92672">=</span>config)
+</code></pre></div><h1 id="pytorch">Pytorch</h1>
+<h3 id="1-runtimeerror-expected-object-of-scalar-type-double-but-got-scalar-type-float-for-argument-2-weight-in-call-to-_thnn_conv2d_forward">1. RuntimeError: Expected object of scalar type Double but got scalar type Float for argument #2 &lsquo;weight&rsquo; in call to _thnn_conv2d_forward</h3>
 <ul>
-<li><p>原因：错误提示其实很明显了，就是对应对象的“weight”参数类型错误。一般来说是因为将double(float64)类型的Tensor传入了定义的网络中，而在pytorch中定义网络权重的默认类型都是float32，所以会导致这一错误</p></li>
-
-<li><p>解决办法：将input数据和network model权重设置为统一类型即可
+<li>
+<p>原因：错误提示其实很明显了，就是对应对象的“weight”参数类型错误。一般来说是因为将double(float64)类型的Tensor传入了定义的网络中，而在pytorch中定义网络权重的默认类型都是float32，所以会导致这一错误</p>
+</li>
+<li>
+<p>解决办法：将input数据和network model权重设置为统一类型即可
 To convert your inputs to float (recommended):</p>
-
-<pre><code class="language-python">inputs, labels = data
-inputs = inputs.float()
-labels = labels.float()
-inputs, labels = Variable(inputs), Variable(labels)
-</code></pre></li>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">inputs, labels <span style="color:#f92672">=</span> data
+inputs <span style="color:#f92672">=</span> inputs<span style="color:#f92672">.</span>float()
+labels <span style="color:#f92672">=</span> labels<span style="color:#f92672">.</span>float()
+inputs, labels <span style="color:#f92672">=</span> Variable(inputs), Variable(labels)
+</code></pre></div><p>To convert your model to double:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">model <span style="color:#f92672">=</span> Net()
+model<span style="color:#f92672">.</span>double()
+</code></pre></div><p>I recommend using floats instead of doubles. It’s the default tensor type in PyTorch. On GPUs, float calculations are much faster than double calculations.</p>
+</li>
 </ul>
-
-<p>To convert your model to double:</p>
-
-<pre><code class="language-python">  model = Net()
-  model.double()
-</code></pre>
-
-<p>I recommend using floats instead of doubles. It’s the default tensor type in PyTorch. On GPUs, float calculations are much faster than double calculations.</p>
-
 <h3 id="2-the-derivative-for-target-is-not-implemented">2. the derivative for target is not implemented</h3>
-
 <ul>
-<li><p>原因：在定义损失函数时，作为target的参数依然存在梯度，即其requires_grad为True。这通常在训练某个神经网络子网络的是偶出现。</p></li>
-
-<li><p>解决办法：将设置为target的参数应用一下detach函数再传入。</p>
-
+<li>
+<p>原因：在定义损失函数时，作为target的参数依然存在梯度，即其requires_grad为True。这通常在训练某个神经网络子网络的是偶出现。</p>
+</li>
+<li>
+<p>解决办法：将设置为target的参数应用一下detach函数再传入。</p>
 <pre><code>target_ = target.detach()
 loss = crieterion(y, target_)
 </code></pre></li>
 </ul>
-
 <h1 id="numpy">numpy</h1>
-
 <h3 id="1-valueerror-setting-an-array-element-with-sequence">1. ValueError: setting an array element with sequence</h3>
-
 <ul>
-<li><p>原因：numpy可以通过并行的方式加速向量间的运算，但是它要求向量中的元素应该是同一类型，若是不同类型，则进一步操作容易出现此类错误</p></li>
-
-<li><p>解决办法：若是一定要让numpy中元素分别是不同类型的，则可以加一个object的type标识</p>
-
-<pre><code class="language-python">x = np.array([5, [1,2,3], &quot;123&quot;])
-</code></pre></li>
+<li>
+<p>原因：numpy可以通过并行的方式加速向量间的运算，但是它要求向量中的元素应该是同一类型，若是不同类型，则进一步操作容易出现此类错误</p>
+</li>
+<li>
+<p>解决办法：若是一定要让numpy中元素分别是不同类型的，则可以加一个object的type标识</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">x <span style="color:#f92672">=</span> np<span style="color:#f92672">.</span>array([<span style="color:#ae81ff">5</span>, [<span style="color:#ae81ff">1</span>,<span style="color:#ae81ff">2</span>,<span style="color:#ae81ff">3</span>], <span style="color:#e6db74">&#34;123&#34;</span>])
+</code></pre></div></li>
 </ul>
-
 <h1 id="matplotlib">matplotlib</h1>
-
-<h3 id="1-调用imshow-显示出的图像全白">1. 调用imshow()显示出的图像全白</h3>
-
+<h3 id="1-调用imshow显示出的图像全白">1. 调用imshow()显示出的图像全白</h3>
 <ul>
-<li><p>原因：imshow可以接受float或者int类型的参数，其有效范围分别为[0,1]和[0,255]。当参数类型为float时，imshow会默认将其裁剪到[0,1]的区间内。所以通常是输入了按照[0,255]的区间范围的float参数会出现上述问题</p></li>
-
-<li><p>解决办法：将float参数手动转换到[0,1]区间（x = x / 255），或者将其转换为int类型（x = x.astype(&lsquo;int32&rsquo;)）。</p></li>
+<li>
+<p>原因：imshow可以接受float或者int类型的参数，其有效范围分别为[0,1]和[0,255]。当参数类型为float时，imshow会默认将其裁剪到[0,1]的区间内。所以通常是输入了按照[0,255]的区间范围的float参数会出现上述问题</p>
+</li>
+<li>
+<p>解决办法：将float参数手动转换到[0,1]区间（x = x / 255），或者将其转换为int类型（x = x.astype(&lsquo;int32&rsquo;)）。</p>
+</li>
 </ul>
 <ul class="pa0">
   
