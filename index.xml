@@ -6,7 +6,20 @@
     <description>Recent content on Bridge : you &amp; me</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 30 Sep 2020 16:46:41 +0800</lastBuildDate><atom:link href="https://horizonnn.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 05 Oct 2020 14:02:05 +0800</lastBuildDate><atom:link href="https://horizonnn.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>科学上网</title>
+      <link>https://horizonnn.github.io/post/%E7%A7%91%E5%AD%A6%E4%B8%8A%E7%BD%91/</link>
+      <pubDate>Mon, 05 Oct 2020 14:02:05 +0800</pubDate>
+      
+      <guid>https://horizonnn.github.io/post/%E7%A7%91%E5%AD%A6%E4%B8%8A%E7%BD%91/</guid>
+      <description>相关网站  vps234（VPS购买汇总） shadowsocks主页 v2ray主页 检查IP是否能通  VPS推荐 搬瓦工没用过，vultr的话容易被ban IP。目前一直在用hostwinds，很稳定，而且hostwinds可以换IP，对于科学上网来说比较方便。
+Shadowsocks[不推荐，现在不稳定] 安装python yum install python-setuptools easy_install pip firewall-cmd --zone=public --add-port=443/tcp --permanent firewall-cmd --reload 如果运行firewall-cmd命令出现Command not found的错误，则执行下列命令之后再执行上述firewall-cmd命令
+yum install firewalld systemctl start firewalld 配置shadowsocks   安装shadowsocks
+pip install shadowsocks vi /etc/shadowsocks.json # 以下为填写内容 { &amp;#34;server&amp;#34;:&amp;#34;ip_address&amp;#34;, &amp;#34;server_port&amp;#34;:443, &amp;#34;local_port&amp;#34;:1080, &amp;#34;password&amp;#34;:&amp;#34;your_password&amp;#34;, &amp;#34;timeout&amp;#34;:600, &amp;#34;method&amp;#34;:&amp;#34;aes-256-cfb&amp;#34; }   运行shadowsocks
+# 使用配置文件 nohup ssserver -c /etc/shadowsocks.json &amp;amp; &amp;gt;/dev/null 2&amp;gt;&amp;amp;1 # 不使用配置文件 sudo ssserver -p {端口号} -k {密码}-m aes-256-cfb --user nobody -d start   配置BBR加速访问[可选] BBR的github地址：BBR</description>
+    </item>
+    
     <item>
       <title>深度学习重要参考资源</title>
       <link>https://horizonnn.github.io/post/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0%E9%87%8D%E8%A6%81%E5%8F%82%E8%80%83%E8%B5%84%E6%BA%90/</link>
