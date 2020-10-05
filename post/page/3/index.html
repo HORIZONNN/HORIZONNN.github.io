@@ -32,7 +32,7 @@
 <meta property="og:description" content="The last theme you&#39;ll ever need. Maybe." />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="https://horizonnn.github.io/post/" />
-<meta property="og:updated_time" content="2020-10-05T14:02:05+08:00" />
+<meta property="og:updated_time" content="2020-10-05T14:07:40+08:00" />
 <meta itemprop="name" content="Posts">
 <meta itemprop="description" content="The last theme you&#39;ll ever need. Maybe.">
 <meta name="twitter:card" content="summary"/>
@@ -108,6 +108,30 @@
             <div class="mb3 pa4 mid-gray overflow-hidden">
     
       <div class="f6">
+        September 26, 2020
+      </div>
+    
+    <h1 class="f3 near-black">
+      <a href="/post/%E5%9F%BA%E6%9C%AC%E7%89%B9%E5%BE%81%E9%80%89%E6%8B%A9%E6%96%B9%E6%B3%95/" class="link black dim">
+        基本特征选择方法
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+      其中data为特征的DataFrame，y为目标值的Series，y_pre为预测值的Series
+Filter 基于统计量的预处理   缺失值比例删除：删除高缺失值的特征（列）
+percent = data.isnull().sum() / len(data) * 100 result = data.loc[percent &lt; 50]   方差值删除：删除低方差的特征（列）
+var = data.var() result = data.loc[var &gt; 0.1]   相关性矩阵：首先计算出特征之间的相关性，然后根据相关性的大小排序，按顺序删除冗余的特征
+# 将数值范围变化到0-1之间 data = data.apply(lambda x: (x - np.min(x)) / (np.max(x) - np.min(x))) # 相关性矩阵 cor = data.corr() # 按相关性大小逐步剔除 drop_pairs = [] for i in range(len(cor.index)): for j in range(len(cor.columns)): if cor.iloc[i,j] &gt;= 0.8 and i != j: drop_pairs.
+    </div>
+  </div>
+
+        </div>
+      
+        <div class="relative w-100 w-30-l mb4 bg-white">
+          
+            <div class="mb3 pa4 mid-gray overflow-hidden">
+    
+      <div class="f6">
         September 8, 2020
       </div>
     
@@ -142,26 +166,6 @@ val intent = Intent(Intent.ACTION_VIEW) intent.data = Uri.parse(&#34;https://www
       Seleunium 不打印chromedriver的日志信息 from selenium import webdriver chrome_options = Options() chrome_options.add_experimental_option(&#39;excludeSwitches&#39;, [&#39;enable-logging&#39;]) chrome_options.add_argument(&#39;--headless&#39;) browser = webdriver.Chrome(chrome_options=chrome_options) 使用chrome/firefox的已存在的cookie访问网站 chrome
 from selenium import webdriver profile_dir=r&#34;C:\Users\leonyu\AppData\Local\Google\Chrome\User Data&#34; # 对应你的chrome的用户数据存放路径  chrome_options=webdriver.ChromeOptions() chrome_options.add_argument(&#34;user-data-dir=&#34;+os.path.abspath(profile_dir)) browser=webdriver.Chrome(chrome_options=chrome_options) firefox
 from selenium import webdriver fp=webdriver.FirefoxProfile(r&#39;C:\Users\leony\AppData\Roaming\Mozilla\Firefox\Profiles\btnc8mzb.default&#39;) browser=webdriver.Firefox(fp) 
-    </div>
-  </div>
-
-        </div>
-      
-        <div class="relative w-100 w-30-l mb4 bg-white">
-          
-            <div class="mb3 pa4 mid-gray overflow-hidden">
-    
-      <div class="f6">
-        August 17, 2020
-      </div>
-    
-    <h1 class="f3 near-black">
-      <a href="/post/%E5%BC%BA%E5%8C%96%E5%AD%A6%E4%B9%A0%E9%87%8D%E8%A6%81%E5%8F%82%E8%80%83%E8%B5%84%E6%BA%90/" class="link black dim">
-        强化学习重要参考资源
-      </a>
-    </h1>
-    <div class="nested-links f5 lh-copy nested-copy-line-height">
-      概述  David Sliver强化学习视频十讲 《Reinforcement Learning》书籍  博文  强化学习中Ornstein-Uhlenbeck噪声是鸡肋吗？ &mdash; 说明了OU噪声并非比高斯噪声差，只是其在时序相关的问题中会作用更明显 Reinforcement learning never worked, and &lsquo;deep&rsquo; only helped a bit &mdash; 虽然深度学习的泛化性对于强化学习中的探索利用平衡具有一定的帮助，但强化学习中还有其他一些很关键的问题深度学习并不能解决。 策略迭代和值迭代的区别 &mdash; 通过算法对比阐述了策略迭代和值迭代的区别，适合初学者区分概念。 强化学习方法分类 &mdash; 概述了强化学习中几个概念分类，便于初学者进行概念区分。  
     </div>
   </div>
 

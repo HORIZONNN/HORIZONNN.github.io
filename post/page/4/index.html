@@ -32,7 +32,7 @@
 <meta property="og:description" content="The last theme you&#39;ll ever need. Maybe." />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="https://horizonnn.github.io/post/" />
-<meta property="og:updated_time" content="2020-10-05T14:02:05+08:00" />
+<meta property="og:updated_time" content="2020-10-05T14:07:40+08:00" />
 <meta itemprop="name" content="Posts">
 <meta itemprop="description" content="The last theme you&#39;ll ever need. Maybe.">
 <meta name="twitter:card" content="summary"/>
@@ -108,6 +108,26 @@
             <div class="mb3 pa4 mid-gray overflow-hidden">
     
       <div class="f6">
+        August 17, 2020
+      </div>
+    
+    <h1 class="f3 near-black">
+      <a href="/post/%E5%BC%BA%E5%8C%96%E5%AD%A6%E4%B9%A0%E9%87%8D%E8%A6%81%E5%8F%82%E8%80%83%E8%B5%84%E6%BA%90/" class="link black dim">
+        强化学习重要参考资源
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+      概述  David Sliver强化学习视频十讲 《Reinforcement Learning》书籍  博文  强化学习中Ornstein-Uhlenbeck噪声是鸡肋吗？ &mdash; 说明了OU噪声并非比高斯噪声差，只是其在时序相关的问题中会作用更明显 Reinforcement learning never worked, and &lsquo;deep&rsquo; only helped a bit &mdash; 虽然深度学习的泛化性对于强化学习中的探索利用平衡具有一定的帮助，但强化学习中还有其他一些很关键的问题深度学习并不能解决。 策略迭代和值迭代的区别 &mdash; 通过算法对比阐述了策略迭代和值迭代的区别，适合初学者区分概念。 强化学习方法分类 &mdash; 概述了强化学习中几个概念分类，便于初学者进行概念区分。  
+    </div>
+  </div>
+
+        </div>
+      
+        <div class="relative w-100 w-30-l mb4 bg-white">
+          
+            <div class="mb3 pa4 mid-gray overflow-hidden">
+    
+      <div class="f6">
         July 4, 2020
       </div>
     
@@ -149,37 +169,6 @@ conda create -n &lt;your_env_name&gt; python=3.6   如果需要在gym中录制�
 conda install -c conda-forge ffmpeg   首先需要安装一个空的gym环境，因为在后面安装完全的gym环境的过程中会出现mujoco环境的错误，虽然这不影响其他模块的使用，但会导致gym不会被添加到环境中，也就没有办法import。
 conda install -c conda-forge gym   安装pystan是ToyText环境的需要
 conda install -c conda-forge pystan   这一步是安装gym环境成功的关键，国外大神kojoley成功地封装了atari模块使得安装这一补丁后，atari环境能够在win 10环境下成功运行
-    </div>
-  </div>
-
-        </div>
-      
-        <div class="relative w-100 w-30-l mb4 bg-white">
-          
-            <div class="mb3 pa4 mid-gray overflow-hidden">
-    
-      <div class="f6">
-        September 28, 2019
-      </div>
-    
-    <h1 class="f3 near-black">
-      <a href="/post/%E5%88%A9%E7%94%A8frp%E5%AE%9E%E7%8E%B0%E9%BB%91%E7%BE%A4%E6%99%96%E5%86%85%E7%BD%91%E7%A9%BF%E9%80%8F/" class="link black dim">
-        利用frp实现黑群晖内网穿透
-      </a>
-    </h1>
-    <div class="nested-links f5 lh-copy nested-copy-line-height">
-      前一段时间捡了一台暴风酷播云矿机，想着拿来做NAS，装了黑群晖，无奈的是没有公网IP，只能局域网访问，因此需要做内网穿透。
-搜了搜方法，感觉frp还是比较不错的方案，开搞！
-相关链接  frp的github链接 群晖的中文官网  准备工具  使用frp做内网穿透，首先需要一台具有公网IP的主机，这里我租用了一台VPS 去frp的github链接里根据个人NAS以及公网IP主机的型号下载对应的压缩文件 去群晖官网下载drive client  配置过程 服务端   解压公网IP主机对应的frp文件，只保存frps和frps.ini文件，删掉其他文件
-  将上述两个文件上传到公网IP主机中
-  编辑frps.ini文件（vim frps.ini），写入以下内容
-[common] bind_port = 7000  vhost_http_port = 7008 vhost_https_port = 7010  dashboard_port = 7001 dashboard_user = admin dashboard_pwd = 123456 其中7008是http连接的端口，7001是frp后台管理的端口
-此外，在主机中开启7000、7008、7001、7010、6690（后文中会说到为什么开启这个端口）端口
-  运行frps
-./frps -c ./frps.ini   客户端   解压公网IP主机对应的frp文件，只保存frpc和frpc.ini文件，删掉其他文件
-  将上述两个文件上传到NAS主机中
-  编辑frpc.ini文件（vim frpc.ini），写入以下内容
-[common] server_addr = XXX.
     </div>
   </div>
 
