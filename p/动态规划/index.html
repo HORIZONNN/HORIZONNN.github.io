@@ -219,7 +219,15 @@
 </header>
 
     <section class="article-content">
-    <h1 id="动态规划">动态规划</h1>
+    <p>$$
+$$
+F_{X}(x)=\operatorname{Pr}(X \leq x)= \begin{cases}
+0 &amp;\text{if } x&lt;0 \\
+\frac{1}{2} &amp;\text{if } 0 \leq x&lt;1 \\
+1 &amp;\text{if } x \geq 1 \end{cases}
+$$
+$$</p>
+<h1 id="动态规划">动态规划</h1>
 <h3 id="为什么需要动态规划">为什么需要动态规划</h3>
 <p>分治法通常将问题划分为互不相交的子问题，递归地求解子问题，从而得到原问题的解。但在不同的子问题具有公共地子子问题的时候，分治法会做很多重复性的工作。所以这时候就需要用到动态规划，动态规划对每个子子问题只求解一次，然后保存在表格中，这样通过空间换时间来避免不必要的重复计算工作。</p>
 <p>举个例子来说就是有如下这样一个钢条切割的问题</p>
@@ -358,7 +366,7 @@
 <p>根据问题定义可知如果希望nums添加的的符号得到的和为S的话，那么去掉最后一位的数和符号，剩下的和一定为S - num[n-1]或者S + nums[n-1]。而两者又是互不相交的子问题，所以$counts(nums, S) = nums(nums[:n-1], S-nums[n-1]) + nums(nums[:n-1], S+nums[n-1])$。为了下面的程序表示方便，重新考虑一下counts的定义，定义counts[i, S]为利用前i个数得到目标数为S的方法数。则可以得到如下状态转移方程
 $$
 counts[i, S] = \begin{cases}
-S == nums[0] || S == -nums[0] &amp; i = 0 \<br>
+S == nums[0] || S == -nums[0] &amp; i = 0 \\<br>
 counts[ i-1, S-nums[i-1] ] + counts[ i-1, S+nums[i-1] ] &amp; i &gt; 0
 \end{cases}
 $$

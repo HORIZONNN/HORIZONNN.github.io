@@ -12,7 +12,15 @@
         <pubDate>Wed, 31 Mar 2021 13:23:26 +0800</pubDate>
         
         <guid>https://horizonnn.github.io/p/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/</guid>
-        <description>&lt;h1 id=&#34;动态规划&#34;&gt;动态规划&lt;/h1&gt;
+        <description>&lt;p&gt;$$
+$$
+F_{X}(x)=\operatorname{Pr}(X \leq x)= \begin{cases}
+0 &amp;amp;\text{if } x&amp;lt;0 \\
+\frac{1}{2} &amp;amp;\text{if } 0 \leq x&amp;lt;1 \\
+1 &amp;amp;\text{if } x \geq 1 \end{cases}
+$$
+$$&lt;/p&gt;
+&lt;h1 id=&#34;动态规划&#34;&gt;动态规划&lt;/h1&gt;
 &lt;h3 id=&#34;为什么需要动态规划&#34;&gt;为什么需要动态规划&lt;/h3&gt;
 &lt;p&gt;分治法通常将问题划分为互不相交的子问题，递归地求解子问题，从而得到原问题的解。但在不同的子问题具有公共地子子问题的时候，分治法会做很多重复性的工作。所以这时候就需要用到动态规划，动态规划对每个子子问题只求解一次，然后保存在表格中，这样通过空间换时间来避免不必要的重复计算工作。&lt;/p&gt;
 &lt;p&gt;举个例子来说就是有如下这样一个钢条切割的问题&lt;/p&gt;
@@ -151,7 +159,7 @@
 &lt;p&gt;根据问题定义可知如果希望nums添加的的符号得到的和为S的话，那么去掉最后一位的数和符号，剩下的和一定为S - num[n-1]或者S + nums[n-1]。而两者又是互不相交的子问题，所以$counts(nums, S) = nums(nums[:n-1], S-nums[n-1]) + nums(nums[:n-1], S+nums[n-1])$。为了下面的程序表示方便，重新考虑一下counts的定义，定义counts[i, S]为利用前i个数得到目标数为S的方法数。则可以得到如下状态转移方程
 $$
 counts[i, S] = \begin{cases}
-S == nums[0] || S == -nums[0] &amp;amp; i = 0 \&lt;br&gt;
+S == nums[0] || S == -nums[0] &amp;amp; i = 0 \\&lt;br&gt;
 counts[ i-1, S-nums[i-1] ] + counts[ i-1, S+nums[i-1] ] &amp;amp; i &amp;gt; 0
 \end{cases}
 $$
