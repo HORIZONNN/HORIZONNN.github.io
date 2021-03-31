@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Android on Bridge for us</title>
+    <link>https://horizonnn.github.io/categories/android/</link>
+    <description>Recent content in Android on Bridge for us</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 08 Sep 2020 21:05:54 +0800</lastBuildDate><atom:link href="https://horizonnn.github.io/categories/android/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>AndroidBugFlow</title>
+      <link>https://horizonnn.github.io/p/androidbugflow/</link>
+      <pubDate>Tue, 08 Sep 2020 21:05:54 +0800</pubDate>
+      
+      <guid>https://horizonnn.github.io/p/androidbugflow/</guid>
+      <description>1. android.content.ActivityNotFoundException: No Activity found to handle Intent   原因：在调用intent启动其他activity的时候，使用Uri.parse()时传递的网页url参数中没加“https://”前缀
+  解决办法：在调用Uri.parse()函数的时候一定要把参数写完整，如
+val intent = Intent(Intent.ACTION_VIEW) intent.data = Uri.parse(&amp;#34;https://www.baidu.com&amp;#34;) startActivity(intent)   </description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,26 +1,17 @@
 <!DOCTYPE html>
 <html lang="en-us">
     <head><meta charset='utf-8'>
-<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content='基础问题 1. AttributeError: module &amp;lsquo;XXX&amp;rsquo; has no attribute &amp;lsquo;XXX&amp;rsquo;  原因：一般情况下可能是因为拼写错误导致的改模块下确实没有对应的attribute。但还有另外一种情况是当前运行的python文件目录下有和此module模块重名的python文件，导致运行的python文件优先import了当前目录下的对应文件，所以不存在对应的attribute 解决办法：检查拼写错误或者改变文件名即可  2.   bug
-File &amp;quot;C:\ProgramData\Anaconda3\lib\site-packages\pyreadline\lineeditor\history.py&amp;quot;, line 82, in read_history_file for line in open(filename, &#39;r&#39;): ... UnicodeDecodeError: &#39;charmap&#39; codec can&#39;t decode byte 0x81 in position 991: character maps to &amp;lt;undefined&amp;gt;   原因：一般是因为打开python的history file时遇到了编码错误
-  解决办法：删除位于%userprofile%/.python_history的history文件
-  TensorFlow 1. TypeError: Unexpected keyword argument passed to optimizer: name Traceback (most recent call last): File &amp;#34;visualizing_the_convnet.py&amp;#34;, line 3, in &amp;lt;module&amp;gt; model = load_model(&amp;#39;cats_and_dogs_small_2.'><title>PythonBugFlow</title>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content='Python学习和开发过程中遇到的典型Bug及问题'><title>PythonBugFlow</title>
 
 <link rel='canonical' href='https://horizonnn.github.io/p/pythonbugflow/'>
 
 <link rel="stylesheet" href="/scss/style.min.css"><meta property='og:title' content='PythonBugFlow'>
-<meta property='og:description' content='基础问题 1. AttributeError: module &amp;lsquo;XXX&amp;rsquo; has no attribute &amp;lsquo;XXX&amp;rsquo;  原因：一般情况下可能是因为拼写错误导致的改模块下确实没有对应的attribute。但还有另外一种情况是当前运行的python文件目录下有和此module模块重名的python文件，导致运行的python文件优先import了当前目录下的对应文件，所以不存在对应的attribute 解决办法：检查拼写错误或者改变文件名即可  2.   bug
-File &amp;quot;C:\ProgramData\Anaconda3\lib\site-packages\pyreadline\lineeditor\history.py&amp;quot;, line 82, in read_history_file for line in open(filename, &#39;r&#39;): ... UnicodeDecodeError: &#39;charmap&#39; codec can&#39;t decode byte 0x81 in position 991: character maps to &amp;lt;undefined&amp;gt;   原因：一般是因为打开python的history file时遇到了编码错误
-  解决办法：删除位于%userprofile%/.python_history的history文件
-  TensorFlow 1. TypeError: Unexpected keyword argument passed to optimizer: name Traceback (most recent call last): File &amp;#34;visualizing_the_convnet.py&amp;#34;, line 3, in &amp;lt;module&amp;gt; model = load_model(&amp;#39;cats_and_dogs_small_2.'>
+<meta property='og:description' content='Python学习和开发过程中遇到的典型Bug及问题'>
 <meta property='og:url' content='https://horizonnn.github.io/p/pythonbugflow/'>
 <meta property='og:site_name' content='Bridge for us'>
-<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:published_time' content='2019-08-25T21:21:34&#43;08:00'/><meta property='article:modified_time' content='2019-08-25T21:21:34&#43;08:00'/>
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='Bug' /><meta property='article:published_time' content='2019-08-25T21:21:34&#43;08:00'/><meta property='article:modified_time' content='2019-08-25T21:21:34&#43;08:00'/>
 <meta name="twitter:title" content="PythonBugFlow">
-<meta name="twitter:description" content="基础问题 1. AttributeError: module &amp;lsquo;XXX&amp;rsquo; has no attribute &amp;lsquo;XXX&amp;rsquo;  原因：一般情况下可能是因为拼写错误导致的改模块下确实没有对应的attribute。但还有另外一种情况是当前运行的python文件目录下有和此module模块重名的python文件，导致运行的python文件优先import了当前目录下的对应文件，所以不存在对应的attribute 解决办法：检查拼写错误或者改变文件名即可  2.   bug
-File &amp;quot;C:\ProgramData\Anaconda3\lib\site-packages\pyreadline\lineeditor\history.py&amp;quot;, line 82, in read_history_file for line in open(filename, &#39;r&#39;): ... UnicodeDecodeError: &#39;charmap&#39; codec can&#39;t decode byte 0x81 in position 991: character maps to &amp;lt;undefined&amp;gt;   原因：一般是因为打开python的history file时遇到了编码错误
-  解决办法：删除位于%userprofile%/.python_history的history文件
-  TensorFlow 1. TypeError: Unexpected keyword argument passed to optimizer: name Traceback (most recent call last): File &amp;#34;visualizing_the_convnet.py&amp;#34;, line 3, in &amp;lt;module&amp;gt; model = load_model(&amp;#39;cats_and_dogs_small_2.">
+<meta name="twitter:description" content="Python学习和开发过程中遇到的典型Bug及问题">
     </head>
     <body class="">
     <script>
@@ -60,8 +51,8 @@ File &amp;quot;C:\ProgramData\Anaconda3\lib\site-packages\pyreadline\lineeditor\
                     
                     
                         
-                        <img src="/img/avatar_huda2458f72ce188392d75c5d51cd8e24e_373_300x0_resize_box_2.png" width="300"
-                            height="300" class="site-logo" loading="lazy" alt="Avatar">
+                        <img src="/img/avatar2_hu7cf6c41997e5ab4e89e2b391ba44d7e4_372723_300x0_resize_box_2.png" width="300"
+                            height="226" class="site-logo" loading="lazy" alt="Avatar">
                     
                 
 
@@ -140,11 +131,27 @@ File &amp;quot;C:\ProgramData\Anaconda3\lib\site-packages\pyreadline\lineeditor\
 
     <div class="article-details">
     
+    <header class="article-category">
+        
+            <a href="/categories/bug/" >
+                Bug
+            </a>
+        
+            <a href="/categories/python/" >
+                Python
+            </a>
+        
+    </header>
+    
 
     <h2 class="article-title">
         <a href="/p/pythonbugflow/">PythonBugFlow</a>
     </h2>
 
+    
+    <h3 class="article-subtitle">
+        Python学习和开发过程中遇到的典型Bug及问题
+    </h3>
     <footer class="article-time">
         <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
   <path stroke="none" d="M0 0h24v24H0z"/>
@@ -273,6 +280,12 @@ loss = crieterion(y, target_)
 
     <footer class="article-footer">
     
+    <section class="article-tags">
+        
+            <a href="/tags/bug/">Bug</a>
+        
+    </section>
+
 
     
     <section class="article-copyright">
@@ -316,6 +329,61 @@ loss = crieterion(y, target_)
 
     <aside class="related-contents--wrapper">
     
+    
+        <h2 class="section-title">Related contents</h2>
+        <div class="related-contents">
+            <div class="flex article-list--tile">
+                
+                    
+<article class="">
+    <a href="/p/toolsbugflow/">
+        
+        
+
+        <div class="article-details">
+            <h2 class="article-title">ToolsBugFlow</h2>
+        </div>
+    </a>
+</article>
+                
+                    
+<article class="">
+    <a href="/p/androidbugflow/">
+        
+        
+
+        <div class="article-details">
+            <h2 class="article-title">AndroidBugFlow</h2>
+        </div>
+    </a>
+</article>
+                
+                    
+<article class="">
+    <a href="/p/cbugflow/">
+        
+        
+
+        <div class="article-details">
+            <h2 class="article-title">CBugFlow</h2>
+        </div>
+    </a>
+</article>
+                
+                    
+<article class="">
+    <a href="/p/python%E5%B8%B8%E6%9F%A5%E9%97%AE%E9%A2%98/">
+        
+        
+
+        <div class="article-details">
+            <h2 class="article-title">Python常查问题</h2>
+        </div>
+    </a>
+</article>
+                
+            </div>
+        </div>
     
 </aside>
 

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>算法 on Bridge for us</title>
+    <link>https://horizonnn.github.io/tags/%E7%AE%97%E6%B3%95/</link>
+    <description>Recent content in 算法 on Bridge for us</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 31 Mar 2021 13:23:26 +0800</lastBuildDate><atom:link href="https://horizonnn.github.io/tags/%E7%AE%97%E6%B3%95/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>动态规划</title>
+      <link>https://horizonnn.github.io/p/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/</link>
+      <pubDate>Wed, 31 Mar 2021 13:23:26 +0800</pubDate>
+      
+      <guid>https://horizonnn.github.io/p/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/</guid>
+      <description>动态规划 为什么需要动态规划 分治法通常将问题划分为互不相交的子问题，递归地求解子问题，从而得到原问题的解。但在不同的子问题具有公共地子子问题的时候，分治法会做很多重复性的工作。所以这时候就需要用到动态规划，动态规划对每个子子问题只求解一次，然后保存在表格中，这样通过空间换时间来避免不必要的重复计算工作。
+举个例子来说就是有如下这样一个钢条切割的问题
+钢条切割 假定我们知道Serling公司出售一段长度为i英寸的钢条的价格为p；（i=1，2，…，单位为美元）。钢条的长度均为整英寸。如下给出了一个价格表的样例。
+   长度 1 2 3     价格 1 5 8    则给定一段长度为n英寸的钢条和一个价格表，求切割钢条方案，使得销售收益r最大。
+我们如果采用分治法的思想，那么一个长度为n的的钢条就会有接近$2^{n-1}$种切割方式，因为距离钢条左端i (i=1, 2, &amp;hellip;, n-1)处，我们都可以选择切割或者不切割，但是这样指数上升的复杂度是随着问题规模增长而无法接受的。分治法的代码结构如下，当然下面的代码可以进一步优化，但是为了与动态规划进行对比说明，我们采用如下最直观的写法。
+// restLength 代表从当前决策位置到最右端的钢条长度 // rewardArr 代表不同的切割长度的价格数组 int cut(int length, int* priceArr) { if (length == 0) return priceArr[preNoCutLength]; // 递归终止条件，当遍历到钢条最右端的时候返回  // 标识所有的递归结果中返回最大的  int maxReward = 0; // 循环递归调用，找到最大的返回值  for (int i=1; i&amp;lt;sizeof(priceArr)/sizeof(int); i++) { if (length-i &amp;gt; 0) { int reward = cut(length-i, priceArr); maxReward = maxReward &amp;gt; reward ?</description>
+    </item>
+    
+    <item>
+      <title>基本特征选择方法</title>
+      <link>https://horizonnn.github.io/p/%E5%9F%BA%E6%9C%AC%E7%89%B9%E5%BE%81%E9%80%89%E6%8B%A9%E6%96%B9%E6%B3%95/</link>
+      <pubDate>Sat, 26 Sep 2020 11:08:40 +0800</pubDate>
+      
+      <guid>https://horizonnn.github.io/p/%E5%9F%BA%E6%9C%AC%E7%89%B9%E5%BE%81%E9%80%89%E6%8B%A9%E6%96%B9%E6%B3%95/</guid>
+      <description>其中data为特征的DataFrame，y为目标值的Series，y_pre为预测值的Series
+Filter 基于统计量的预处理   缺失值比例删除：删除高缺失值的特征（列）
+percent = data.isnull().sum() / len(data) * 100 result = data.loc[percent &amp;lt; 50]   方差值删除：删除低方差的特征（列）
+var = data.var() result = data.loc[var &amp;gt; 0.1]   相关性矩阵：首先计算出特征之间的相关性，然后根据相关性的大小排序，按顺序删除冗余的特征
+# 将数值范围变化到0-1之间 data = data.apply(lambda x: (x - np.min(x)) / (np.max(x) - np.min(x))) # 相关性矩阵 cor = data.corr() # 按相关性大小逐步剔除 drop_pairs = [] for i in range(len(cor.index)): for j in range(len(cor.columns)): if cor.iloc[i,j] &amp;gt;= 0.8 and i != j: drop_pairs.</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>C语言 on Bridge for us</title>
+    <link>https://horizonnn.github.io/categories/c%E8%AF%AD%E8%A8%80/</link>
+    <description>Recent content in C语言 on Bridge for us</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 04 Jul 2020 11:50:58 +0800</lastBuildDate><atom:link href="https://horizonnn.github.io/categories/c%E8%AF%AD%E8%A8%80/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>CBugFlow</title>
+      <link>https://horizonnn.github.io/p/cbugflow/</link>
+      <pubDate>Sat, 04 Jul 2020 11:50:58 +0800</pubDate>
+      
+      <guid>https://horizonnn.github.io/p/cbugflow/</guid>
+      <description>编译问题 1. fatal error C1083: 无法打开包括文件: “basetsd.h”: No such file or directory   错误：
+fatal error C1083: 无法打开包括文件: “basetsd.h”: No such file or directory   原因：缺少basetsd.h文件
+  解决办法：安装windows 10 SDK文件即可解决
+  2. LINK : fatal error LNK1158: cannot run &amp;lsquo;rc.exe&amp;rsquo;   错误
+LINK : fatal error LNK1158: cannot run &#39;rc.exe&#39;   原因：在PATH所提供的环境中搜索不到rc.exe程序
+  解决办法：安装winsows 8.1 SDK，并将路径&amp;quot;C:\Program Files (x86)\Wexit()indows Kits\8.1\bin\x86&amp;quot;路径 添加到环境变量中。
+  </description>
+    </item>
+    
+  </channel>
+</rss>

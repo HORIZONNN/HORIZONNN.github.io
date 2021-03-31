@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>软件 on Bridge for us</title>
+    <link>https://horizonnn.github.io/tags/%E8%BD%AF%E4%BB%B6/</link>
+    <description>Recent content in 软件 on Bridge for us</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 05 Oct 2020 14:07:40 +0800</lastBuildDate><atom:link href="https://horizonnn.github.io/tags/%E8%BD%AF%E4%BB%B6/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>OpenVaultMedia安装以及配置NextCloud</title>
+      <link>https://horizonnn.github.io/p/openvaultmedia%E5%AE%89%E8%A3%85%E4%BB%A5%E5%8F%8A%E9%85%8D%E7%BD%AEnextcloud/</link>
+      <pubDate>Mon, 05 Oct 2020 14:07:40 +0800</pubDate>
+      
+      <guid>https://horizonnn.github.io/p/openvaultmedia%E5%AE%89%E8%A3%85%E4%BB%A5%E5%8F%8A%E9%85%8D%E7%BD%AEnextcloud/</guid>
+      <description> OpenMediaVault(OMV)配置你的私有云盘&amp;ndash;NextCloud OMV搭建系列教程[8]  </description>
+    </item>
+    
+    <item>
+      <title>在win10下安装gym环境的两种办法</title>
+      <link>https://horizonnn.github.io/p/%E5%9C%A8win10%E4%B8%8B%E5%AE%89%E8%A3%85gym%E7%8E%AF%E5%A2%83%E7%9A%84%E4%B8%A4%E7%A7%8D%E5%8A%9E%E6%B3%95/</link>
+      <pubDate>Wed, 20 Nov 2019 22:23:45 +0800</pubDate>
+      
+      <guid>https://horizonnn.github.io/p/%E5%9C%A8win10%E4%B8%8B%E5%AE%89%E8%A3%85gym%E7%8E%AF%E5%A2%83%E7%9A%84%E4%B8%A4%E7%A7%8D%E5%8A%9E%E6%B3%95/</guid>
+      <description>Gym是强化学习中一个很重要的python库，里面包含了很多强化学习的环境。但比较可惜的是官方并没有提供Windows平台的支持，这对于习惯了Windows平台工作的强化学习研究人员来说很不方便，所以我找到了两个解决办法。
+ 直接在win 10上安装Gym环境 利用WSL( Windows Subsystem for Linux )安装Gym环境  直接在win 10上安装Gym环境 安装 Microsoft Visual C++ 2017 Build Tools  下载链接 : Visual Studio 安装 Microsoft Visual C++ 2017 Build Tools  在Anaconda中创建python环境并安装相应的packages   在Anaconda中创建python环境
+conda create -n &amp;lt;your_env_name&amp;gt; python=3.6   如果需要在gym中录制视频，则需要安装ffmpeg
+conda install -c conda-forge ffmpeg   首先需要安装一个空的gym环境，因为在后面安装完全的gym环境的过程中会出现mujoco环境的错误，虽然这不影响其他模块的使用，但会导致gym不会被添加到环境中，也就没有办法import。
+conda install -c conda-forge gym   安装pystan是ToyText环境的需要
+conda install -c conda-forge pystan   这一步是安装gym环境成功的关键，国外大神kojoley成功地封装了atari模块使得安装这一补丁后，atari环境能够在win 10环境下成功运行</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -247,7 +247,7 @@ $$
 &lt;li&gt;股票交易&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h1 id=&#34;背包问题&#34;&gt;背包问题&lt;/h1&gt;
-&lt;p&gt;&lt;img src=&#34;https://pic.leetcode-cn.com/1611047974-CMdFek-file_1611047974684&#34; alt=&#34;416.分割等和子集1&#34;  /&gt;&lt;/p&gt;
+&lt;p&gt;![背包问题](pictures/package problem.png)&lt;/p&gt;
 &lt;h3 id=&#34;01背包问题&#34;&gt;01背包问题&lt;/h3&gt;
 &lt;h5 id=&#34;基本公式&#34;&gt;基本公式&lt;/h5&gt;
 &lt;p&gt;一般01背包问题的公式都是&lt;/p&gt;

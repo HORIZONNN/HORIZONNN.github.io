@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>特征选择 on Bridge for us</title>
+    <link>https://horizonnn.github.io/categories/%E7%89%B9%E5%BE%81%E9%80%89%E6%8B%A9/</link>
+    <description>Recent content in 特征选择 on Bridge for us</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 26 Sep 2020 11:08:40 +0800</lastBuildDate><atom:link href="https://horizonnn.github.io/categories/%E7%89%B9%E5%BE%81%E9%80%89%E6%8B%A9/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>基本特征选择方法</title>
+      <link>https://horizonnn.github.io/p/%E5%9F%BA%E6%9C%AC%E7%89%B9%E5%BE%81%E9%80%89%E6%8B%A9%E6%96%B9%E6%B3%95/</link>
+      <pubDate>Sat, 26 Sep 2020 11:08:40 +0800</pubDate>
+      
+      <guid>https://horizonnn.github.io/p/%E5%9F%BA%E6%9C%AC%E7%89%B9%E5%BE%81%E9%80%89%E6%8B%A9%E6%96%B9%E6%B3%95/</guid>
+      <description>其中data为特征的DataFrame，y为目标值的Series，y_pre为预测值的Series
+Filter 基于统计量的预处理   缺失值比例删除：删除高缺失值的特征（列）
+percent = data.isnull().sum() / len(data) * 100 result = data.loc[percent &amp;lt; 50]   方差值删除：删除低方差的特征（列）
+var = data.var() result = data.loc[var &amp;gt; 0.1]   相关性矩阵：首先计算出特征之间的相关性，然后根据相关性的大小排序，按顺序删除冗余的特征
+# 将数值范围变化到0-1之间 data = data.apply(lambda x: (x - np.min(x)) / (np.max(x) - np.min(x))) # 相关性矩阵 cor = data.corr() # 按相关性大小逐步剔除 drop_pairs = [] for i in range(len(cor.index)): for j in range(len(cor.columns)): if cor.iloc[i,j] &amp;gt;= 0.8 and i != j: drop_pairs.</description>
+    </item>
+    
+  </channel>
+</rss>

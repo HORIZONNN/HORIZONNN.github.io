@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Bug on Bridge for us</title>
+    <link>https://horizonnn.github.io/categories/bug/</link>
+    <description>Recent content in Bug on Bridge for us</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 27 Sep 2020 13:39:50 +0800</lastBuildDate><atom:link href="https://horizonnn.github.io/categories/bug/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>ToolsBugFlow</title>
+      <link>https://horizonnn.github.io/p/toolsbugflow/</link>
+      <pubDate>Sun, 27 Sep 2020 13:39:50 +0800</pubDate>
+      
+      <guid>https://horizonnn.github.io/p/toolsbugflow/</guid>
+      <description>Anaconda 1. CondaHTTPError SSLError Collecting package metadata (current_repodata.json): failed
+CondaHTTPError: HTTP 000 CONNECTION FAILED for url https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud/conda-forge/win-64/current_repodata.json Elapsed: -
+An HTTP error occurred when trying to retrieve this URL. HTTP errors are often intermittent, and a simple retry will get you on your way. SSLError(MaxRetryError(&amp;lsquo;HTTPSConnectionPool(host=&#39;mirrors.tuna.tsinghua.edu.cn&#39;, port=443): Max retries exceeded with url: /anaconda/cloud/conda-forge/win-64/current_repodata.json (Caused by SSLError(&amp;ldquo;Can&#39;t connect to HTTPS URL because the SSL module is not available.&amp;quot;))&#39;))
+PS C:\WINDOWS\system32&amp;gt; conda create -n rl-tf python=3.</description>
+    </item>
+    
+    <item>
+      <title>AndroidBugFlow</title>
+      <link>https://horizonnn.github.io/p/androidbugflow/</link>
+      <pubDate>Tue, 08 Sep 2020 21:05:54 +0800</pubDate>
+      
+      <guid>https://horizonnn.github.io/p/androidbugflow/</guid>
+      <description>1. android.content.ActivityNotFoundException: No Activity found to handle Intent   原因：在调用intent启动其他activity的时候，使用Uri.parse()时传递的网页url参数中没加“https://”前缀
+  解决办法：在调用Uri.parse()函数的时候一定要把参数写完整，如
+val intent = Intent(Intent.ACTION_VIEW) intent.data = Uri.parse(&amp;#34;https://www.baidu.com&amp;#34;) startActivity(intent)   </description>
+    </item>
+    
+    <item>
+      <title>CBugFlow</title>
+      <link>https://horizonnn.github.io/p/cbugflow/</link>
+      <pubDate>Sat, 04 Jul 2020 11:50:58 +0800</pubDate>
+      
+      <guid>https://horizonnn.github.io/p/cbugflow/</guid>
+      <description>编译问题 1. fatal error C1083: 无法打开包括文件: “basetsd.h”: No such file or directory   错误：
+fatal error C1083: 无法打开包括文件: “basetsd.h”: No such file or directory   原因：缺少basetsd.h文件
+  解决办法：安装windows 10 SDK文件即可解决
+  2. LINK : fatal error LNK1158: cannot run &amp;lsquo;rc.exe&amp;rsquo;   错误
+LINK : fatal error LNK1158: cannot run &#39;rc.exe&#39;   原因：在PATH所提供的环境中搜索不到rc.exe程序
+  解决办法：安装winsows 8.1 SDK，并将路径&amp;quot;C:\Program Files (x86)\Wexit()indows Kits\8.1\bin\x86&amp;quot;路径 添加到环境变量中。
+  </description>
+    </item>
+    
+    <item>
+      <title>PythonBugFlow</title>
+      <link>https://horizonnn.github.io/p/pythonbugflow/</link>
+      <pubDate>Sun, 25 Aug 2019 21:21:34 +0800</pubDate>
+      
+      <guid>https://horizonnn.github.io/p/pythonbugflow/</guid>
+      <description>基础问题 1. AttributeError: module &amp;lsquo;XXX&amp;rsquo; has no attribute &amp;lsquo;XXX&amp;rsquo;  原因：一般情况下可能是因为拼写错误导致的改模块下确实没有对应的attribute。但还有另外一种情况是当前运行的python文件目录下有和此module模块重名的python文件，导致运行的python文件优先import了当前目录下的对应文件，所以不存在对应的attribute 解决办法：检查拼写错误或者改变文件名即可  2.   bug
+File &amp;quot;C:\ProgramData\Anaconda3\lib\site-packages\pyreadline\lineeditor\history.py&amp;quot;, line 82, in read_history_file for line in open(filename, &#39;r&#39;): ... UnicodeDecodeError: &#39;charmap&#39; codec can&#39;t decode byte 0x81 in position 991: character maps to &amp;lt;undefined&amp;gt;   原因：一般是因为打开python的history file时遇到了编码错误
+  解决办法：删除位于%userprofile%/.python_history的history文件
+  TensorFlow 1. TypeError: Unexpected keyword argument passed to optimizer: name Traceback (most recent call last): File &amp;#34;visualizing_the_convnet.py&amp;#34;, line 3, in &amp;lt;module&amp;gt; model = load_model(&amp;#39;cats_and_dogs_small_2.</description>
+    </item>
+    
+  </channel>
+</rss>

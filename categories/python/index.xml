@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Python on Bridge for us</title>
+    <link>https://horizonnn.github.io/categories/python/</link>
+    <description>Recent content in Python on Bridge for us</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 26 Aug 2020 17:27:58 +0800</lastBuildDate><atom:link href="https://horizonnn.github.io/categories/python/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Python常查问题</title>
+      <link>https://horizonnn.github.io/p/python%E5%B8%B8%E6%9F%A5%E9%97%AE%E9%A2%98/</link>
+      <pubDate>Wed, 26 Aug 2020 17:27:58 +0800</pubDate>
+      
+      <guid>https://horizonnn.github.io/p/python%E5%B8%B8%E6%9F%A5%E9%97%AE%E9%A2%98/</guid>
+      <description>Seleunium 不打印chromedriver的日志信息 from selenium import webdriver chrome_options = Options() chrome_options.add_experimental_option(&amp;#39;excludeSwitches&amp;#39;, [&amp;#39;enable-logging&amp;#39;]) chrome_options.add_argument(&amp;#39;--headless&amp;#39;) browser = webdriver.Chrome(chrome_options=chrome_options) 使用chrome/firefox的已存在的cookie访问网站 chrome
+from selenium import webdriver profile_dir=r&amp;#34;C:\Users\leonyu\AppData\Local\Google\Chrome\User Data&amp;#34; # 对应你的chrome的用户数据存放路径  chrome_options=webdriver.ChromeOptions() chrome_options.add_argument(&amp;#34;user-data-dir=&amp;#34;+os.path.abspath(profile_dir)) browser=webdriver.Chrome(chrome_options=chrome_options) firefox
+from selenium import webdriver fp=webdriver.FirefoxProfile(r&amp;#39;C:\Users\leony\AppData\Roaming\Mozilla\Firefox\Profiles\btnc8mzb.default&amp;#39;) browser=webdriver.Firefox(fp) </description>
+    </item>
+    
+    <item>
+      <title>PythonBugFlow</title>
+      <link>https://horizonnn.github.io/p/pythonbugflow/</link>
+      <pubDate>Sun, 25 Aug 2019 21:21:34 +0800</pubDate>
+      
+      <guid>https://horizonnn.github.io/p/pythonbugflow/</guid>
+      <description>基础问题 1. AttributeError: module &amp;lsquo;XXX&amp;rsquo; has no attribute &amp;lsquo;XXX&amp;rsquo;  原因：一般情况下可能是因为拼写错误导致的改模块下确实没有对应的attribute。但还有另外一种情况是当前运行的python文件目录下有和此module模块重名的python文件，导致运行的python文件优先import了当前目录下的对应文件，所以不存在对应的attribute 解决办法：检查拼写错误或者改变文件名即可  2.   bug
+File &amp;quot;C:\ProgramData\Anaconda3\lib\site-packages\pyreadline\lineeditor\history.py&amp;quot;, line 82, in read_history_file for line in open(filename, &#39;r&#39;): ... UnicodeDecodeError: &#39;charmap&#39; codec can&#39;t decode byte 0x81 in position 991: character maps to &amp;lt;undefined&amp;gt;   原因：一般是因为打开python的history file时遇到了编码错误
+  解决办法：删除位于%userprofile%/.python_history的history文件
+  TensorFlow 1. TypeError: Unexpected keyword argument passed to optimizer: name Traceback (most recent call last): File &amp;#34;visualizing_the_convnet.py&amp;#34;, line 3, in &amp;lt;module&amp;gt; model = load_model(&amp;#39;cats_and_dogs_small_2.</description>
+    </item>
+    
+  </channel>
+</rss>

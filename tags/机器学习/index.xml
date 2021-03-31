@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>机器学习 on Bridge for us</title>
+    <link>https://horizonnn.github.io/tags/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/</link>
+    <description>Recent content in 机器学习 on Bridge for us</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 26 Sep 2020 11:09:07 +0800</lastBuildDate><atom:link href="https://horizonnn.github.io/tags/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>线性回归评估指标</title>
+      <link>https://horizonnn.github.io/p/%E7%BA%BF%E6%80%A7%E5%9B%9E%E5%BD%92%E8%AF%84%E4%BC%B0%E6%8C%87%E6%A0%87/</link>
+      <pubDate>Sat, 26 Sep 2020 11:09:07 +0800</pubDate>
+      
+      <guid>https://horizonnn.github.io/p/%E7%BA%BF%E6%80%A7%E5%9B%9E%E5%BD%92%E8%AF%84%E4%BC%B0%E6%8C%87%E6%A0%87/</guid>
+      <description>在回归问题中，常见的评估指标（Metric）有：
+ 平均绝对误差（Mean Absolute Error, MAE） 均方误差（Mean Square Error, MSE） 均方根误差（Root Mean Error, RMSE） 平均绝对百分误差（Mean Absolute Percentage Error, MAPE） R2  线性回归评估指标 平均绝对误差   公式 $$ MAE = \frac{1}{n} \sum^n_{i=1} |y_i - \hat{y_i}|, \in [0, +\infty) $$
+  代码表示
+def MAE(y, y_pre): return np.mean(np.abs(y - y_pre))   均方误差   公式 $$ MSE = \frac{1}{n} \sum^n_{i=1} (y_i - \hat{y_i})^2, \in[0, +\infty) $$
+  代码表示
+def MSE(y, y_pre): return np.</description>
+    </item>
+    
+  </channel>
+</rss>

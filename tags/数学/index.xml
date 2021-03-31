@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>数学 on Bridge for us</title>
+    <link>https://horizonnn.github.io/tags/%E6%95%B0%E5%AD%A6/</link>
+    <description>Recent content in 数学 on Bridge for us</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 30 Sep 2020 16:28:29 +0800</lastBuildDate><atom:link href="https://horizonnn.github.io/tags/%E6%95%B0%E5%AD%A6/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>数学相关知识点</title>
+      <link>https://horizonnn.github.io/p/%E6%95%B0%E5%AD%A6%E7%9B%B8%E5%85%B3%E7%9F%A5%E8%AF%86%E7%82%B9/</link>
+      <pubDate>Wed, 30 Sep 2020 16:28:29 +0800</pubDate>
+      
+      <guid>https://horizonnn.github.io/p/%E6%95%B0%E5%AD%A6%E7%9B%B8%E5%85%B3%E7%9F%A5%E8%AF%86%E7%82%B9/</guid>
+      <description>统计学  详解最大似然估计、最大后验概率估计以及贝叶斯公式的理解 为什么样本方差里面要除以（n-1）而不是n  </description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>frp on Bridge for us</title>
+    <link>https://horizonnn.github.io/categories/frp/</link>
+    <description>Recent content in frp on Bridge for us</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 28 Sep 2019 20:37:36 +0800</lastBuildDate><atom:link href="https://horizonnn.github.io/categories/frp/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>利用frp实现黑群晖内网穿透</title>
+      <link>https://horizonnn.github.io/p/%E5%88%A9%E7%94%A8frp%E5%AE%9E%E7%8E%B0%E9%BB%91%E7%BE%A4%E6%99%96%E5%86%85%E7%BD%91%E7%A9%BF%E9%80%8F/</link>
+      <pubDate>Sat, 28 Sep 2019 20:37:36 +0800</pubDate>
+      
+      <guid>https://horizonnn.github.io/p/%E5%88%A9%E7%94%A8frp%E5%AE%9E%E7%8E%B0%E9%BB%91%E7%BE%A4%E6%99%96%E5%86%85%E7%BD%91%E7%A9%BF%E9%80%8F/</guid>
+      <description>前一段时间捡了一台暴风酷播云矿机，想着拿来做NAS，装了黑群晖，无奈的是没有公网IP，只能局域网访问，因此需要做内网穿透。
+搜了搜方法，感觉frp还是比较不错的方案，开搞！
+相关链接  frp的github链接 群晖的中文官网  准备工具  使用frp做内网穿透，首先需要一台具有公网IP的主机，这里我租用了一台VPS 去frp的github链接里根据个人NAS以及公网IP主机的型号下载对应的压缩文件 去群晖官网下载drive client  配置过程 服务端   解压公网IP主机对应的frp文件，只保存frps和frps.ini文件，删掉其他文件
+  将上述两个文件上传到公网IP主机中
+  编辑frps.ini文件（vim frps.ini），写入以下内容
+[common] bind_port = 7000  vhost_http_port = 7008 vhost_https_port = 7010  dashboard_port = 7001 dashboard_user = admin dashboard_pwd = 123456 其中7008是http连接的端口，7001是frp后台管理的端口
+此外，在主机中开启7000、7008、7001、7010、6690（后文中会说到为什么开启这个端口）端口
+  运行frps
+./frps -c ./frps.ini   客户端   解压公网IP主机对应的frp文件，只保存frpc和frpc.ini文件，删掉其他文件
+  将上述两个文件上传到NAS主机中
+  编辑frpc.ini文件（vim frpc.ini），写入以下内容
+[common] server_addr = XXX.</description>
+    </item>
+    
+  </channel>
+</rss>
