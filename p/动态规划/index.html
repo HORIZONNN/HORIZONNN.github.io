@@ -452,11 +452,11 @@ $$
 <li>股票交易</li>
 </ul>
 <h1 id="背包问题">背包问题</h1>
-<p><figure style="flex-grow: 66; flex-basis: 160px">
-		<a href="/p/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/pictures/florian-klauer-nptLmg6jqDo-unsplash.jpg" data-size="667x1000"><img src="/p/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/pictures/florian-klauer-nptLmg6jqDo-unsplash.jpg"
-				srcset="/p/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/pictures/florian-klauer-nptLmg6jqDo-unsplash_hu595aaf3b3dbbb41af5aed8d3958cc9f9_13854_480x0_resize_q75_box.jpg 480w, /p/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/pictures/florian-klauer-nptLmg6jqDo-unsplash_hu595aaf3b3dbbb41af5aed8d3958cc9f9_13854_1024x0_resize_q75_box.jpg 1024w"
-				width="667"
-				height="1000"
+<p><figure style="flex-grow: 246; flex-basis: 592px">
+		<a href="/p/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/package-problem.png" data-size="7029x2847"><img src="/p/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/package-problem.png"
+				srcset="/p/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/package-problem_hua0db707c28481fcebc9c5b1edd36a1cc_285596_480x0_resize_box_2.png 480w, /p/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/package-problem_hua0db707c28481fcebc9c5b1edd36a1cc_285596_1024x0_resize_box_2.png 1024w"
+				width="7029"
+				height="2847"
 				loading="lazy"
 				alt="背包问题">
 		</a>
@@ -464,8 +464,7 @@ $$
 		<figcaption>背包问题</figcaption>
 		
 	</figure></p>
-<h3 id="01背包问题">01背包问题</h3>
-<h5 id="基本公式">基本公式</h5>
+<h3 id="01背包问题基本公式">01背包问题基本公式</h3>
 <p>一般01背包问题的公式都是</p>
 <ul>
 <li>计数问题：$dp[i, j] = dp[i-1, j] + dp[i-1, j-weight[i]]$</li>
@@ -511,7 +510,7 @@ $$
 <li>空间优化：一般的01背包问题需要定义一个二位矩阵存储中间结果，但是如果采用倒序遍历的做法，就可以只定义一个一维数组来降低空间复杂度。</li>
 </ul>
 <h3 id="完全背包问题">完全背包问题</h3>
-<h5 id="基本公式-1">基本公式</h5>
+<h5 id="基本公式">基本公式</h5>
 <p>一般完全背包问题的公式都是</p>
 <ul>
 <li>计数问题：$dp[i, j] = dp[i-1, j] + dp[i, j-weight[i]]$</li>
@@ -560,7 +559,7 @@ $$
 <li>这也是个最大最小的完全背包问题，只不过能使用的完全平方数（物品）需要提前自己计算出来，然后就是动态规划数组初值和边界条件这些细节问题了。</li>
 </ul>
 <h3 id="完全背包排列问题">完全背包排列问题</h3>
-<h5 id="基本公式-2">基本公式</h5>
+<h5 id="基本公式-1">基本公式</h5>
 <p>一般完全背包排列问题的公式都是</p>
 <ul>
 <li>计数问题：$dp[j] = dp[j-weight[1]] + dp[i, j-weight[2]] + &hellip; + dp[i, j-weight[n]]$</li>
