@@ -108,59 +108,19 @@
             <div class="mb3 pa4 mid-gray overflow-hidden">
     
       <div class="f6">
-        September 30, 2020
+        August 25, 2019
       </div>
     
     <h1 class="f3 near-black">
-      <a href="/post/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0%E9%87%8D%E8%A6%81%E5%8F%82%E8%80%83%E8%B5%84%E6%BA%90/" class="link black dim">
-        深度学习重要参考资源
+      <a href="/post/pythonbugflow/" class="link black dim">
+        PythonBugFlow
       </a>
     </h1>
     <div class="nested-links f5 lh-copy nested-copy-line-height">
-      书籍  Deep Learning Machine learning yearning Mathematics for machine learning  视频 组织或个人  fast.ai 李宏毅 苏剑林科学空间 mlcourse.ai  
-    </div>
-  </div>
-
-        </div>
-      
-        <div class="relative w-100 w-30-l mb4 bg-white">
-          
-            <div class="mb3 pa4 mid-gray overflow-hidden">
-    
-      <div class="f6">
-        September 30, 2020
-      </div>
-    
-    <h1 class="f3 near-black">
-      <a href="/post/%E6%95%B0%E5%AD%A6%E7%9B%B8%E5%85%B3%E7%9F%A5%E8%AF%86%E7%82%B9/" class="link black dim">
-        数学相关知识点
-      </a>
-    </h1>
-    <div class="nested-links f5 lh-copy nested-copy-line-height">
-      统计学  详解最大似然估计、最大后验概率估计以及贝叶斯公式的理解 为什么样本方差里面要除以（n-1）而不是n  
-    </div>
-  </div>
-
-        </div>
-      
-        <div class="relative w-100 w-30-l mb4 bg-white">
-          
-            <div class="mb3 pa4 mid-gray overflow-hidden">
-    
-      <div class="f6">
-        September 27, 2020
-      </div>
-    
-    <h1 class="f3 near-black">
-      <a href="/post/toolsbugflow/" class="link black dim">
-        ToolsBugFlow
-      </a>
-    </h1>
-    <div class="nested-links f5 lh-copy nested-copy-line-height">
-      Anaconda 1. CondaHTTPError SSLError Collecting package metadata (current_repodata.json): failed
-CondaHTTPError: HTTP 000 CONNECTION FAILED for url https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud/conda-forge/win-64/current_repodata.json Elapsed: -
-An HTTP error occurred when trying to retrieve this URL. HTTP errors are often intermittent, and a simple retry will get you on your way. SSLError(MaxRetryError(&lsquo;HTTPSConnectionPool(host='mirrors.tuna.tsinghua.edu.cn', port=443): Max retries exceeded with url: /anaconda/cloud/conda-forge/win-64/current_repodata.json (Caused by SSLError(&ldquo;Can't connect to HTTPS URL because the SSL module is not available.&quot;))'))
-PS C:\WINDOWS\system32&gt; conda create -n rl-tf python=3.
+      基础问题 1. AttributeError: module &lsquo;XXX&rsquo; has no attribute &lsquo;XXX&rsquo;  原因：一般情况下可能是因为拼写错误导致的改模块下确实没有对应的attribute。但还有另外一种情况是当前运行的python文件目录下有和此module模块重名的python文件，导致运行的python文件优先import了当前目录下的对应文件，所以不存在对应的attribute 解决办法：检查拼写错误或者改变文件名即可  2.   bug
+File &quot;C:\ProgramData\Anaconda3\lib\site-packages\pyreadline\lineeditor\history.py&quot;, line 82, in read_history_file for line in open(filename, 'r'): ... UnicodeDecodeError: 'charmap' codec can't decode byte 0x81 in position 991: character maps to &lt;undefined&gt;   原因：一般是因为打开python的history file时遇到了编码错误
+  解决办法：删除位于%userprofile%/.python_history的history文件
+  TensorFlow 1. TypeError: Unexpected keyword argument passed to optimizer: name Traceback (most recent call last): File &#34;visualizing_the_convnet.py&#34;, line 3, in &lt;module&gt; model = load_model(&#39;cats_and_dogs_small_2.
     </div>
   </div>
 
@@ -173,12 +133,12 @@ PS C:\WINDOWS\system32&gt; conda create -n rl-tf python=3.
     <a href="/post/" class="page-link" aria-label="First"><span aria-hidden="true">&laquo;&laquo;</span></a>
   </li>
   <li class="page-item">
-    <a href="/post/" class="page-link" aria-label="Previous"><span aria-hidden="true">&laquo;</span></a>
+    <a href="/post/page/5/" class="page-link" aria-label="Previous"><span aria-hidden="true">&laquo;</span></a>
   </li>
   <li class="page-item">
     <a class="page-link" href="/post/">1</a>
   </li>
-  <li class="page-item active">
+  <li class="page-item">
     <a class="page-link" href="/post/page/2/">2</a>
   </li>
   <li class="page-item">
@@ -188,10 +148,13 @@ PS C:\WINDOWS\system32&gt; conda create -n rl-tf python=3.
     <span aria-hidden="true">&nbsp;&hellip;&nbsp;</span>
   </li>
   <li class="page-item">
+    <a class="page-link" href="/post/page/5/">5</a>
+  </li>
+  <li class="page-item active">
     <a class="page-link" href="/post/page/6/">6</a>
   </li>
-  <li class="page-item">
-    <a href="/post/page/3/" class="page-link" aria-label="Next"><span aria-hidden="true">&raquo;</span></a>
+  <li class="page-item disabled">
+    <a  class="page-link" aria-label="Next"><span aria-hidden="true">&raquo;</span></a>
   </li>
   <li class="page-item">
     <a href="/post/page/6/" class="page-link" aria-label="Last"><span aria-hidden="true">&raquo;&raquo;</span></a>

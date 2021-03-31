@@ -32,7 +32,7 @@
 <meta property="og:description" content="The last theme you&#39;ll ever need. Maybe." />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="https://horizonnn.github.io/post/" />
-<meta property="og:updated_time" content="2020-10-05T14:07:40+08:00" />
+<meta property="og:updated_time" content="2021-03-31T13:23:26+08:00" />
 <meta itemprop="name" content="Posts">
 <meta itemprop="description" content="The last theme you&#39;ll ever need. Maybe.">
 <meta name="twitter:card" content="summary"/>
@@ -112,6 +112,31 @@
       </div>
     
     <h1 class="f3 near-black">
+      <a href="/post/%E7%BA%BF%E6%80%A7%E5%9B%9E%E5%BD%92%E8%AF%84%E4%BC%B0%E6%8C%87%E6%A0%87/" class="link black dim">
+        线性回归评估指标
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+      在回归问题中，常见的评估指标（Metric）有：
+ 平均绝对误差（Mean Absolute Error, MAE） 均方误差（Mean Square Error, MSE） 均方根误差（Root Mean Error, RMSE） 平均绝对百分误差（Mean Absolute Percentage Error, MAPE） R2  线性回归评估指标 平均绝对误差   公式 $$ MAE = \frac{1}{n} \sum^n_{i=1} |y_i - \hat{y_i}|, \in [0, +\infty) $$
+  代码表示
+def MAE(y, y_pre): return np.mean(np.abs(y - y_pre))   均方误差   公式 $$ MSE = \frac{1}{n} \sum^n_{i=1} (y_i - \hat{y_i})^2, \in[0, +\infty) $$
+  代码表示
+def MSE(y, y_pre): return np.
+    </div>
+  </div>
+
+        </div>
+      
+        <div class="relative w-100 w-30-l mb4 bg-white">
+          
+            <div class="mb3 pa4 mid-gray overflow-hidden">
+    
+      <div class="f6">
+        September 26, 2020
+      </div>
+    
+    <h1 class="f3 near-black">
       <a href="/post/%E5%9F%BA%E6%9C%AC%E7%89%B9%E5%BE%81%E9%80%89%E6%8B%A9%E6%96%B9%E6%B3%95/" class="link black dim">
         基本特征选择方法
       </a>
@@ -149,28 +174,6 @@ val intent = Intent(Intent.ACTION_VIEW) intent.data = Uri.parse(&#34;https://www
 
         </div>
       
-        <div class="relative w-100 w-30-l mb4 bg-white">
-          
-            <div class="mb3 pa4 mid-gray overflow-hidden">
-    
-      <div class="f6">
-        August 26, 2020
-      </div>
-    
-    <h1 class="f3 near-black">
-      <a href="/post/python%E5%B8%B8%E6%9F%A5%E9%97%AE%E9%A2%98/" class="link black dim">
-        Python常查问题
-      </a>
-    </h1>
-    <div class="nested-links f5 lh-copy nested-copy-line-height">
-      Seleunium 不打印chromedriver的日志信息 from selenium import webdriver chrome_options = Options() chrome_options.add_experimental_option(&#39;excludeSwitches&#39;, [&#39;enable-logging&#39;]) chrome_options.add_argument(&#39;--headless&#39;) browser = webdriver.Chrome(chrome_options=chrome_options) 使用chrome/firefox的已存在的cookie访问网站 chrome
-from selenium import webdriver profile_dir=r&#34;C:\Users\leonyu\AppData\Local\Google\Chrome\User Data&#34; # 对应你的chrome的用户数据存放路径  chrome_options=webdriver.ChromeOptions() chrome_options.add_argument(&#34;user-data-dir=&#34;+os.path.abspath(profile_dir)) browser=webdriver.Chrome(chrome_options=chrome_options) firefox
-from selenium import webdriver fp=webdriver.FirefoxProfile(r&#39;C:\Users\leony\AppData\Roaming\Mozilla\Firefox\Profiles\btnc8mzb.default&#39;) browser=webdriver.Firefox(fp) 
-    </div>
-  </div>
-
-        </div>
-      
     </aside>
     
 <ul class="pagination">
@@ -192,14 +195,17 @@ from selenium import webdriver fp=webdriver.FirefoxProfile(r&#39;C:\Users\leony\
   <li class="page-item">
     <a class="page-link" href="/post/page/4/">4</a>
   </li>
+  <li class="page-item disabled">
+    <span aria-hidden="true">&nbsp;&hellip;&nbsp;</span>
+  </li>
   <li class="page-item">
-    <a class="page-link" href="/post/page/5/">5</a>
+    <a class="page-link" href="/post/page/6/">6</a>
   </li>
   <li class="page-item">
     <a href="/post/page/4/" class="page-link" aria-label="Next"><span aria-hidden="true">&raquo;</span></a>
   </li>
   <li class="page-item">
-    <a href="/post/page/5/" class="page-link" aria-label="Last"><span aria-hidden="true">&raquo;&raquo;</span></a>
+    <a href="/post/page/6/" class="page-link" aria-label="Last"><span aria-hidden="true">&raquo;&raquo;</span></a>
   </li>
 </ul>
 
@@ -210,7 +216,7 @@ from selenium import webdriver fp=webdriver.FirefoxProfile(r&#39;C:\Users\leony\
     <footer class="bg-black bottom-0 w-100 pa3" role="contentinfo">
   <div class="flex justify-between">
   <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="https://horizonnn.github.io/" >
-    &copy; 2020 Bridge : you &amp; me
+    &copy; 2021 Bridge : you &amp; me
   </a>
     <div>
 

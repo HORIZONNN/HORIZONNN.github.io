@@ -6,7 +6,21 @@
     <description>Recent content in Posts on Bridge : you &amp; me</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 05 Oct 2020 14:07:40 +0800</lastBuildDate><atom:link href="https://horizonnn.github.io/post/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 31 Mar 2021 13:23:26 +0800</lastBuildDate><atom:link href="https://horizonnn.github.io/post/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>动态规划</title>
+      <link>https://horizonnn.github.io/post/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/</link>
+      <pubDate>Wed, 31 Mar 2021 13:23:26 +0800</pubDate>
+      
+      <guid>https://horizonnn.github.io/post/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/</guid>
+      <description>动态规划 为什么需要动态规划 分治法通常将问题划分为互不相交的子问题，递归地求解子问题，从而得到原问题的解。但在不同的子问题具有公共地子子问题的时候，分治法会做很多重复性的工作。所以这时候就需要用到动态规划，动态规划对每个子子问题只求解一次，然后保存在表格中，这样通过空间换时间来避免不必要的重复计算工作。
+举个例子来说就是有如下这样一个钢条切割的问题
+钢条切割 假定我们知道Serling公司出售一段长度为i英寸的钢条的价格为p；（i=1，2，…，单位为美元）。钢条的长度均为整英寸。如下给出了一个价格表的样例。
+   长度 1 2 3     价格 1 5 8    则给定一段长度为n英寸的钢条和一个价格表，求切割钢条方案，使得销售收益r最大。
+我们如果采用分治法的思想，那么一个长度为n的的钢条就会有接近$2^{n-1}$种切割方式，因为距离钢条左端i (i=1, 2, &amp;hellip;, n-1)处，我们都可以选择切割或者不切割，但是这样指数上升的复杂度是随着问题规模增长而无法接受的。分治法的代码结构如下，当然下面的代码可以进一步优化，但是为了与动态规划进行对比说明，我们采用如下最直观的写法。
+// restLength 代表从当前决策位置到最右端的钢条长度 // rewardArr 代表不同的切割长度的价格数组 int cut(int length, int* priceArr) { if (length == 0) return priceArr[preNoCutLength]; // 递归终止条件，当遍历到钢条最右端的时候返回  // 标识所有的递归结果中返回最大的  int maxReward = 0; // 循环递归调用，找到最大的返回值  for (int i=1; i&amp;lt;sizeof(priceArr)/sizeof(int); i++) { if (length-i &amp;gt; 0) { int reward = cut(length-i, priceArr); maxReward = maxReward &amp;gt; reward ?</description>
+    </item>
+    
     <item>
       <title>OpenVaultMedia安装以及配置NextCloud</title>
       <link>https://horizonnn.github.io/post/openvaultmedia%E5%AE%89%E8%A3%85%E4%BB%A5%E5%8F%8A%E9%85%8D%E7%BD%AEnextcloud/</link>
@@ -114,7 +128,9 @@ from selenium import webdriver fp=webdriver.FirefoxProfile(r&amp;#39;C:\Users\le
       <pubDate>Mon, 17 Aug 2020 10:48:11 +0800</pubDate>
       
       <guid>https://horizonnn.github.io/post/%E5%BC%BA%E5%8C%96%E5%AD%A6%E4%B9%A0%E9%87%8D%E8%A6%81%E5%8F%82%E8%80%83%E8%B5%84%E6%BA%90/</guid>
-      <description>概述  David Sliver强化学习视频十讲 《Reinforcement Learning》书籍  博文  强化学习中Ornstein-Uhlenbeck噪声是鸡肋吗？ &amp;mdash; 说明了OU噪声并非比高斯噪声差，只是其在时序相关的问题中会作用更明显 Reinforcement learning never worked, and &amp;lsquo;deep&amp;rsquo; only helped a bit &amp;mdash; 虽然深度学习的泛化性对于强化学习中的探索利用平衡具有一定的帮助，但强化学习中还有其他一些很关键的问题深度学习并不能解决。 策略迭代和值迭代的区别 &amp;mdash; 通过算法对比阐述了策略迭代和值迭代的区别，适合初学者区分概念。 强化学习方法分类 &amp;mdash; 概述了强化学习中几个概念分类，便于初学者进行概念区分。  </description>
+      <description>概述  David Sliver强化学习视频十讲 《Reinforcement Learning》书籍  https://vdn1.vzuu.com/HD/e3a8e294-70f4-11ea-aaa4-4a156244e7a6.mp4?disable_local_cache=1&amp;amp;bu=http-com&amp;amp;expiration=1608637617&amp;amp;auth_key=1608637617-0-0-626b9387da2090079f2cfc12960b0c09&amp;amp;f=mp4&amp;amp;v=hw
+https://vdn1.vzuu.com/HD/e3a8e294-70f4-11ea-aaa4-4a156244e7a6.mp4?disable_local_cache=1&amp;amp;amp;bu=http-com&amp;amp;amp;expiration=1608637617&amp;amp;amp;auth_key=1608637617-0-0-626b9387da2090079f2cfc12960b0c09&amp;amp;amp;f=mp4&amp;amp;amp;v=hw
+博客  [openai blog](OpenAI Blog)  博文  强化学习中Ornstein-Uhlenbeck噪声是鸡肋吗？ &amp;mdash; 说明了OU噪声并非比高斯噪声差，只是其在时序相关的问题中会作用更明显 Reinforcement learning never worked, and &amp;lsquo;deep&amp;rsquo; only helped a bit &amp;mdash; 虽然深度学习的泛化性对于强化学习中的探索利用平衡具有一定的帮助，但强化学习中还有其他一些很关键的问题深度学习并不能解决。 策略迭代和值迭代的区别 &amp;mdash; 通过算法对比阐述了策略迭代和值迭代的区别，适合初学者区分概念。 强化学习方法分类 &amp;mdash; 概述了强化学习中几个概念分类，便于初学者进行概念区分。 强化学习需要批归一化吗？ &amp;mdash; 讨论了强化学习中是否需要批归一化。 Deep Reinforcement Learning Doesn&amp;rsquo;t Work Yet (alexirpan.com)  </description>
     </item>
     
     <item>
@@ -188,11 +204,10 @@ nohup python newclient.py &amp;gt;/dev/null 2&amp;gt;&amp;amp;1 此时可以连�
       <pubDate>Sun, 25 Aug 2019 21:21:34 +0800</pubDate>
       
       <guid>https://horizonnn.github.io/post/pythonbugflow/</guid>
-      <description>基础问题 1. AttributeError: module &amp;lsquo;XXX&amp;rsquo; has no attribute &amp;lsquo;xxx&amp;rsquo;   原因：一般module和attribute的名字没有拼错的情况下，出现这类问题通常是因为这个py文件所在的目录中存在与module同名的py文件，导致python的错误调用。
-  解决办法：更改文件名。
-  2. AttributeError: module &amp;lsquo;XXX&amp;rsquo; has no attribute &amp;lsquo;XXX&amp;rsquo;  原因：一般情况下可能是因为拼写错误导致的改模块下确实没有对应的attribute。但还有另外一种情况是当前运行的python文件目录下有和此module模块重名的python文件，导致运行的python文件优先import了当前目录下的对应文件，所以不存在对应的attribute 解决办法：检查拼写错误或者改变文件名即可  TensorFlow 1. TypeError: Unexpected keyword argument passed to optimizer: name Traceback (most recent call last): File &amp;#34;visualizing_the_convnet.py&amp;#34;, line 3, in &amp;lt;module&amp;gt; model = load_model(&amp;#39;cats_and_dogs_small_2.h5&amp;#39;) ... TypeError: Unexpected keyword argument passed to optimizer: name   原因：这部分代码加载了H5文件保存的keras Model，但是由于保存Model和加载Model的keras的版本不一致，所以会产生这个问题
-  解决办法：保持加载Model和保存Model的keras版本一致
-  2.</description>
+      <description>基础问题 1. AttributeError: module &amp;lsquo;XXX&amp;rsquo; has no attribute &amp;lsquo;XXX&amp;rsquo;  原因：一般情况下可能是因为拼写错误导致的改模块下确实没有对应的attribute。但还有另外一种情况是当前运行的python文件目录下有和此module模块重名的python文件，导致运行的python文件优先import了当前目录下的对应文件，所以不存在对应的attribute 解决办法：检查拼写错误或者改变文件名即可  2.   bug
+File &amp;quot;C:\ProgramData\Anaconda3\lib\site-packages\pyreadline\lineeditor\history.py&amp;quot;, line 82, in read_history_file for line in open(filename, &#39;r&#39;): ... UnicodeDecodeError: &#39;charmap&#39; codec can&#39;t decode byte 0x81 in position 991: character maps to &amp;lt;undefined&amp;gt;   原因：一般是因为打开python的history file时遇到了编码错误
+  解决办法：删除位于%userprofile%/.python_history的history文件
+  TensorFlow 1. TypeError: Unexpected keyword argument passed to optimizer: name Traceback (most recent call last): File &amp;#34;visualizing_the_convnet.py&amp;#34;, line 3, in &amp;lt;module&amp;gt; model = load_model(&amp;#39;cats_and_dogs_small_2.</description>
     </item>
     
   </channel>
