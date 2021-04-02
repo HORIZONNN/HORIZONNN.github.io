@@ -522,6 +522,18 @@ rose -&amp;gt; ros (删除 &#39;e&#39;)
 &lt;li&gt;其实就是找数组中前后相差最大的两个数，最好的做法就是设两个标志位，一个是当前最大差值，一个是当前的最小值。
 用动态规划也能做就是时间复杂度高一些，用f(k)标记k节点卖出时的最大利润，然后迭代一遍就行了。&lt;/li&gt;
 &lt;/ul&gt;
+&lt;h5 id=&#34;122-买卖股票的最佳时机2&#34;&gt;122 买卖股票的最佳时机2&lt;/h5&gt;
+&lt;p&gt;给定一个数组，它的第 i 个元素是一支给定股票第 i 天的价格。&lt;/p&gt;
+&lt;p&gt;设计一个算法来计算你所能获取的最大利润。你可以尽可能地完成更多的交易（多次买卖一支股票）。&lt;/p&gt;
+&lt;p&gt;注意：你不能同时参与多笔交易（你必须在再次购买前出售掉之前的股票）。&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;输入: [7,1,5,3,6,4]
+输出: 7
+解释: 在第 2 天（股票价格 = 1）的时候买入，在第 3 天（股票价格 = 5）的时候卖出, 这笔交易所能获得利润 = 5-1 = 4 。
+     随后，在第 4 天（股票价格 = 3）的时候买入，在第 5 天（股票价格 = 6）的时候卖出, 这笔交易所能获得利润 = 6-3 = 3 。
+&lt;/code&gt;&lt;/pre&gt;&lt;ul&gt;
+&lt;li&gt;解法一：动态规划可以求解，分成两个状态：买和卖，然后迭代求解。&lt;/li&gt;
+&lt;li&gt;解法二：贪心算法也可以求解：实际上就是找到所有的上升段&lt;/li&gt;
+&lt;/ul&gt;
 &lt;h5 id=&#34;309-最佳买卖股票时机含冷冻期&#34;&gt;309 最佳买卖股票时机含冷冻期&lt;/h5&gt;
 &lt;p&gt;给定一个整数数组，其中第 i 个元素代表了第 i 天的股票价格 。&lt;/p&gt;
 &lt;p&gt;设计一个算法计算出最大利润。在满足以下约束条件下，你可以尽可能地完成更多的交易（多次买卖一支股票）:&lt;/p&gt;
@@ -1122,7 +1134,27 @@ result = data.loc[var &amp;gt; 0.1]
         <pubDate>Sat, 04 Jul 2020 11:50:58 +0800</pubDate>
         
         <guid>https://horizonnn.github.io/p/cbugflow/</guid>
-        <description>&lt;h1 id=&#34;编译问题&#34;&gt;编译问题&lt;/h1&gt;
+        <description>&lt;h1 id=&#34;逻辑问题&#34;&gt;逻辑问题&lt;/h1&gt;
+&lt;h3 id=&#34;1-整型数组未遍历到末尾就结束&#34;&gt;1. 整型数组未遍历到末尾就结束&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;错误：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-c++&#34; data-lang=&#34;c++&#34;&gt;&lt;span class=&#34;kt&#34;&gt;int&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;a&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;10&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;];&lt;/span&gt;
+&lt;span class=&#34;p&#34;&gt;...&lt;/span&gt;
+&lt;span class=&#34;k&#34;&gt;for&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;kt&#34;&gt;int&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;i&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;a&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;i&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;!=&lt;/span&gt; &lt;span class=&#34;sc&#34;&gt;&amp;#39;\0&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;i&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;++&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
+    &lt;span class=&#34;c1&#34;&gt;// some logic
+&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;有时候会发现数组并不能完全遍历，有时候遍历到中间就退出了&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;原因：因为很多人知道数组的末尾标识就是&lt;code&gt;\0&lt;/code&gt;，所以有些人会这么写。但是在C++中，字符&lt;code&gt;\0&lt;/code&gt;的二进制编码就是0x00，而整型变量为0的时候编码也是0x00，如果数组中间有位置为0的话，就相当于满足终止条件退出了。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;解决办法：还是用&lt;code&gt;i &amp;lt; length&lt;/code&gt;这样的长度判断比较靠谱。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&#34;编译问题&#34;&gt;编译问题&lt;/h1&gt;
 &lt;h3 id=&#34;1-fatal-error-c1083-无法打开包括文件-basetsdh-no-such-file-or-directory&#34;&gt;1. fatal error C1083: 无法打开包括文件: “basetsd.h”: No such file or directory&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;
