@@ -855,6 +855,35 @@ Your installed CUDA driver is: 11.0
 &lt;p&gt;解决办法：采用&lt;code&gt;conda install -c conda-forge &amp;lt;package_name&amp;gt;&lt;/code&gt;的安装方式&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
+&lt;h1 id=&#34;git&#34;&gt;Git&lt;/h1&gt;
+&lt;h3 id=&#34;1-failed-to-connect-to-githubcom-port-443-timed-out&#34;&gt;1. Failed to connect to github.com port 443: Timed out&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;错误：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;Failed to connect to github.com port 443: Timed out
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;用git没办法push到github上。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;原因：DNS污染和路由的问题&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;解决办法&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;去&lt;a class=&#34;link&#34; href=&#34;https://www.ipaddress.com/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;ipaddress&lt;/a&gt;分别查询一下&lt;code&gt;github.com&lt;/code&gt;和&lt;code&gt;github.global.ssl.fastly.net&lt;/code&gt;这两个地址的域名&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;然后去host文件（在C:\Windows\System32\drivers\etc\hosts）中末尾更新如下代码，IP部分填自己查到的地址&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;140.82.113.4 github.com
+199.232.69.194 github.global.ssl.fastly.net
+&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;命令行中使用&lt;code&gt;ipconfig /flushdns&lt;/code&gt;清理一下DNS。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
 </description>
         </item>
         <item>
