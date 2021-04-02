@@ -560,15 +560,25 @@ sudo dd if=/dev/zero of=500mb.zip bs=1024k count=500
             >
             </main>
     <nav id="TableOfContents">
-  <ul>
+  <ol>
     <li>
-      <ul>
+      <ol>
         <li><a href="#安装python">安装python</a></li>
         <li><a href="#配置shadowsocks">配置shadowsocks</a></li>
-        <li><a href="#配置bbr加速访问可选">配置BBR加速访问[可选]</a></li>
-      </ul>
+        <li><a href="#配置bbr加速访问可选">配置BBR加速访问[可选]</a>
+          <ol>
+            <li>
+              <ol>
+                <li><a href="#利用elrepo-rpm库更新内核">利用ELRepo RPM库更新内核</a></li>
+                <li><a href="#启用bbr">启用BBR</a></li>
+                <li><a href="#测试网络性能">测试网络性能</a></li>
+              </ol>
+            </li>
+          </ol>
+        </li>
+      </ol>
     </li>
-  </ul>
+  </ol>
 </nav>
 
         </div>
